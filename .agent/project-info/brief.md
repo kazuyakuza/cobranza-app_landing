@@ -1,27 +1,87 @@
-# Project Brief
+# Project Brief: Cobranza App Landing Page
 
-## Overview
+## Project Overview
 
-This is a base project designed to serve as a foundational template for future AI-agent driven development. It is pre-configured with essential rules, workflows, and structures optimized for collaboration between human developers and AI agents (specifically Kilo Code).
+**Project Name:** Cobranza App Landing Page
 
-## Core Requirements
+**Type:** Single Page Landing Page (Marketing Website)
 
-- **Foundation**: Provide a clean, structured starting point for new projects.
-- **AI-Readiness**: Include necessary configurations (like `.kilo` and `.ai-agent` directories) to enable immediate and effective AI agent participation.
-- **Standardization**: Establish a baseline for coding standards, workflows (e.g., Git Flow, Task Handling), and documentation practices.
-- **Project Info**: Integrate a Project Info system to ensure persistent context and knowledge management across sessions.
+**Objective:**  
+Develop a professional, modern and high-converting landing page to promote **Cobranza App**, a SaaS platform for debt management and payment reconciliation. The main goal is to generate leads and onboard users to the Beta program.
 
-## Goals
+---
 
-- Reduce setup time for new projects.
-- Ensure consistency across different projects started from this base.
-- Demonstrate best practices for "AI-Agent Driven" development.
+## Language Rules
 
-## Project Scope
+- **All user-facing content** (texts, headings, buttons, etc.): Must be in **neutral Spanish**.
+- **All development artifacts**: Code, component names, folders, comments, variables, documentation, etc. must be in **English**.
+- This project is **only** the landing page. It does **not** include any part of the actual Cobranza App system.
 
-- This repository is a **base project to use later**. It is not a functional application itself but a scaffolding tool.
-- It contains configuration files, rule definitions, and workflow documentation.
-- It does not contain specific business logic or application code.
+---
+
+## Technical Stack
+
+- **Framework**: Vue.js 3 (Composition API + `<script setup>`)
+- **Styling**: Bootstrap 5
+- **Language**: TypeScript
+- **Architecture**: Component-based with independent sections
+
+---
+
+## Content Source
+
+The Spanish initial content for the landing page can be found [in this file](./landing-content.es.md).
+
+All visible texts must be taken from that file.
+
+---
+
+## Page Structure
+
+The landing page must be developed as a **single full-scrolling page** composed of independent sections/components:
+
+1. **Hero** (`HeroSection.vue`)
+2. **Problem** (`ProblemSection.vue`)
+3. **Solution** (`SolutionSection.vue`)
+4. **Use Cases** (`UseCasesSection.vue`)
+5. **Features / Benefits** (`FeaturesSection.vue`)
+6. **Beta Status** (`BetaSection.vue`)
+7. **Pricing** (`PricingSection.vue`)
+8. **FAQ** (`FaqSection.vue`)
+9. **Contact** (`ContactSection.vue`)
+10. **Footer** (`Footer.vue`)
+
+Additional elements:
+
+- Sticky Navbar with smooth scroll navigation
+- Multiple Calls to Action throughout the page
+- Responsive design (mobile-first)
+
+---
+
+## Additional Requirements
+
+- Professional, clean and trustworthy design (financial SaaS style)
+- Smooth scrolling between sections
+- Fully responsive with Bootstrap 5
+- SEO-friendly semantic HTML structure
+- Contact section including:
+  - Visible contact email
+  - Embedded form (Google Form or similar) that saves data to Google Sheets
+- Include the accompanying phrase: “Un sistema en constante evolución, que crece junto a vos.”
+
+---
+
+## Deliverables
+
+- Complete Vue 3 + TypeScript + Bootstrap 5 project
+- Well-organized, clean and maintainable code (English)
+- Reusable and independent components
+- Ready for deployment as a static site
+
+---
+
+This brief establishes the scope and rules for the development of the landing page.
 
 <!-- DO NOT DELETE NEXT SECTION -->
 
