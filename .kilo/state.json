@@ -4,10 +4,15 @@
   "global_step": "1",
   "current_task": {
     "index": 0,
-    "description": "Waiting for initialization",
+    "description": "Project info initialization completed",
     "sub_step": "1.0",
-    "sub_step_status": "PENDING",
+    "sub_step_status": "COMPLETED",
     "attempts": 0
   },
-  "history": []
+  "history": [
+    {
+      "timestamp": "2026-05-22T12:49:27",
+      "event": "project-info-initialization"
+    }
+  ]
 }
