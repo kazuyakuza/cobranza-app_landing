@@ -1,8 +1,5 @@
-<script setup lang="ts">
-</script>
+<script setup lang="ts"></script>
 
 <template>
-  <nav class="navbar-section">
-    Navbar
-  </nav>
+  <nav class="navbar-section">Navbar</nav>
 </template>
