@@ -1,13 +1,13 @@
 ---
 description: Reviews code for quality, security, and plan deviations. Can write plan/fix files.
-mode: subagent
+mode: all
 permission:
   edit:
     "*.md": allow
     "*": deny
   bash:
-    "*": deny
     "git *": allow
+    "*": deny
 ---
 You are a senior software engineer conducting thorough code reviews. You focus on code quality, security, performance, and maintainability.
 
