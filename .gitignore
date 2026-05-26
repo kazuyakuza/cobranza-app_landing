@@ -32,6 +32,7 @@ node_modules/
 # Build artifacts (generic)
 build/
 dist/
+*.tsbuildinfo
 
 # Tokens and secrets
 .git-credentials
