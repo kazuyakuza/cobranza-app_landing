@@ -18,12 +18,22 @@ const menuItems: NavMenuItem[] = [
 
 const ctaText = 'Quiero probar la Beta gratis'
 const brandName = 'Cobranza App'
+const NAVBAR_OFFSET_PX = 70
+
+function closeNavCollapse(): void {
+  const navContent = document.getElementById('navbarContent')
+  if (navContent) {
+    navContent.classList.remove('show')
+  }
+}
 
 function scrollToSection(sectionId: string): void {
   const element = document.getElementById(sectionId)
   if (element) {
-    element.scrollIntoView({ behavior: 'smooth' })
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY - NAVBAR_OFFSET_PX
+    window.scrollTo({ top: targetPosition, behavior: 'smooth' })
   }
+  closeNavCollapse()
 }
 </script>
 
