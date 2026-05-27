@@ -1,5 +1,7 @@
 import { onMounted, onUnmounted } from 'vue'
 
+const REVEAL_THRESHOLD = 0.15
+
 export function useScrollReveal(): void {
   let observer: IntersectionObserver | null = null
 
@@ -10,17 +12,20 @@ export function useScrollReveal(): void {
       return
     }
 
+    for (const element of elements) {
+      element.classList.add('reveal-on-scroll')
+    }
+
     observer = new IntersectionObserver(
       (entries) => {
         for (const entry of entries) {
           if (entry.isIntersecting) {
-            entry.target.classList.add('reveal-on-scroll')
             entry.target.classList.add('is-visible')
             observer?.unobserve(entry.target)
           }
         }
       },
-      { threshold: 0.15 }
+      { threshold: REVEAL_THRESHOLD }
     )
 
     for (const element of elements) {

@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { useScrollReveal } from '@/composables/useScrollReveal'
 import Navbar from '@/components/landing/Navbar.vue'
 import HeroSection from '@/components/landing/HeroSection.vue'
 import ProblemSection from '@/components/landing/ProblemSection.vue'
@@ -10,6 +11,8 @@ import PricingSection from '@/components/landing/PricingSection.vue'
 import FaqSection from '@/components/landing/FaqSection.vue'
 import ContactSection from '@/components/landing/ContactSection.vue'
 import Footer from '@/components/landing/Footer.vue'
+
+useScrollReveal()
 </script>
 
 <template>

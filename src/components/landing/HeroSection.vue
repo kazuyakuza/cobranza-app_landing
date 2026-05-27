@@ -1,6 +1,5 @@
 <script setup lang="ts">
 import { NAVBAR_HEIGHT_PX } from '@/utils/constants'
-import { useScrollReveal } from '@/composables/useScrollReveal'
 
 const mainTitle =
   'Cobranza App — Gestioná tus cobros de forma simple, ordenada y eficiente.'
@@ -8,8 +7,6 @@ const subtitle =
   'Sistema web que permite a empresas y profesionales cargar deudas, recibir comprobantes de pago de sus clientes y conciliarlos de manera centralizada y sin complicaciones.'
 const primaryCtaText = 'Quiero probar la Beta gratis'
 const secondaryCtaText = 'Cómo funciona'
-
-useScrollReveal()
 
 function scrollToContact(): void {
   const element = document.getElementById('contact')
@@ -41,7 +38,7 @@ function scrollToSolution(): void {
           >
             {{ mainTitle }}
           </h1>
-          <p data-reveal class="hero-subtitle lead text-white-50 mb-5">
+          <p data-reveal class="hero-subtitle lead mb-5">
             {{ subtitle }}
           </p>
           <div
@@ -70,7 +67,7 @@ function scrollToSolution(): void {
 <style scoped>
 .hero-section {
   min-height: 100vh;
-  padding-top: 70px;
+  padding-top: var(--navbar-height);
   background: linear-gradient(
     135deg,
     var(--color-bg-navy) 0%,
@@ -85,6 +82,7 @@ function scrollToSolution(): void {
 }
 
 .hero-subtitle {
+  color: var(--color-text-on-dark-muted);
   opacity: 0.85;
 }
 
