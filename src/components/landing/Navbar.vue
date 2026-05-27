@@ -20,6 +20,7 @@ const ctaText = 'Quiero probar la Beta gratis'
 const brandName = 'Cobranza App'
 const NAVBAR_OFFSET_PX = 70
 
+// Closes the Bootstrap mobile navigation collapse
 function closeNavCollapse(): void {
   const navContent = document.getElementById('navbarContent')
   if (navContent) {
@@ -27,6 +28,7 @@ function closeNavCollapse(): void {
   }
 }
 
+// Scrolls to the target section, compensating for navbar height
 function scrollToSection(sectionId: string): void {
   const element = document.getElementById(sectionId)
   if (element) {

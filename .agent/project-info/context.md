@@ -12,14 +12,14 @@
 - **2026-05-26**: Set up ESLint + Prettier with flat config
 - **2026-05-26**: Created component stubs in `src/components/landing/`
 - **2026-05-26**: Updated README.md with project information
+- **2026-05-26**: Implemented Navbar component with smooth scroll navigation
 
 ## Immediate Next Steps
 
-1. Implement landing page sections (HeroSection, ProblemSection, etc.)
-2. Add Navbar with smooth scroll navigation
-3. Integrate Spanish content from `landing-content.es.md`
-4. Implement ContactSection with form integration
-5. Responsive design and polish
+1. Implement remaining landing page sections (HeroSection, ProblemSection, etc.)
+2. Integrate Spanish content from `landing-content.es.md`
+3. Implement ContactSection with form integration
+4. Responsive design and polish
 
 ## Project Status
 
@@ -32,8 +32,8 @@
 ## Active Tasks
 
 - [x] Initialize project (TODO-01 complete)
+- [x] Add Navbar component — implemented with smooth scroll navigation
 - [ ] Implement landing page sections
-- [ ] Add Navbar component
 - [ ] Integrate Spanish content
 - [ ] Responsive design polish
 
