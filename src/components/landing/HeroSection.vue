@@ -1,4 +1,7 @@
 <script setup lang="ts">
+import { NAVBAR_HEIGHT_PX } from '@/utils/constants'
+import { useScrollReveal } from '@/composables/useScrollReveal'
+
 const mainTitle =
   'Cobranza App — Gestioná tus cobros de forma simple, ordenada y eficiente.'
 const subtitle =
@@ -6,11 +9,13 @@ const subtitle =
 const primaryCtaText = 'Quiero probar la Beta gratis'
 const secondaryCtaText = 'Cómo funciona'
 
+useScrollReveal()
+
 function scrollToContact(): void {
   const element = document.getElementById('contact')
   if (element) {
     const targetPosition =
-      element.getBoundingClientRect().top + window.scrollY - 70
+      element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT_PX
     window.scrollTo({ top: targetPosition, behavior: 'smooth' })
   }
 }
@@ -19,7 +24,7 @@ function scrollToSolution(): void {
   const element = document.getElementById('solution')
   if (element) {
     const targetPosition =
-      element.getBoundingClientRect().top + window.scrollY - 70
+      element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT_PX
     window.scrollTo({ top: targetPosition, behavior: 'smooth' })
   }
 }
@@ -30,13 +35,17 @@ function scrollToSolution(): void {
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-12 col-md-10 col-lg-8">
-          <h1 class="hero-title display-4 fw-bold text-white mb-4">
+          <h1
+            data-reveal
+            class="hero-title display-4 fw-bold text-white mb-4"
+          >
             {{ mainTitle }}
           </h1>
-          <p class="hero-subtitle lead text-white-50 mb-5">
+          <p data-reveal class="hero-subtitle lead text-white-50 mb-5">
             {{ subtitle }}
           </p>
           <div
+            data-reveal
             class="hero-cta-wrapper d-flex flex-column flex-sm-row justify-content-center gap-3"
           >
             <button
@@ -64,10 +73,10 @@ function scrollToSolution(): void {
   padding-top: 70px;
   background: linear-gradient(
     135deg,
-    #0a1f3f 0%,
-    #0d2b5e 40%,
-    #0f3460 70%,
-    #0a1f3f 100%
+    var(--color-bg-navy) 0%,
+    var(--color-bg-dark) 40%,
+    var(--color-bg-navy) 70%,
+    var(--color-bg-dark) 100%
   );
 }
 

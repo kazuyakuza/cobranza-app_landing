@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { NAVBAR_HEIGHT_PX } from '@/utils/constants'
+
 interface NavMenuItem {
   label: string
   sectionId: string
@@ -18,9 +20,7 @@ const menuItems: NavMenuItem[] = [
 
 const ctaText = 'Quiero probar la Beta gratis'
 const brandName = 'Cobranza App'
-const NAVBAR_OFFSET_PX = 70
 
-// Closes the Bootstrap mobile navigation collapse
 function closeNavCollapse(): void {
   const navContent = document.getElementById('navbarContent')
   if (navContent) {
@@ -28,11 +28,10 @@ function closeNavCollapse(): void {
   }
 }
 
-// Scrolls to the target section, compensating for navbar height
 function scrollToSection(sectionId: string): void {
   const element = document.getElementById(sectionId)
   if (element) {
-    const targetPosition = element.getBoundingClientRect().top + window.scrollY - NAVBAR_OFFSET_PX
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT_PX
     window.scrollTo({ top: targetPosition, behavior: 'smooth' })
   }
   closeNavCollapse()
@@ -40,10 +39,10 @@ function scrollToSection(sectionId: string): void {
 </script>
 
 <template>
-  <nav class="navbar navbar-expand-lg fixed-top navbar-light bg-white shadow-sm">
+  <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
       <a
-        class="navbar-brand fw-bold text-primary"
+        class="navbar-brand fw-bold"
         href="#"
         @click.prevent="scrollToSection('hero')"
       >
@@ -89,11 +88,21 @@ function scrollToSection(sectionId: string): void {
 
 <style scoped>
 .navbar {
-  transition: box-shadow 0.3s ease;
+  background: rgba(12, 21, 40, 0.85);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border-bottom: 1px solid var(--color-border);
+  transition: border-color 0.3s ease;
 }
 
 .nav-link {
   font-size: 0.95rem;
+  font-weight: 500;
+  color: var(--color-text-on-dark-muted);
   transition: color 0.2s ease;
+}
+
+.nav-link:hover {
+  color: var(--color-text-on-dark);
 }
 </style>
