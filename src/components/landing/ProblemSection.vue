@@ -8,6 +8,8 @@ const sectionTitle = '¿Cuántas horas por mes dedicás a gestionar cobros y seg
 const bodyParagraph =
   'En muchos negocios (expensas, alquileres, honorarios, cuotas, etc.) el monto a cobrar varía mes a mes. Esto genera una carga constante de consultas, recordatorios y seguimientos.'
 
+const painPointsIntro = 'Además, se pierde tiempo valioso en:'
+
 interface PainPoint {
   icon: string
   text: string
@@ -47,6 +49,8 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
           <p data-reveal class="problem-body">
             {{ bodyParagraph }}
           </p>
+
+          <p data-reveal class="problem-intro">{{ painPointsIntro }}</p>
 
           <div data-reveal class="pain-points-wrapper">
             <ul class="pain-points-list list-unstyled row g-4">
@@ -92,6 +96,14 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
   line-height: 1.65;
 }
 
+.problem-intro {
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--color-text-on-dark);
+  margin-bottom: 1.5rem;
+  line-height: 1.65;
+}
+
 .pain-points-wrapper {
   margin-bottom: 2.5rem;
 }
@@ -131,6 +143,7 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
   }
 
   .problem-body,
+  .problem-intro,
   .problem-closing {
     font-size: 1rem;
   }
