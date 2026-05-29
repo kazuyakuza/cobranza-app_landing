@@ -112,10 +112,15 @@ const closingNote =
   .use-cases-title {
     font-size: 1.75rem;
   }
+
+  .detailed-example-title {
+    font-size: 1.25rem;
+  }
 }
 
 .detailed-example {
   border-left: 4px solid var(--color-primary);
+  background: var(--color-bg-card-alt);
 }
 
 .detailed-example-title {
