@@ -19,6 +19,21 @@ const useCases: UseCaseItem[] = [
   { icon: 'bi-mortarboard', text: 'Colegios, academias, gimnasios y clubes' },
   { icon: 'bi-arrow-repeat', text: 'Cualquier cobro recurrente o variable' }
 ]
+
+const detailedExampleTitle = 'Administración de Expensas'
+
+const detailedSteps: string[] = [
+  'La administradora carga las expensas del mes (individual o masivamente).',
+  'Cada propietario o inquilino accede con su ID de unidad y consulta el monto exacto y fecha de vencimiento.',
+  'Realiza la transferencia y sube el comprobante (foto o PDF) directamente en la plataforma.',
+  'La administradora sube el extracto bancario.',
+  'El sistema facilita el cruzamiento entre comprobantes, transferencias y deudas.',
+  'Queda registrado claramente el estado de cada unidad (pagado, pendiente, en revisión).',
+  'El cliente puede descargar su recibo oficial una vez validado el pago.'
+]
+
+const closingNote =
+  'Un flujo similar se aplica a honorarios profesionales, cuotas educativas, alquileres y otros cobros.'
 </script>
 
 <template>
@@ -37,6 +52,16 @@ const useCases: UseCaseItem[] = [
                 </div>
               </li>
             </ul>
+          </div>
+
+          <div data-reveal class="detailed-example dark-card">
+            <h3 class="detailed-example-title">{{ detailedExampleTitle }}</h3>
+            <ol class="detailed-example-steps">
+              <li v-for="step in detailedSteps" :key="step" class="detailed-example-step">
+                {{ step }}
+              </li>
+            </ol>
+            <p class="detailed-example-note">{{ closingNote }}</p>
           </div>
         </div>
       </div>
@@ -86,5 +111,39 @@ const useCases: UseCaseItem[] = [
   .use-cases-title {
     font-size: 1.75rem;
   }
+}
+
+.detailed-example {
+  border-left: 4px solid var(--color-primary);
+}
+
+.detailed-example-title {
+  font-size: 1.5rem;
+  font-weight: 600;
+  margin-bottom: 1.5rem;
+  line-height: 1.3;
+}
+
+.detailed-example-steps {
+  padding-left: 1.25rem;
+  margin-bottom: 1.5rem;
+}
+
+.detailed-example-step {
+  font-size: 1rem;
+  line-height: 1.6;
+  padding-bottom: 0.75rem;
+  color: var(--color-text-on-dark);
+}
+
+.detailed-example-step:last-child {
+  padding-bottom: 0;
+}
+
+.detailed-example-note {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--color-text-on-dark-muted);
+  margin-bottom: 0;
 }
 </style>
