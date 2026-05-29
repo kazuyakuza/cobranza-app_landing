@@ -79,9 +79,8 @@ const closingNote =
 .use-cases-title {
   font-size: 2.25rem;
   font-weight: 700;
-  margin-bottom: 2.5rem;
+  margin-bottom: 1.5rem;
   line-height: 1.25;
-  text-align: center;
 }
 
 .use-cases-grid {
@@ -96,7 +95,7 @@ const closingNote =
 }
 
 .use-case-icon {
-  font-size: 1.5rem;
+  font-size: 1.4rem;
   color: var(--color-text-on-dark-dim);
   flex-shrink: 0;
   margin-top: 0.15rem;
