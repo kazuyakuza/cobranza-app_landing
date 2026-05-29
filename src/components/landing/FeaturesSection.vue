@@ -4,6 +4,7 @@ import { useScrollReveal } from '@/composables/useScrollReveal'
 useScrollReveal()
 
 const sectionTitle = 'Cómo te ayuda Cobranza App'
+const featuresSubtitle = 'Funcionalidades diseñadas para ambas partes del proceso de cobranza'
 
 interface FeatureItem {
   icon: string
@@ -33,10 +34,11 @@ const userFeatures: FeatureItem[] = [
       <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-9">
           <h2 data-reveal class="features-title">{{ sectionTitle }}</h2>
+          <p data-reveal class="features-subtitle">{{ featuresSubtitle }}</p>
 
           <div class="row g-4">
             <div data-reveal class="col-12 col-md-6">
-              <div class="feature-group dark-card">
+              <div class="feature-group dark-card feature-group-company">
                 <h3 class="feature-group-title">Para la empresa o profesional</h3>
                 <ul class="feature-list list-unstyled">
                   <li v-for="item in companyFeatures" :key="item.text" class="feature-item">
@@ -48,7 +50,7 @@ const userFeatures: FeatureItem[] = [
             </div>
 
             <div data-reveal class="col-12 col-md-6">
-              <div class="feature-group dark-card">
+              <div class="feature-group dark-card feature-group-user">
                 <h3 class="feature-group-title">Para el cliente final</h3>
                 <ul class="feature-list list-unstyled">
                   <li v-for="item in userFeatures" :key="item.text" class="feature-item">
@@ -74,8 +76,32 @@ const userFeatures: FeatureItem[] = [
 .features-title {
   font-size: 2.25rem;
   font-weight: 700;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
   line-height: 1.25;
+}
+
+.features-subtitle {
+  font-size: 1.125rem;
+  font-weight: 400;
+  color: var(--color-text-on-dark-muted);
+  margin-bottom: 2rem;
+  line-height: 1.6;
+}
+
+.feature-group-company {
+  border-left: 4px solid var(--color-primary);
+}
+
+.feature-group-user {
+  border-left: 4px solid var(--color-accent);
+}
+
+.feature-group-company .feature-group-title {
+  color: var(--color-primary);
+}
+
+.feature-group-user .feature-group-title {
+  color: var(--color-accent);
 }
 
 .feature-group-title {
@@ -107,6 +133,11 @@ const userFeatures: FeatureItem[] = [
   color: var(--color-accent);
   flex-shrink: 0;
   margin-top: 0.2rem;
+  transition: transform 0.2s ease;
+}
+
+.feature-item:hover .feature-icon {
+  transform: translateX(2px);
 }
 
 @media (max-width: 767.98px) {
