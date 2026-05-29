@@ -4,10 +4,6 @@
   "global_step": "6",
   "current_task": null,
   "sub_step_status": "COMPLETED",
-  "history": [
-    {
-      "timestamp": "2026-05-29T02:03:48-03:00",
-      "event": "step5-todo-completion"
-    }
-  ]
+  "history": [],
+  "current_task": null
 }
