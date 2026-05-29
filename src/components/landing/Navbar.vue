@@ -15,7 +15,7 @@ const menuItems: NavMenuItem[] = [
   { label: 'Prueba Gratis', sectionId: 'beta' },
   { label: 'Precios', sectionId: 'pricing' },
   { label: 'Dudas', sectionId: 'faq' },
-  { label: 'Contacto', sectionId: 'contact' },
+  { label: 'Contacto', sectionId: 'contact' }
 ]
 
 const ctaText = 'Quiero probar la Beta gratis'
@@ -41,11 +41,7 @@ function scrollToSection(sectionId: string): void {
 <template>
   <nav class="navbar navbar-expand-lg fixed-top navbar-dark">
     <div class="container">
-      <a
-        class="navbar-brand fw-bold"
-        href="#"
-        @click.prevent="scrollToSection('hero')"
-      >
+      <a class="navbar-brand fw-bold" href="#" @click.prevent="scrollToSection('hero')">
         {{ brandName }}
       </a>
 
@@ -64,11 +60,7 @@ function scrollToSection(sectionId: string): void {
       <div id="navbarContent" class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li v-for="item in menuItems" :key="item.sectionId" class="nav-item">
-            <a
-              class="nav-link"
-              href="#"
-              @click.prevent="scrollToSection(item.sectionId)"
-            >
+            <a class="nav-link" href="#" @click.prevent="scrollToSection(item.sectionId)">
               {{ item.label }}
             </a>
           </li>

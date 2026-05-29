@@ -1,8 +1,7 @@
 <script setup lang="ts">
 import { NAVBAR_HEIGHT_PX } from '@/utils/constants'
 
-const mainTitle =
-  'Cobranza App — Gestioná tus cobros de forma simple, ordenada y eficiente.'
+const mainTitle = 'Cobranza App — Gestioná tus cobros de forma simple, ordenada y eficiente.'
 const subtitle =
   'Sistema web que permite a empresas y profesionales cargar deudas, recibir comprobantes de pago de sus clientes y conciliarlos de manera centralizada y sin complicaciones.'
 const primaryCtaText = 'Quiero probar la Beta gratis'
@@ -11,8 +10,7 @@ const secondaryCtaText = 'Cómo funciona'
 function scrollToContact(): void {
   const element = document.getElementById('contact')
   if (element) {
-    const targetPosition =
-      element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT_PX
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT_PX
     window.scrollTo({ top: targetPosition, behavior: 'smooth' })
   }
 }
@@ -20,8 +18,7 @@ function scrollToContact(): void {
 function scrollToSolution(): void {
   const element = document.getElementById('solution')
   if (element) {
-    const targetPosition =
-      element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT_PX
+    const targetPosition = element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT_PX
     window.scrollTo({ top: targetPosition, behavior: 'smooth' })
   }
 }
@@ -32,10 +29,7 @@ function scrollToSolution(): void {
     <div class="container">
       <div class="row justify-content-center text-center">
         <div class="col-12 col-md-10 col-lg-8">
-          <h1
-            data-reveal
-            class="hero-title display-4 fw-bold text-white mb-4"
-          >
+          <h1 data-reveal class="hero-title display-4 fw-bold text-white mb-4">
             {{ mainTitle }}
           </h1>
           <p data-reveal class="hero-subtitle lead mb-5">
@@ -88,7 +82,9 @@ function scrollToSolution(): void {
 
 .hero-cta-primary {
   border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .hero-cta-primary:hover {
@@ -98,7 +94,9 @@ function scrollToSolution(): void {
 
 .hero-cta-secondary {
   border-radius: 8px;
-  transition: transform 0.2s ease, background-color 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    background-color 0.2s ease;
 }
 
 .hero-cta-secondary:hover {
