@@ -20,6 +20,7 @@ const useCases: UseCaseItem[] = [
   { icon: 'bi-arrow-repeat', text: 'Cualquier cobro recurrente o variable' }
 ]
 
+// Detailed example: Administración de Expensas walkthrough
 const detailedExampleTitle = 'Administración de Expensas'
 
 const detailedSteps: string[] = [
