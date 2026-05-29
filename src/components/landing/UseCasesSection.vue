@@ -1,10 +1,12 @@
 <script setup lang="ts">
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
+// Displays a section listing target audiences that benefit from the product
 useScrollReveal()
 
 const sectionTitle = 'Ideal para:'
 
+// Shape of each use case entry in the grid
 interface UseCaseItem {
   icon: string
   text: string
