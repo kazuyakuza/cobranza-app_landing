@@ -1,10 +1,30 @@
 <script setup lang="ts">
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
-// Activates scroll-reveal animation for elements with [data-reveal]
 useScrollReveal()
 
 const sectionTitle = 'Cómo te ayuda Cobranza App'
+
+interface FeatureItem {
+  icon: string
+  text: string
+}
+
+const companyFeatures: FeatureItem[] = [
+  { icon: 'bi-building', text: 'Gestión centralizada de clientes y deudas' },
+  { icon: 'bi-upload', text: 'Carga masiva de saldos y vencimientos' },
+  { icon: 'bi-bar-chart', text: 'Reportes claros de deudas, pagos y morosidad' },
+  { icon: 'bi-bell', text: 'Notificaciones automáticas al recibir comprobantes' },
+  { icon: 'bi-check2-circle', text: 'Validación ágil de pagos y generación automática de recibos' },
+  { icon: 'bi-clock-history', text: 'Historial completo y trazabilidad por cliente' }
+]
+
+const userFeatures: FeatureItem[] = [
+  { icon: 'bi-search', text: 'Consulta inmediata de su deuda y vencimientos' },
+  { icon: 'bi-cloud-upload', text: 'Subida sencilla de comprobantes desde el celular' },
+  { icon: 'bi-eye', text: 'Seguimiento en tiempo real del estado de sus pagos' },
+  { icon: 'bi-download', text: 'Descarga de recibo oficial una vez validado' }
+]
 </script>
 
 <template>
@@ -15,30 +35,26 @@ const sectionTitle = 'Cómo te ayuda Cobranza App'
           <h2 data-reveal class="features-title">{{ sectionTitle }}</h2>
 
           <div class="row g-4">
-            <!-- Placeholder: Company / Professional -->
             <div data-reveal class="col-12 col-md-6">
               <div class="feature-group dark-card">
                 <h3 class="feature-group-title">Para la empresa o profesional</h3>
                 <ul class="feature-list list-unstyled">
-                  <li class="feature-item">Gestión centralizada de clientes y deudas</li>
-                  <li class="feature-item">Carga masiva de saldos y vencimientos</li>
-                  <li class="feature-item">Reportes claros de deudas, pagos y morosidad</li>
-                  <li class="feature-item">Notificaciones automáticas al recibir comprobantes</li>
-                  <li class="feature-item">Validación ágil de pagos y generación automática de recibos</li>
-                  <li class="feature-item">Historial completo y trazabilidad por cliente</li>
+                  <li v-for="item in companyFeatures" :key="item.text" class="feature-item">
+                    <i :class="item.icon" class="feature-icon bi" aria-hidden="true"></i>
+                    <span class="feature-text">{{ item.text }}</span>
+                  </li>
                 </ul>
               </div>
             </div>
 
-            <!-- Placeholder: End User -->
             <div data-reveal class="col-12 col-md-6">
               <div class="feature-group dark-card">
                 <h3 class="feature-group-title">Para el cliente final</h3>
                 <ul class="feature-list list-unstyled">
-                  <li class="feature-item">Consulta inmediata de su deuda y vencimientos</li>
-                  <li class="feature-item">Subida sencilla de comprobantes desde el celular</li>
-                  <li class="feature-item">Seguimiento en tiempo real del estado de sus pagos</li>
-                  <li class="feature-item">Descarga de recibo oficial una vez validado</li>
+                  <li v-for="item in userFeatures" :key="item.text" class="feature-item">
+                    <i :class="item.icon" class="feature-icon bi" aria-hidden="true"></i>
+                    <span class="feature-text">{{ item.text }}</span>
+                  </li>
                 </ul>
               </div>
             </div>
@@ -74,23 +90,23 @@ const sectionTitle = 'Cómo te ayuda Cobranza App'
 }
 
 .feature-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.75rem;
   font-size: 1rem;
   line-height: 1.55;
   padding-bottom: 0.75rem;
-  padding-left: 1.5rem;
-  position: relative;
 }
 
 .feature-item:last-child {
   padding-bottom: 0;
 }
 
-.feature-item::before {
-  content: '✓';
-  position: absolute;
-  left: 0;
+.feature-icon {
+  font-size: 1.1rem;
   color: var(--color-accent);
-  font-weight: 700;
+  flex-shrink: 0;
+  margin-top: 0.2rem;
 }
 
 @media (max-width: 767.98px) {
