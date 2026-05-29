@@ -4,6 +4,7 @@ import pluginVue from 'eslint-plugin-vue'
 import prettierPlugin from 'eslint-plugin-prettier'
 import prettierConfig from 'eslint-config-prettier'
 import vueParser from 'vue-eslint-parser'
+import globals from 'globals'
 
 export default tseslint.config(
   js.configs.recommended,
@@ -18,6 +19,9 @@ export default tseslint.config(
         parser: tseslint.parser,
         ecmaVersion: 'latest',
         sourceType: 'module'
+      },
+      globals: {
+        ...globals.browser
       }
     }
   },
