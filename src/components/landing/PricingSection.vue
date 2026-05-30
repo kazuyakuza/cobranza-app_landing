@@ -19,7 +19,7 @@ const exampleData: PricingExampleData = {
   payableOn: '$400.000'
 }
 
-const exampleTitle = 'Ejemplo concreto'
+const exampleTitle = 'Ejemplo'
 
 const transparencyTitle = 'Cobro transparente y personalizado'
 const transparencyText =
