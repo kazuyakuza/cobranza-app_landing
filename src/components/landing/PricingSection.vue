@@ -1,4 +1,9 @@
 <script setup lang="ts">
+/**
+ * PricingSection — Displays the pay-per-use pricing model with a
+ * concrete example and transparency explanation. Spanish content
+ * sourced from landing-content.es.md §7.
+ */
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
 useScrollReveal()
