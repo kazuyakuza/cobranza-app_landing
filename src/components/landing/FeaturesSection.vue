@@ -136,6 +136,10 @@ const userFeatures: FeatureItem[] = [
   transition: transform 0.2s ease;
 }
 
+.feature-group-company .feature-icon {
+  color: var(--color-primary);
+}
+
 .feature-item:hover .feature-icon {
   transform: translateX(2px);
 }
