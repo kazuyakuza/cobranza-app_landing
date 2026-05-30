@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// Renders the open-beta announcement section with emerald trust accents,
+// Spanish content, and a list of beta-stage benefits.
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
 useScrollReveal()

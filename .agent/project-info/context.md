@@ -7,6 +7,7 @@
 
 ## Recent Changes
 
+- **2026-05-29**: Implemented BetaSection component — emerald trust accents, Spanish content from landing-content.es.md §6, accompanying phrase included
 - **2026-05-27**: Task 4 Sub-step 4.4 — Documentation: Added minimal CSS comments, created `.agent/project-info/style-guide.md`, updated context
 - **2026-05-27**: Task 4 Sub-step 4.3 — Code Review: Styling polish reviewed
 - **2026-05-27**: Task 4 Sub-step 4.2 — Implementation: Dark-first CSS variables, base styles, typography, scroll animations, navbar glass-morphism, hero gradient
