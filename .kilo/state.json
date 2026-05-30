@@ -3,12 +3,11 @@
   "git_branch": "feat/beta-pricing-sections",
   "global_step": "4",
   "current_task": {
-    "index": 3,
-    "description": "Task 3: Design & UX",
-    "sub_step": "4.5",
-    "sub_step_status": "COMPLETED",
+    "index": 5,
+    "description": "Task 5: Styling & Polish",
+    "sub_step": "4.6",
+    "sub_step_status": "IN_PROGRESS",
     "attempts": 0
   },
-  "sub_step_status": "COMPLETED",
   "history": []
 }
