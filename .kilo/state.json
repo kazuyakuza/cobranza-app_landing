@@ -5,10 +5,10 @@
   "current_task": {
     "index": 3,
     "description": "Task 3: Design & UX",
-    "sub_step": "4.4",
-    "sub_step_status": "IN_PROGRESS",
+    "sub_step": "4.5",
+    "sub_step_status": "COMPLETED",
     "attempts": 0
   },
-  "sub_step_status": "IN_PROGRESS",
+  "sub_step_status": "COMPLETED",
   "history": []
 }
