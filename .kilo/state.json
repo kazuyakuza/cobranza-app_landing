@@ -1,14 +1,14 @@
 {
   "current_todo_file": ".agent/todos/20260529/20260529-todo-1.md",
-  "git_branch": "main",
-  "global_step": "2",
+  "git_branch": "feat/beta-pricing-sections",
+  "global_step": "4",
   "current_task": {
-    "index": 0,
-    "description": "Git Feature Branch Setup",
-    "sub_step": "2.0",
+    "index": 3,
+    "description": "Task 3: Design & UX",
+    "sub_step": "4.4",
     "sub_step_status": "IN_PROGRESS",
     "attempts": 0
   },
-  "sub_step_status": "PENDING",
+  "sub_step_status": "IN_PROGRESS",
   "history": []
 }

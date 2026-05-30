@@ -7,6 +7,7 @@
 
 ## Recent Changes
 
+- **2026-05-29**: Task 3 (Design & UX) — verified all design requirements met: Beta emerald trust signals, Pricing clear layout, dark-card usage, accompanying phrase in BetaSection. No code changes needed.
 - **2026-05-29**: Implemented PricingSection component — pay-per-use model, concrete example with highlighted numbers, Spanish content from landing-content.es.md §7
 - **2026-05-29**: Implemented BetaSection component — emerald trust accents, Spanish content from landing-content.es.md §6, accompanying phrase included
 - **2026-05-27**: Task 4 Sub-step 4.4 — Documentation: Added minimal CSS comments, created `.agent/project-info/style-guide.md`, updated context
