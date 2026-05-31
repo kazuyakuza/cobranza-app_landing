@@ -1,7 +1,7 @@
 {
-  "current_todo_file": ".agent/todos/20260529/20260529-todo-2.md",
+  "current_todo_file": null,
   "git_branch": "feat/faq-section",
-  "global_step": "2",
+  "global_step": "5",
   "current_task": {
     "index": 4,
     "description": "FAQ Section",
