@@ -1,7 +1,7 @@
 {
   "current_todo_file": null,
-  "git_branch": "feat/beta-pricing-sections",
-  "global_step": "5",
+  "git_branch": "main",
+  "global_step": "6",
   "current_task": {
     "index": 5,
     "description": "Task 5: Styling & Polish",
