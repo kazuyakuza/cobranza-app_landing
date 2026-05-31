@@ -122,6 +122,18 @@ const faqItems: FaqItem[] = [
 .accordion-item {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
+}
+
+.accordion-item:first-of-type,
+.accordion-item:last-of-type {
+  border-radius: 8px;
+}
+
+.accordion-item:last-of-type {
+  margin-bottom: 0;
 }
 
 .accordion-button {
