@@ -7,6 +7,7 @@
 
 ## Recent Changes
 
+- **2026-05-30**: Applied FaqSection design polish — accordion item border-radius (8px), vertical spacing (0.75rem), overflow clipping
 - **2026-05-30**: Implemented FaqSection component — Bootstrap 5 Accordion with 9 Spanish Q&A pairs, dark theme overrides, scroll reveal animations
 
 - **2026-05-29**: Task 3 (Design & UX) — verified all design requirements met: Beta emerald trust signals, Pricing clear layout, dark-card usage, accompanying phrase in BetaSection. No code changes needed.
@@ -85,6 +86,12 @@
 - Dark theme overrides for accordion button, body, and chevron icon
 - Scroll reveal animations via `data-reveal` attribute
 - Responsive title sizing (2.25rem desktop, 1.75rem mobile)
+
+**Design Details**:
+
+- Accordion items: 8px border-radius, 0.75rem vertical spacing, overflow hidden to clip child content to rounded corners
+- Card backgrounds use `--color-bg-card` with `--color-border` borders
+- Expanded state uses `--color-bg-card-alt` for visual distinction
 
 ## Pending TODO Files
 

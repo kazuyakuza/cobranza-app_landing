@@ -120,10 +120,12 @@ const faqItems: FaqItem[] = [
 }
 
 .accordion-item {
+  /* Rounded corners and consistent vertical spacing between items */
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   margin-bottom: 0.75rem;
+  /* Clip content to preserve border-radius on child elements */
   overflow: hidden;
 }
 
