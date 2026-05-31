@@ -1,14 +1,14 @@
 {
   "current_todo_file": ".agent/todos/20260529/20260529-todo-2.md",
-  "git_branch": "main",
+  "git_branch": "feat/faq-section",
   "global_step": "2",
   "current_task": {
     "index": 0,
     "description": "Starting",
     "sub_step": "2.0",
-    "sub_step_status": "PENDING",
+    "sub_step_status": "COMPLETED",
     "attempts": 0
   },
-  "sub_step_status": "PENDING",
+  "sub_step_status": "COMPLETED",
   "history": []
 }
