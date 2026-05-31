@@ -1,4 +1,9 @@
 <script setup lang="ts">
+/**
+ * FaqSection — Frequently Asked Questions section using Bootstrap 5
+ * Accordion. Renders 9 Spanish Q&A pairs with dark theme overrides
+ * and scroll reveal animations. Content from landing-content.es.md §8.
+ */
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
 interface FaqItem {

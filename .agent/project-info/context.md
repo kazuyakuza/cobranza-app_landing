@@ -2,10 +2,12 @@
 
 ## Current Work Focus
 
-**Phase**: PricingSection Documentation Complete
-**Status**: Code comment added, context updated
+**Phase**: PricingSection & FaqSection Documentation Complete
+**Status**: Code comments added, context updated
 
 ## Recent Changes
+
+- **2026-05-30**: Implemented FaqSection component — Bootstrap 5 Accordion with 9 Spanish Q&A pairs, dark theme overrides, scroll reveal animations
 
 - **2026-05-29**: Task 3 (Design & UX) — verified all design requirements met: Beta emerald trust signals, Pricing clear layout, dark-card usage, accompanying phrase in BetaSection. No code changes needed.
 - **2026-05-29**: Implemented PricingSection component — pay-per-use model, concrete example with highlighted numbers, Spanish content from landing-content.es.md §7
@@ -25,12 +27,11 @@
 
 ## Immediate Next Steps
 
-1. Complete Task 4 remaining sub-steps (4.5 Verification, 4.6 Task Completion)
-2. Process remaining TODO file tasks
-3. Implement remaining landing page sections (ProblemSection, SolutionSection, etc.)
-4. Integrate Spanish content from `landing-content.es.md`
-5. Implement ContactSection with form integration
-6. Responsive design and polish
+1. Complete Task 1 sub-steps (4.5 Verification, 4.6 Task Completion)
+2. Implement remaining landing page sections (ProblemSection, SolutionSection, BenefitsSection)
+3. Implement ContactSection with form integration
+4. Integrate Spanish content from `landing-content.es.md` into all sections
+5. Responsive design and polish
 
 ## Project Status
 
@@ -46,7 +47,8 @@
 - [x] Add Navbar component — implemented with smooth scroll navigation
 - [x] HeroSection component — implemented with scroll-to-section CTAs, documented
 - [x] Styling system — CSS variables, base styles, typography, scroll animations, style guide
-- [ ] Implement remaining landing page sections
+- [x] FaqSection component — Bootstrap 5 Accordion, 9 Spanish Q&A pairs, documented
+- [ ] Implement remaining landing page sections (ProblemSection, SolutionSection, BenefitsSection)
 - [ ] Integrate Spanish content
 - [ ] Responsive design polish
 
@@ -72,6 +74,17 @@
 - Responsive: reduces to 90vh height and smaller font on mobile (<768px)
 - Hover animations on buttons (translateY + shadow/background changes)
 - Scroll reveal animations via `data-reveal` attribute
+
+### FaqSection Component Details
+
+**File**: `src/components/landing/FaqSection.vue`
+**Purpose**: FAQ accordion section with 9 Spanish Q&A pairs about Cobranza App.
+**Key Features**:
+
+- Bootstrap 5 Accordion with only-first-expanded behavior
+- Dark theme overrides for accordion button, body, and chevron icon
+- Scroll reveal animations via `data-reveal` attribute
+- Responsive title sizing (2.25rem desktop, 1.75rem mobile)
 
 ## Pending TODO Files
 
