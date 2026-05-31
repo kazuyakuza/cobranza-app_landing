@@ -5,7 +5,7 @@
   "current_task": {
     "index": 0,
     "description": "Starting",
-    "sub_step": "2.0",
+    "sub_step": "3.0",
     "sub_step_status": "COMPLETED",
     "attempts": 0
   },
