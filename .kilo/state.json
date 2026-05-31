@@ -3,7 +3,7 @@
   "git_branch": "feat/faq-section",
   "global_step": "2",
   "current_task": {
-    "index": 1,
+    "index": 2,
     "description": "FAQ Section",
     "sub_step": "4.6",
     "sub_step_status": "COMPLETED",
