@@ -4,8 +4,8 @@
   "global_step": "2",
   "current_task": {
     "index": 0,
-    "description": "Starting",
-    "sub_step": "3.0",
+    "description": "FAQ Section",
+    "sub_step": "4.2",
     "sub_step_status": "COMPLETED",
     "attempts": 0
   },
