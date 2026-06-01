@@ -1,4 +1,6 @@
 <script setup lang="ts">
+// Renders the contact/CTA section with email link, Google Form embed,
+// Spanish content, and scroll reveal animations.
 import { useScrollReveal } from '@/composables/useScrollReveal'
 
 useScrollReveal()

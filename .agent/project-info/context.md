@@ -7,6 +7,7 @@
 
 ## Recent Changes
 
+- **2026-06-01**: Implemented ContactSection component — email contact link, Google Form iframe embed, mailto CTA button, Spanish content, scroll reveal animations, dark theme
 - **2026-05-30**: Applied FaqSection design polish — accordion item border-radius (8px), vertical spacing (0.75rem), overflow clipping
 - **2026-05-30**: Implemented FaqSection component — Bootstrap 5 Accordion with 9 Spanish Q&A pairs, dark theme overrides, scroll reveal animations
 
@@ -30,9 +31,8 @@
 
 1. Complete Task 1 sub-steps (4.5 Verification, 4.6 Task Completion)
 2. Implement remaining landing page sections (ProblemSection, SolutionSection, BenefitsSection)
-3. Implement ContactSection with form integration
-4. Integrate Spanish content from `landing-content.es.md` into all sections
-5. Responsive design and polish
+3. Integrate Spanish content from `landing-content.es.md` into all sections
+4. Responsive design and polish
 
 ## Project Status
 
@@ -49,6 +49,7 @@
 - [x] HeroSection component — implemented with scroll-to-section CTAs, documented
 - [x] Styling system — CSS variables, base styles, typography, scroll animations, style guide
 - [x] FaqSection component — Bootstrap 5 Accordion, 9 Spanish Q&A pairs, documented
+- [x] ContactSection component — email link, Google Form embed, mailto CTA, dark theme, documented
 - [ ] Implement remaining landing page sections (ProblemSection, SolutionSection, BenefitsSection)
 - [ ] Integrate Spanish content
 - [ ] Responsive design polish
@@ -92,6 +93,20 @@
 - Accordion items: 8px border-radius, 0.75rem vertical spacing, overflow hidden to clip child content to rounded corners
 - Card backgrounds use `--color-bg-card` with `--color-border` borders
 - Expanded state uses `--color-bg-card-alt` for visual distinction
+
+### ContactSection Component Details
+
+**File**: `src/components/landing/ContactSection.vue`
+**Purpose**: Contact/CTA section with email link, embedded Google Form, and mailto call-to-action button.
+**Key Features**:
+
+- Email contact link to `cobranza360pro@gmail.com` with hover styling
+- Google Form embedded via responsive iframe with 90% padding-top ratio
+- Mailto CTA button with subject pre-filled for beta access request
+- All Spanish content from landing requirements
+- Scroll reveal animations via `data-reveal` attribute
+- Dark theme with `--color-bg-dark` background and muted text colors
+- Responsive: iframe scales to container width, font sizes reduce on mobile (<768px)
 
 ## Pending TODO Files
 
