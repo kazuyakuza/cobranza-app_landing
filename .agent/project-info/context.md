@@ -7,6 +7,7 @@
 
 ## Recent Changes
 
+- **2026-06-01**: Task 3 (Design & UX) — ContactSection & Footer review pass; minor CSS variable fix on CTA hover shadow; no new patterns emerged
 - **2026-06-01**: Implemented Footer component — navigation links, contact email, copyright, beta legal disclaimer, smooth scroll, dark theme, documented
 - **2026-06-01**: Implemented ContactSection component — email contact link, Google Form iframe embed, mailto CTA button, Spanish content, scroll reveal animations, dark theme
 - **2026-05-30**: Applied FaqSection design polish — accordion item border-radius (8px), vertical spacing (0.75rem), overflow clipping
