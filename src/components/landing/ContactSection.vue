@@ -123,7 +123,7 @@ const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.
 
 .contact-cta:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.35);
+  box-shadow: 0 6px 20px rgba(var(--bs-primary-rgb), 0.35);
 }
 
 .contact-form-wrapper {
