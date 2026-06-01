@@ -149,7 +149,7 @@ const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.
 
 .contact-form-notice {
   font-size: 0.875rem;
-  color: var(--color-text-on-dark-dim);
+  color: var(--color-text-on-dark-muted);
   margin-bottom: 0;
 }
 

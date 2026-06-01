@@ -99,7 +99,8 @@ function scrollToSection(sectionId: string): void {
   flex-wrap: wrap;
   justify-content: center;
   align-items: center;
-  gap: 0.5rem 1rem;
+  gap: 0.75rem 1.25rem;
+  overflow-wrap: break-word;
 }
 
 .footer-link {
@@ -134,7 +135,7 @@ function scrollToSection(sectionId: string): void {
 .footer-legal {
   font-size: 0.8rem;
   margin-bottom: 0;
-  color: var(--color-text-on-dark-dim);
+  color: var(--color-text-on-dark-muted);
 }
 
 @media (max-width: 767.98px) {
