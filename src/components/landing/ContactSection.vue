@@ -10,8 +10,7 @@ const sectionSubtitle = 'Dejanos tu consulta o solicitud de acceso. Respondemos 
 const contactEmail = 'cobranza360pro@gmail.com'
 const emailLabel = 'Email de contacto:'
 const ctaText = 'Quiero probar la Beta gratis'
-const ctaHref =
-  'mailto:cobranza360pro@gmail.com?subject=Solicitud%20de%20acceso%20a%20la%20Beta'
+const ctaHref = 'mailto:cobranza360pro@gmail.com?subject=Solicitud%20de%20acceso%20a%20la%20Beta'
 const googleFormUrl =
   'https://docs.google.com/forms/d/e/1FAIpQLSfrzXRY9nH9iQ6o2lyXvrZw_B8WxKGekqDzaG5JRRzTM0tGXQ/viewform?embedded=true'
 const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.'
@@ -22,7 +21,6 @@ const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.
     <div class="container">
       <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-8 text-center">
-
           <h2 data-reveal class="contact-title">
             {{ sectionTitle }}
           </h2>
@@ -63,7 +61,6 @@ const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.
           <p data-reveal class="contact-form-notice">
             {{ formNotice }}
           </p>
-
         </div>
       </div>
     </div>
