@@ -1,4 +1,7 @@
 <script setup lang="ts">
+// Renders the site footer with navigation links, contact email,
+// copyright notice, and beta-stage legal disclaimer in Spanish.
+
 const currentYear = new Date().getFullYear()
 const companyName = 'Cobranza App'
 const contactEmail = 'cobranza360pro@gmail.com'

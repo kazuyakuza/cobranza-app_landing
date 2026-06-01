@@ -7,6 +7,7 @@
 
 ## Recent Changes
 
+- **2026-06-01**: Implemented Footer component — navigation links, contact email, copyright, beta legal disclaimer, smooth scroll, dark theme, documented
 - **2026-06-01**: Implemented ContactSection component — email contact link, Google Form iframe embed, mailto CTA button, Spanish content, scroll reveal animations, dark theme
 - **2026-05-30**: Applied FaqSection design polish — accordion item border-radius (8px), vertical spacing (0.75rem), overflow clipping
 - **2026-05-30**: Implemented FaqSection component — Bootstrap 5 Accordion with 9 Spanish Q&A pairs, dark theme overrides, scroll reveal animations
@@ -29,7 +30,7 @@
 
 ## Immediate Next Steps
 
-1. Complete Task 1 sub-steps (4.5 Verification, 4.6 Task Completion)
+1. Complete Task 2 sub-steps (4.5 Verification, 4.6 Task Completion) for Footer
 2. Implement remaining landing page sections (ProblemSection, SolutionSection, BenefitsSection)
 3. Integrate Spanish content from `landing-content.es.md` into all sections
 4. Responsive design and polish
@@ -50,6 +51,7 @@
 - [x] Styling system — CSS variables, base styles, typography, scroll animations, style guide
 - [x] FaqSection component — Bootstrap 5 Accordion, 9 Spanish Q&A pairs, documented
 - [x] ContactSection component — email link, Google Form embed, mailto CTA, dark theme, documented
+- [x] Footer component — nav links, contact email, copyright, beta disclaimer, smooth scroll, documented
 - [ ] Implement remaining landing page sections (ProblemSection, SolutionSection, BenefitsSection)
 - [ ] Integrate Spanish content
 - [ ] Responsive design polish
@@ -107,6 +109,20 @@
 - Scroll reveal animations via `data-reveal` attribute
 - Dark theme with `--color-bg-dark` background and muted text colors
 - Responsive: iframe scales to container width, font sizes reduce on mobile (<768px)
+
+### Footer Component Details
+
+**File**: `src/components/landing/Footer.vue`
+**Purpose**: Site footer with closing phrase, navigation links, contact email, copyright notice, and beta-stage legal disclaimer.
+**Key Features**:
+
+- Closing phrase: "Un sistema en constante evolución, que crece junto a vos."
+- Navigation links: Inicio, Funcionalidades, Contacto — smooth scroll with 70px offset
+- Contact email link: `cobranza360pro@gmail.com` via mailto
+- Copyright: dynamic year with company name
+- Legal disclaimer: beta-stage notice about features and pricing subject to change
+- Dark theme with `--color-bg-deepest` background and muted text colors
+- Responsive: nav links wrap on mobile, separator pipes hidden on small screens
 
 ## Pending TODO Files
 
