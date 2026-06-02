@@ -113,6 +113,7 @@ const closingStatement =
   display: flex;
   align-items: flex-start;
   gap: 1rem;
+  height: 100%;
 }
 
 .feature-icon {
@@ -143,7 +144,7 @@ const closingStatement =
 .solution-closing {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--color-text-on-dark);
+  color: var(--color-accent);
   line-height: 1.65;
 }
 
