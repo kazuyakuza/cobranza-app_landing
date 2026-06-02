@@ -102,7 +102,7 @@ const faqItems: FaqItem[] = [
 
 <style scoped>
 .faq-section {
-  background: var(--color-bg-slate);
+  background: var(--color-bg-card-alt);
   color: var(--color-text-on-dark);
 }
 
