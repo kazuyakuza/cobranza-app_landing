@@ -2,11 +2,12 @@
 
 ## Current Work Focus
 
-**Phase**: TODO-08 — Styling Polish (Step 4.4 Documentation)
-**Status**: 3 minor CSS fixes applied (contrast + overflow); documentation updated
+**Phase**: TODO-09 — Task A Content Update (Step 4.4 Documentation)
+**Status**: UseCasesSection.vue reviewed (self-documenting, no comments needed); context updated
 
 ## Recent Changes
 
+- **2026-06-02**: Task A Step 4.4 — Documentation: Reviewed UseCasesSection.vue (self-documenting code, existing comments sufficient); content text updated in commit `bbac0b9`
 - **2026-06-01**: TODO-08 Step 4.4 — Documentation update for styling polish; full landing page now complete (10 sections + Navbar + Footer)
 - **2026-06-01**: Applied 3 minor CSS fixes — contrast improvements and overflow corrections across landing sections
 - **2026-06-01**: Task 3 (Design & UX) — ContactSection & Footer review pass; minor CSS variable fix on CTA hover shadow; no new patterns emerged
@@ -55,6 +56,7 @@
 - [x] ContactSection component — email link, Google Form embed, mailto CTA, dark theme, documented
 - [x] Footer component — nav links, contact email, copyright, beta disclaimer, smooth scroll, documented
 - [x] Landing page structure — all 10 sections + Navbar + Footer with styling polish applied
+- [x] UseCasesSection — content update (Task A), detailed example text refined
 - [ ] Implement remaining landing page sections (ProblemSection, SolutionSection, BenefitsSection)
 - [ ] Integrate Spanish content
 
@@ -111,6 +113,20 @@
 - Scroll reveal animations via `data-reveal` attribute
 - Dark theme with `--color-bg-dark` background and muted text colors
 - Responsive: iframe scales to container width, font sizes reduce on mobile (<768px)
+
+### UseCasesSection Component Details
+
+**File**: `src/components/landing/UseCasesSection.vue`
+**Purpose**: Displays target audiences that benefit from Cobranza App, plus a detailed walkthrough example of expense management workflow.
+**Key Features**:
+
+- Grid of 5 use case cards with Bootstrap icons (consorcios, inmobiliarias, profesionales, educación/gimnasios, cobros recurrentes)
+- Detailed example section: step-by-step "Administración de Expensas" workflow (7 steps)
+- Closing note extending the workflow to other use cases (honorarios, cuotas, alquileres, gimnasios)
+- Scroll reveal animations via `data-reveal` attribute
+- Dark theme with `--color-bg-slate` background, `--color-bg-card-alt` for detailed example card
+- Responsive title sizing (2.25rem desktop, 1.75rem/1.25rem mobile)
+- All content in neutral Spanish
 
 ### Footer Component Details
 
