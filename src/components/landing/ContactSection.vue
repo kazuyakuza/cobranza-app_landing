@@ -47,8 +47,6 @@ const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.
           <div data-reveal class="contact-form-wrapper">
             <iframe
               :src="googleFormUrl"
-              width="640"
-              height="576"
               frameborder="0"
               marginheight="0"
               marginwidth="0"
@@ -131,7 +129,7 @@ const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.
   width: 100%;
   max-width: 640px;
   margin: 0 auto 1rem;
-  padding-top: 90%;
+  min-height: 640px;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 12px;
@@ -160,6 +158,10 @@ const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.
 
   .contact-subtitle {
     font-size: 1rem;
+  }
+
+  .contact-form-wrapper {
+    min-height: 720px;
   }
 }
 </style>
