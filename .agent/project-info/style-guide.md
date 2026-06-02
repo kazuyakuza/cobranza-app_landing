@@ -104,7 +104,7 @@ Sections alternate between dark shades using subtle shifts. Only Beta breaks the
 | 7 | **Pricing** | `--color-bg-navy` | `--color-text-on-dark` | Back to dark after Beta |
 | 8 | **FAQ** | `--color-bg-slate` | `--color-text-on-dark` | Slightly warmer dark |
 | 9 | **Contact** | `--color-bg-dark` | `--color-text-on-dark` | Returns to deepest dark |
-| 10 | **Footer** | `--color-bg-deepest` | `--color-text-on-dark-muted` | Seamless page close |
+| 10 | **Footer** | `--color-bg-deepest` | `--color-text-on-dark-muted` | Seamless page close. Closing phrase uses `--color-accent` (emerald) for emphasis |
 
 ### 3.2 Section Separation Rule
 
