@@ -101,7 +101,7 @@ Sections alternate between dark shades using subtle shifts. Only Beta breaks the
 | 3 | **Solution** | `--color-bg-navy` | `--color-text-on-dark` | Slightly brighter navy |
 | 4 | **Use Cases** | `--color-bg-slate` | `--color-text-on-dark` | Fresh slate tone |
 | 5 | **Features** | `--color-bg-dark` | `--color-text-on-dark` | Dark again; cards use `--color-bg-card` |
-| 6 | **Beta** | `linear-gradient(135deg, --color-accent → #0d9488)` (emerald) | `--color-white` | **Sole bright contrast breaker** — emerald trust gradient |
+| 6 | **Beta** | `linear-gradient(135deg, #0f766e, #134e4a)` (darker emerald) | `--color-white` | **Sole bright contrast breaker** — darkened emerald trust gradient |
 | 7 | **Pricing** | `--color-bg-navy` | `--color-text-on-dark` | Back to dark after Beta |
 | 8 | **FAQ** | `--color-bg-slate` | `--color-text-on-dark` | Slightly warmer dark |
 | 9 | **Contact** | `--color-bg-dark` | `--color-text-on-dark` | Returns to deepest dark |
@@ -203,7 +203,7 @@ section {
 
 **File**: `src/components/landing/BetaSection.vue`
 
-- Background: `linear-gradient(135deg, var(--color-accent), #0d9488)` — emerald green gradient
+- Background: `linear-gradient(135deg, #0f766e, #134e4a)` — darker emerald green gradient
 - Text: `--color-white` throughout
 - Badge: solid `--color-accent` pill, `font-weight: 600`, `0.9rem`
 - Title: `2.25rem`, `font-weight: 700`, white
