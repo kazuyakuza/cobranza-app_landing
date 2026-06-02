@@ -55,7 +55,7 @@ const closingPhrase = 'Un sistema en constante evolución, que crece junto a vos
 
 <style scoped>
 .beta-section {
-  background: linear-gradient(135deg, var(--color-accent), #0d9488);
+  background: linear-gradient(135deg, #0f766e, #134e4a);
   color: var(--color-white);
 }
 
