@@ -103,7 +103,7 @@ Sections alternate between dark shades using subtle shifts. Only Beta breaks the
 | 5 | **Features** | `--color-bg-dark` | `--color-text-on-dark` | Dark again; cards use `--color-bg-card` |
 | 6 | **Beta** | `linear-gradient(135deg, #0f766e, #134e4a)` (darker emerald) | `--color-white` | **Sole bright contrast breaker** — darkened emerald trust gradient |
 | 7 | **Pricing** | `--color-bg-navy` | `--color-text-on-dark` | Back to dark after Beta |
-| 8 | **FAQ** | `--color-bg-slate` | `--color-text-on-dark` | Slightly warmer dark |
+| 8 | **FAQ** | `--color-bg-card-alt` | `--color-text-on-dark` | Slightly warmer dark |
 | 9 | **Contact** | `--color-bg-dark` | `--color-text-on-dark` | Returns to deepest dark |
 | 10 | **Footer** | `--color-bg-deepest` | `--color-text-on-dark-muted` | Seamless page close. Closing phrase uses `--color-accent` (emerald) for emphasis |
 
