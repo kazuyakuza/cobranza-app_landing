@@ -87,7 +87,7 @@
 **Purpose**: FAQ accordion section with 9 Spanish Q&A pairs about Cobranza App.
 **Key Features**:
 
-- Bootstrap 5 Accordion with only-first-expanded behavior
+- Bootstrap 5 Accordion with multi-open behavior (multiple items can be expanded simultaneously)
 - Dark theme overrides for accordion button, body, and chevron icon
 - Scroll reveal animations via `data-reveal` attribute
 - Responsive title sizing (2.25rem desktop, 1.75rem mobile)
