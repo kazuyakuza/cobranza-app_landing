@@ -89,7 +89,8 @@ function scrollToSection(sectionId: string): void {
 .footer-phrase {
   font-size: 1.125rem;
   font-style: italic;
-  color: var(--color-text-on-dark);
+  color: var(--color-accent);
+  font-weight: 600;
   margin-bottom: 0;
   line-height: 1.6;
 }
