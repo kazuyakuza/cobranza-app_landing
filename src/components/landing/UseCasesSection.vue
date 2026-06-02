@@ -92,6 +92,12 @@ const closingNote =
   align-items: flex-start;
   gap: 1rem;
   height: 100%;
+  transition: transform 0.25s ease, border-color 0.25s ease;
+}
+
+.use-case-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--color-primary);
 }
 
 .use-case-icon {
