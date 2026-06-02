@@ -148,7 +148,7 @@ section {
 The navbar tracks the currently visible section using an `IntersectionObserver`:
 
 - On mount, observes all section IDs from the `menuItems` array
-- Root margin: `-70px 0px -70% 0px` (offsets navbar height, triggers when section enters top 30% of viewport)
+- Root margin: `-70px 0px -50% 0px` (offsets navbar height, triggers when section enters top 50% of viewport; expanded zone to detect bottom sections like FAQ)
 - Threshold: `[0, 0.25]` — fires when section is 0% or 25% visible
 - When a section enters the observed zone, its ID updates `activeSectionId`
 - The matching nav link receives `.active` class (primary blue, bold)
