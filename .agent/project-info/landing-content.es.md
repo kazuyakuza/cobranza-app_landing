@@ -57,17 +57,17 @@ Ideal para:
 
 **Caso de uso detallado:**
 
-**Administración de Expensas**
+**Ejemplo práctico: Administración de Expensas con Cobranza App**
 
-1. La administradora carga las expensas del mes (individual o masivamente).
-2. Cada propietario o inquilino accede con su ID de unidad y consulta el monto exacto y fecha de vencimiento.
-3. Realiza la transferencia y sube el comprobante (foto o PDF) directamente en la plataforma.
+1. La administradora carga las expensas del mes (de forma individual o masiva).
+2. Cada propietario o inquilino accede con su ID de unidad y consulta el monto exacto y la fecha de vencimiento.
+3. Cada propietario o inquilino realiza la transferencia bancaria y sube el comprobante (foto o PDF) directamente en la plataforma.
 4. La administradora sube el extracto bancario.
 5. El sistema facilita el cruzamiento entre comprobantes, transferencias y deudas.
 6. Queda registrado claramente el estado de cada unidad (pagado, pendiente, en revisión).
 7. El cliente puede descargar su recibo oficial una vez validado el pago.
 
-El mismo flujo se aplica a honorarios profesionales, cuotas educativas, alquileres y otros cobros.
+Este mismo flujo se aplica a honorarios profesionales, cuotas educativas, alquileres, gimnasios y cualquier otro tipo de cobro recurrente o variable.
 
 ---
 

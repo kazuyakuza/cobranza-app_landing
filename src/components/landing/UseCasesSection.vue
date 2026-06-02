@@ -21,12 +21,12 @@ const useCases: UseCaseItem[] = [
 ]
 
 // Detailed example: Administración de Expensas walkthrough
-const detailedExampleTitle = 'Administración de Expensas'
+const detailedExampleTitle = 'Ejemplo práctico: Administración de Expensas con Cobranza App'
 
 const detailedSteps: string[] = [
-  'La administradora carga las expensas del mes (individual o masivamente).',
-  'Cada propietario o inquilino accede con su ID de unidad y consulta el monto exacto y fecha de vencimiento.',
-  'Realiza la transferencia y sube el comprobante (foto o PDF) directamente en la plataforma.',
+  'La administradora carga las expensas del mes (de forma individual o masiva).',
+  'Cada propietario o inquilino accede con su ID de unidad y consulta el monto exacto y la fecha de vencimiento.',
+  'Cada propietario o inquilino realiza la transferencia bancaria y sube el comprobante (foto o PDF) directamente en la plataforma.',
   'La administradora sube el extracto bancario.',
   'El sistema facilita el cruzamiento entre comprobantes, transferencias y deudas.',
   'Queda registrado claramente el estado de cada unidad (pagado, pendiente, en revisión).',
@@ -34,7 +34,7 @@ const detailedSteps: string[] = [
 ]
 
 const closingNote =
-  'Un flujo similar se aplica a honorarios profesionales, cuotas educativas, alquileres y otros cobros.'
+  'Este mismo flujo se aplica a honorarios profesionales, cuotas educativas, alquileres, gimnasios y cualquier otro tipo de cobro recurrente o variable.'
 </script>
 
 <template>
