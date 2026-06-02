@@ -135,9 +135,23 @@ section {
 - Border: `1px solid var(--color-border)`
 - Brand: `--color-text-on-dark`, bold
 - Nav links: `--color-text-on-dark-muted` → hover: `--color-text-on-dark`
+- Nav links active state: `--color-primary` color, `600` weight — driven by scroll-spy
 - CTA button: `btn-success` → `--color-accent` green
 - Sticky: `fixed-top`
 - Height constant: `NAVBAR_HEIGHT_PX = 70` in `src/utils/constants.ts`
+
+#### Scroll-Spy Active Link Behavior
+
+The navbar tracks the currently visible section using an `IntersectionObserver`:
+
+- On mount, observes all section IDs from the `menuItems` array
+- Root margin: `-70px 0px -70% 0px` (offsets navbar height, triggers when section enters top 30% of viewport)
+- Threshold: `[0, 0.25]` — fires when section is 0% or 25% visible
+- When a section enters the observed zone, its ID updates `activeSectionId`
+- The matching nav link receives `.active` class (primary blue, bold)
+- Observer is disconnected on component unmount
+
+This creates automatic nav link highlighting as the user scrolls through sections.
 
 ### 4.2 Hero — Navy Gradient
 
