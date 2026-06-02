@@ -114,7 +114,7 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
 
 .pain-point-content {
   display: flex;
-  align-items: flex-start;
+  align-items: center;
   gap: 1rem;
 }
 
@@ -122,7 +122,6 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
   font-size: 1.4rem;
   color: var(--color-text-on-dark-dim);
   flex-shrink: 0;
-  margin-top: 0.15rem;
 }
 
 .pain-point-text {
@@ -133,7 +132,7 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
 .problem-closing {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--color-text-on-dark);
+  color: var(--color-accent);
   line-height: 1.65;
 }
 
