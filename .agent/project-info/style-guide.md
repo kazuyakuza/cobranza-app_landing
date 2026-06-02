@@ -148,7 +148,7 @@ section {
 - Title: `--color-white`, `display-4`, `fw-bold`
 - Subtitle: `--color-text-on-dark-muted` with `opacity: 0.85`
 - Primary CTA: `btn-primary`, rounded, hover `translateY(-2px)` + blue shadow
-- Secondary CTA: `btn-outline-light`, rounded, hover white bg tint
+- Secondary CTA: `btn-outline-light`, rounded, hover fills with `--color-primary` bg + `--color-white` text
 - Mobile: `min-height: 90vh`, title `2rem` at `<768px`
 
 ### 4.3 Cards — Dark Card Pattern
