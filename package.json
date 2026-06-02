@@ -1,6 +1,6 @@
 {
   "name": "cobranza-app-landing",
-  "version": "0.6.2",
+  "version": "0.6.3",
   "private": true,
   "type": "module",
   "description": "Professional landing page for Cobranza App — a SaaS platform for debt management and payment reconciliation",
