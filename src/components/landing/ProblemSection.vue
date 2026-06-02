@@ -59,7 +59,7 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
                 :key="point.text"
                 class="pain-point-item col-12 col-md-6"
               >
-                <div class="pain-point-content dark-card">
+                <div class="pain-point-content dark-card h-100">
                   <i :class="point.icon" class="pain-point-icon" aria-hidden="true"></i>
                   <span class="pain-point-text">{{ point.text }}</span>
                 </div>
