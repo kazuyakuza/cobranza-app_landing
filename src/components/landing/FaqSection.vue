@@ -89,7 +89,6 @@ const faqItems: FaqItem[] = [
                 :id="'faqCollapse' + index"
                 class="accordion-collapse collapse"
                 :class="{ show: index === 0 }"
-                :data-bs-parent="'#' + accordionId"
               >
                 <div class="accordion-body">{{ item.answer }}</div>
               </div>
