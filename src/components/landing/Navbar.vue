@@ -1,4 +1,5 @@
 <script setup lang="ts">
+import { ref, onMounted, onUnmounted } from 'vue'
 import { NAVBAR_HEIGHT_PX } from '@/utils/constants'
 
 interface NavMenuItem {
@@ -20,6 +21,8 @@ const menuItems: NavMenuItem[] = [
 
 const ctaText = 'Quiero probar la Beta gratis'
 const brandName = 'Cobranza App'
+const activeSectionId = ref<string>('hero')
+let observer: IntersectionObserver | null = null
 
 function closeNavCollapse(): void {
   const navContent = document.getElementById('navbarContent')
@@ -36,6 +39,28 @@ function scrollToSection(sectionId: string): void {
   }
   closeNavCollapse()
 }
+
+onMounted(() => {
+  observer = new IntersectionObserver(
+    (entries) => {
+      for (const entry of entries) {
+        if (entry.isIntersecting) {
+          activeSectionId.value = entry.target.id
+        }
+      }
+    },
+    { rootMargin: '-70px 0px -70% 0px', threshold: [0, 0.25] }
+  )
+
+  for (const item of menuItems) {
+    const el = document.getElementById(item.sectionId)
+    if (el) observer.observe(el)
+  }
+})
+
+onUnmounted(() => {
+  observer?.disconnect()
+})
 </script>
 
 <template>
@@ -60,7 +85,7 @@ function scrollToSection(sectionId: string): void {
       <div id="navbarContent" class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li v-for="item in menuItems" :key="item.sectionId" class="nav-item">
-            <a class="nav-link" href="#" @click.prevent="scrollToSection(item.sectionId)">
+            <a class="nav-link" :class="{ active: activeSectionId === item.sectionId }" href="#" @click.prevent="scrollToSection(item.sectionId)">
               {{ item.label }}
             </a>
           </li>
@@ -96,5 +121,10 @@ function scrollToSection(sectionId: string): void {
 
 .nav-link:hover {
   color: var(--color-text-on-dark);
+}
+
+.nav-link.active {
+  color: var(--color-primary);
+  font-weight: 600;
 }
 </style>
