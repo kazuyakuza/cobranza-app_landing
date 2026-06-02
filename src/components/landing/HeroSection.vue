@@ -101,7 +101,8 @@ function scrollToSolution(): void {
 
 .hero-cta-secondary:hover {
   transform: translateY(-2px);
-  background-color: rgba(255, 255, 255, 0.1);
+  background-color: var(--color-primary);
+  color: white;
 }
 
 @media (max-width: 767.98px) {
