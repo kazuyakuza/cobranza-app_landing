@@ -137,4 +137,14 @@ onUnmounted(() => {
   color: var(--color-primary);
   font-weight: 600;
 }
+
+.navbar .btn-success {
+  border-radius: 8px;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.navbar .btn-success:hover {
+  transform: translateY(-1px);
+  box-shadow: 0 4px 12px rgba(var(--bs-success-rgb), 0.35);
+}
 </style>

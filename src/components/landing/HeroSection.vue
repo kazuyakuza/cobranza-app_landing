@@ -89,14 +89,15 @@ function scrollToSolution(): void {
 
 .hero-cta-primary:hover {
   transform: translateY(-2px);
-  box-shadow: 0 6px 20px rgba(0, 123, 255, 0.35);
+  box-shadow: 0 6px 20px rgba(var(--bs-primary-rgb), 0.35);
 }
 
 .hero-cta-secondary {
   border-radius: 8px;
   transition:
     transform 0.2s ease,
-    background-color 0.2s ease;
+    background-color 0.2s ease,
+    color 0.2s ease;
 }
 
 .hero-cta-secondary:hover {
