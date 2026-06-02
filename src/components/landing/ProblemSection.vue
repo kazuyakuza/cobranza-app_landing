@@ -132,7 +132,7 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
 .problem-closing {
   font-size: 1.125rem;
   font-weight: 600;
-  color: var(--color-accent);
+  color: var(--color-pain);
   line-height: 1.65;
 }
 
