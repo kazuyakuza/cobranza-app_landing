@@ -29,6 +29,7 @@ All colors are defined as CSS custom properties in `src/assets/styles/variables.
 | `--color-primary-hover` | `#2563eb` | Primary hover state | Darker blue on hover |
 | `--color-accent` | `#10b981` | Navbar CTA, success | Emerald green — money/success signal |
 | `--color-accent-hover` | `#059669` | Accent hover state | Deeper green on hover |
+| `--color-pain` | `#ef4444` | Pain/warning text | Red signal for problem indicators |
 
 ### 1.3 Text Colors
 
