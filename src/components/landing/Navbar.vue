@@ -49,7 +49,7 @@ onMounted(() => {
         }
       }
     },
-    { rootMargin: '-70px 0px -70% 0px', threshold: [0, 0.25] }
+    { rootMargin: '-70px 0px -50% 0px', threshold: [0, 0.25] }
   )
 
   for (const item of menuItems) {
