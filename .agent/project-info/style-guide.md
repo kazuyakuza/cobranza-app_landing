@@ -60,6 +60,7 @@ font-family: 'Inter', system-ui, -apple-system, 'Segoe UI', Roboto, sans-serif;
 ```
 
 Loaded in `index.html` `<head>`:
+
 ```html
 <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet" />
 ```
@@ -99,7 +100,7 @@ Sections alternate between dark shades using subtle shifts. Only Beta breaks the
 | 3 | **Solution** | `--color-bg-navy` | `--color-text-on-dark` | Slightly brighter navy |
 | 4 | **Use Cases** | `--color-bg-slate` | `--color-text-on-dark` | Fresh slate tone |
 | 5 | **Features** | `--color-bg-dark` | `--color-text-on-dark` | Dark again; cards use `--color-bg-card` |
-| 6 | **Beta** | `--color-primary` gradient | `--color-white` | **Sole bright contrast breaker** |
+| 6 | **Beta** | `linear-gradient(135deg, --color-accent → #0d9488)` (emerald) | `--color-white` | **Sole bright contrast breaker** — emerald trust gradient |
 | 7 | **Pricing** | `--color-bg-navy` | `--color-text-on-dark` | Back to dark after Beta |
 | 8 | **FAQ** | `--color-bg-slate` | `--color-text-on-dark` | Slightly warmer dark |
 | 9 | **Contact** | `--color-bg-dark` | `--color-text-on-dark` | Returns to deepest dark |
@@ -115,6 +116,7 @@ Sections alternate between dark shades using subtle shifts. Only Beta breaks the
 ### 3.3 Section Spacing
 
 All sections share consistent vertical padding:
+
 ```css
 section {
   padding-top: 5rem;     /* 80px */
@@ -180,6 +182,7 @@ This creates automatic nav link highlighting as the user scrolls through section
 
 - No box-shadow — depth via bg contrast + border
 - Used in Features, Use Cases, Pricing sections
+- **Equal height in flex/grid layouts**: when cards sit in Bootstrap columns within the same row, apply `height: 100%` to the card wrapper (e.g., `.feature-group`) so all cards fill the tallest column height. Use this pattern whenever card content length varies but visual uniformity is required.
 
 ### 4.4 Sections — Scoped Style Pattern
 
@@ -194,6 +197,20 @@ section {
 - Always use CSS variables, never hardcode hex
 - Section background defined per Section 3.1 table
 - Add `data-reveal` to section headings for scroll animation
+
+### 4.5 Beta — Emerald Gradient
+
+**File**: `src/components/landing/BetaSection.vue`
+
+- Background: `linear-gradient(135deg, var(--color-accent), #0d9488)` — emerald green gradient
+- Text: `--color-white` throughout
+- Badge: solid `--color-accent` pill, `font-weight: 600`, `0.9rem`
+- Title: `2.25rem`, `font-weight: 700`, white
+- Lead paragraph: `1.125rem`, white, `opacity: 0.95`
+- Feature list: flex column, check icons in `--color-accent`, text `font-weight: 500`, white
+- Closing phrase: `font-weight: 600`, white
+- This is the only non-dark section; uses green trust/success signals
+- Mobile: title scales to `1.75rem`, lead to `1rem`
 
 ---
 
@@ -230,10 +247,12 @@ section {
 
 1. Add `data-reveal` attribute to the element in the template
 2. Import and call `useScrollReveal()` in `<script setup>`:
+
    ```ts
    import { useScrollReveal } from '@/composables/useScrollReveal'
    useScrollReveal()
    ```
+
 3. The composable handles the rest — no manual class management needed
 
 ### 5.4 What to Animate
