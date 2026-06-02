@@ -88,6 +88,10 @@ const userFeatures: FeatureItem[] = [
   line-height: 1.6;
 }
 
+.feature-group {
+  height: 100%;
+}
+
 .feature-group-company {
   border-left: 4px solid var(--color-primary);
 }
