@@ -143,6 +143,21 @@ section {
 - Sticky: `fixed-top`
 - Height constant: `NAVBAR_HEIGHT_PX = 70` in `src/utils/constants.ts`
 
+#### Desktop CTA
+
+The desktop CTA uses `ctaText = 'Quiero probar la Beta gratis'` and is hidden on mobile via `d-none d-lg-inline-block`. It sits inside the `navbar-collapse` div and also calls `scrollToSection('contact')`.
+
+#### Mobile CTA
+
+A mobile-specific CTA button sits **outside** the collapse, always visible on screens `< lg`:
+
+- Text constant: `mobileCtaText = 'Probar Beta Gratis'`
+- Wrapper: `d-flex align-items-center gap-2 d-lg-none` — groups the hamburger toggler and CTA side by side on mobile
+- The button uses `btn-success`, matching the desktop CTA style
+- On click, calls `scrollToSection('contact')`, which both scrolls to the contact section and calls `closeNavCollapse()` to close the mobile menu
+
+The dual-CTA pattern ensures mobile users always see the primary action without expanding the menu, while the full desktop CTA text is only shown on larger screens.
+
 #### Scroll-Spy Active Link Behavior
 
 The navbar tracks the currently visible section using an `IntersectionObserver`:
