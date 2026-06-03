@@ -109,6 +109,7 @@ function scrollToSolution(): void {
 @media (max-width: 767.98px) {
   .hero-section {
     min-height: 90vh;
+    padding-top: calc(var(--navbar-height) + 2rem);
   }
 
   .hero-title {

@@ -140,6 +140,10 @@ function scrollToSection(sectionId: string): void {
 }
 
 @media (max-width: 767.98px) {
+  .footer-section {
+    padding-bottom: 5rem;
+  }
+
   .footer-phrase {
     font-size: 1rem;
   }
