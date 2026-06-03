@@ -7,6 +7,7 @@
 
 ## Recent Changes
 
+- **2026-06-03**: Mobile padding adjustments — HeroSection top padding set to `calc(var(--navbar-height) + 2rem)` and Footer bottom padding set to `5rem` in mobile media queries; prevents content overlap with floating CTA button; self-documenting CSS, no comments needed
 - **2026-06-03**: FloatingCta component created — fixed mobile CTA button that appears when hero and contact sections are not visible; uses IntersectionObserver for visibility tracking, smooth scroll to contact, Vue Transition for fade/slide animation, hidden on desktop (`d-lg-none`); code is self-documenting (clear function names: `isFloatingCtaVisible`, `updateVisibility`, `scrollToContact`; clear refs: `isHeroVisible`, `isContactVisible`); no comments needed
 - **2026-06-03**: Navbar cleanup — mobile CTA button and `mobileCtaText` constant removed; `handleClickOutside` function added to close menu on document click outside navbar; scroll listener added to close menu on scroll; code is self-documenting (clear function names: `handleClickOutside`, `closeNavCollapse`, `scrollToSection`); no comments needed
 - **2026-06-03**: ContactSection changes — `ctaText` changed from 'Quiero probar la Beta gratis' to 'Enviar Correo'; pre-form text `<p>` added before Google Form iframe with class `contact-form-pretext`; scoped CSS rule added for `.contact-form-pretext`; code is self-documenting (clear variable names: `ctaText`, `ctaHref`, `contact-form-pretext`); no comments needed
