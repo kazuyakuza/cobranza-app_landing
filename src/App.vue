@@ -11,6 +11,7 @@ import PricingSection from '@/components/landing/PricingSection.vue'
 import FaqSection from '@/components/landing/FaqSection.vue'
 import ContactSection from '@/components/landing/ContactSection.vue'
 import Footer from '@/components/landing/Footer.vue'
+import FloatingCta from '@/components/landing/FloatingCta.vue'
 
 useScrollReveal()
 </script>
@@ -29,4 +30,5 @@ useScrollReveal()
     <ContactSection />
   </main>
   <Footer />
+  <FloatingCta />
 </template>
