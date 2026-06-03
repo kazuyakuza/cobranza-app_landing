@@ -72,6 +72,13 @@ onUnmounted(() => {
       </a>
 
       <div class="d-flex align-items-center gap-2 d-lg-none">
+        <a
+          class="btn btn-success px-3 py-2 fw-semibold mobile-cta"
+          href="#"
+          @click.prevent="scrollToSection('contact')"
+        >
+          {{ mobileCtaText }}
+        </a>
         <button
           class="navbar-toggler"
           type="button"
@@ -83,13 +90,6 @@ onUnmounted(() => {
         >
           <span class="navbar-toggler-icon"></span>
         </button>
-        <a
-          class="btn btn-success px-3 py-2 fw-semibold mobile-cta"
-          href="#"
-          @click.prevent="scrollToSection('contact')"
-        >
-          {{ mobileCtaText }}
-        </a>
       </div>
 
       <div id="navbarContent" class="collapse navbar-collapse">
