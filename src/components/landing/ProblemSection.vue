@@ -26,7 +26,7 @@ const painPoints: PainPoint[] = [
   },
   {
     icon: 'bi-journal-text',
-    text: 'Conciliar manualmente con los extractos bancarios'
+    text: 'Conciliar manualmente con los movimientos bancarios'
   },
   {
     icon: 'bi-person-x',
