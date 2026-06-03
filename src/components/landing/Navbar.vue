@@ -20,7 +20,6 @@ const menuItems: NavMenuItem[] = [
 ]
 
 const ctaText = 'Quiero probar la Beta gratis'
-const mobileCtaText = 'Probar Beta Gratis'
 const brandName = 'Cobranza App'
 const activeSectionId = ref<string>('hero')
 let observer: IntersectionObserver | null = null
@@ -41,6 +40,13 @@ function scrollToSection(sectionId: string): void {
   closeNavCollapse()
 }
 
+function handleClickOutside(event: MouseEvent): void {
+  const navbar = document.querySelector('.navbar')
+  if (navbar && !navbar.contains(event.target as Node)) {
+    closeNavCollapse()
+  }
+}
+
 onMounted(() => {
   observer = new IntersectionObserver(
     (entries) => {
@@ -57,10 +63,14 @@ onMounted(() => {
     const el = document.getElementById(item.sectionId)
     if (el) observer.observe(el)
   }
+  document.addEventListener('click', handleClickOutside)
+  window.addEventListener('scroll', closeNavCollapse, { passive: true })
 })
 
 onUnmounted(() => {
   observer?.disconnect()
+  document.removeEventListener('click', handleClickOutside)
+  window.removeEventListener('scroll', closeNavCollapse)
 })
 </script>
 
@@ -71,26 +81,17 @@ onUnmounted(() => {
         {{ brandName }}
       </a>
 
-      <div class="d-flex align-items-center gap-2 d-lg-none">
-        <a
-          class="btn btn-success px-3 py-2 fw-semibold mobile-cta"
-          href="#"
-          @click.prevent="scrollToSection('contact')"
-        >
-          {{ mobileCtaText }}
-        </a>
-        <button
-          class="navbar-toggler"
-          type="button"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbarContent"
-          aria-controls="navbarContent"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-      </div>
+      <button
+        class="navbar-toggler d-lg-none"
+        type="button"
+        data-bs-toggle="collapse"
+        data-bs-target="#navbarContent"
+        aria-controls="navbarContent"
+        aria-expanded="false"
+        aria-label="Toggle navigation"
+      >
+        <span class="navbar-toggler-icon"></span>
+      </button>
 
       <div id="navbarContent" class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
