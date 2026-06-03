@@ -9,7 +9,7 @@ const sectionTitle = '¿Listo para probar Cobranza App?'
 const sectionSubtitle = 'Dejanos tu consulta o solicitud de acceso. Respondemos a la brevedad.'
 const contactEmail = 'cobranza360pro@gmail.com'
 const emailLabel = 'Email de contacto:'
-const ctaText = 'Quiero probar la Beta gratis'
+const ctaText = 'Enviar Correo'
 const ctaHref = 'mailto:cobranza360pro@gmail.com?subject=Solicitud%20de%20acceso%20a%20la%20Beta'
 const googleFormUrl =
   'https://docs.google.com/forms/d/e/1FAIpQLSfrzXRY9nH9iQ6o2lyXvrZw_B8WxKGekqDzaG5JRRzTM0tGXQ/viewform?embedded=true'
@@ -43,6 +43,10 @@ const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.
           >
             {{ ctaText }}
           </a>
+
+          <p data-reveal class="contact-form-pretext">
+            O bien deja tus datos y te contactamos:
+          </p>
 
           <div data-reveal class="contact-form-wrapper">
             <iframe
@@ -122,6 +126,12 @@ const formNotice = 'Tus respuestas se guardan automáticamente en Google Sheets.
 .contact-cta:hover {
   transform: translateY(-2px);
   box-shadow: 0 6px 20px rgba(var(--bs-primary-rgb), 0.35);
+}
+
+.contact-form-pretext {
+  font-size: 1rem;
+  color: var(--color-text-on-dark-muted);
+  margin-bottom: 1rem;
 }
 
 .contact-form-wrapper {
