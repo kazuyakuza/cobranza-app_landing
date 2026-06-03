@@ -2,11 +2,12 @@
 
 ## Current Work Focus
 
-**Phase**: TODO-09 — Task 3 Step 4.4 Documentation (ContactSection Changes)
-**Status**: ContactSection ctaText changed to 'Enviar Correo', pre-form text added, CSS rule added; context updated
+**Phase**: TODO-09 — Task 3 Step 4.4 Documentation (Navbar Cleanup)
+**Status**: Navbar mobile CTA removed, outside-click and scroll auto-close added; context updated
 
 ## Recent Changes
 
+- **2026-06-03**: Navbar cleanup — mobile CTA button and `mobileCtaText` constant removed; `handleClickOutside` function added to close menu on document click outside navbar; scroll listener added to close menu on scroll; code is self-documenting (clear function names: `handleClickOutside`, `closeNavCollapse`, `scrollToSection`); no comments needed
 - **2026-06-03**: ContactSection changes — `ctaText` changed from 'Quiero probar la Beta gratis' to 'Enviar Correo'; pre-form text `<p>` added before Google Form iframe with class `contact-form-pretext`; scoped CSS rule added for `.contact-form-pretext`; code is self-documenting (clear variable names: `ctaText`, `ctaHref`, `contact-form-pretext`); no comments needed
 - **2026-06-03**: ProblemSection text change — pain point updated from "extractos bancarios" to "movimientos bancarios" in `src/components/landing/ProblemSection.vue`
 - **2026-06-03**: Navbar mobile reorder — CTA button now renders before hamburger toggle in mobile controls container; code is self-documenting (clear variable names: `mobileCtaText`, `ctaText`, `closeNavCollapse`, `scrollToSection`); no comments needed
