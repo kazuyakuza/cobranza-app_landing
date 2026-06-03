@@ -7,6 +7,7 @@
 
 ## Recent Changes
 
+- **2026-06-03**: ProblemSection text change — pain point updated from "extractos bancarios" to "movimientos bancarios" in `src/components/landing/ProblemSection.vue`
 - **2026-06-03**: Navbar mobile reorder — CTA button now renders before hamburger toggle in mobile controls container; code is self-documenting (clear variable names: `mobileCtaText`, `ctaText`, `closeNavCollapse`, `scrollToSection`); no comments needed
 - **2026-06-02**: Task C Step 4.4 — Documentation: Reviewed README.md Deployment section (clear build commands, two deployment options, live URL, important notes including missing OG image); no code comments needed for config files; Task C changes include: `vite.config.ts` base path set for GitHub Pages, `package.json` homepage field added, `index.html` OG URLs fixed, README Deployment section added
 - **2026-06-02**: Task B Step 4.4 — Documentation: Reviewed HeroSection.vue, Navbar.vue, index.html (all self-documenting; CSS changes use clear variable names; SEO tags are self-explanatory); no comments added; Task B changes include: Hero CTA shadow now uses `--bs-primary-rgb` CSS variable, secondary CTA color transition added, Navbar CTA border-radius and hover lift applied, SEO meta tags (description, keywords, OG) added to index.html
