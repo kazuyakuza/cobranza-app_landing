@@ -2,11 +2,12 @@
 
 ## Current Work Focus
 
-**Phase**: TODO-09 — Task C Deployment Preparation (Step 4.4 Documentation)
-**Status**: Task C README Deployment section reviewed for clarity; context updated; Navbar mobile CTA reorder documented
+**Phase**: TODO-09 — Task 3 Step 4.4 Documentation (ContactSection Changes)
+**Status**: ContactSection ctaText changed to 'Enviar Correo', pre-form text added, CSS rule added; context updated
 
 ## Recent Changes
 
+- **2026-06-03**: ContactSection changes — `ctaText` changed from 'Quiero probar la Beta gratis' to 'Enviar Correo'; pre-form text `<p>` added before Google Form iframe with class `contact-form-pretext`; scoped CSS rule added for `.contact-form-pretext`; code is self-documenting (clear variable names: `ctaText`, `ctaHref`, `contact-form-pretext`); no comments needed
 - **2026-06-03**: ProblemSection text change — pain point updated from "extractos bancarios" to "movimientos bancarios" in `src/components/landing/ProblemSection.vue`
 - **2026-06-03**: Navbar mobile reorder — CTA button now renders before hamburger toggle in mobile controls container; code is self-documenting (clear variable names: `mobileCtaText`, `ctaText`, `closeNavCollapse`, `scrollToSection`); no comments needed
 - **2026-06-02**: Task C Step 4.4 — Documentation: Reviewed README.md Deployment section (clear build commands, two deployment options, live URL, important notes including missing OG image); no code comments needed for config files; Task C changes include: `vite.config.ts` base path set for GitHub Pages, `package.json` homepage field added, `index.html` OG URLs fixed, README Deployment section added
