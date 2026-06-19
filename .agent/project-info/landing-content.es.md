@@ -249,7 +249,7 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
   Sí. Podrás invitar a otros miembros de tu equipo sin costo extra.
 
 - **¿Puedo exportar reportes e información?**  
-  Sí, podrás exportar listados deudas, pagos y reportes de conciliación.
+  Sí, podrás exportar listados de deudas, pagos y reportes de conciliación.
 
 - **¿Funciona con pagos parciales, montos variables y cuotas?**  
   Sí. El sistema está diseñado para manejar cobros variables y recurrentes.
