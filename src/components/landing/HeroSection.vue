@@ -1,10 +1,10 @@
 <script setup lang="ts">
 import { NAVBAR_HEIGHT_PX } from '@/utils/constants'
 
-const mainTitle = 'Cobranza App — Gestioná tus cobros de forma simple, ordenada y eficiente.'
+const mainTitle = 'Centralizá deudas, comprobantes y conciliación bancaria en un solo lugar'
 const subtitle =
   'Sistema web que permite a empresas y profesionales cargar deudas, recibir comprobantes de pago de sus clientes y conciliarlos de manera centralizada y sin complicaciones.'
-const primaryCtaText = 'Quiero probar la Beta gratis'
+const primaryCtaText = 'Solicitar acceso anticipado gratuito'
 const secondaryCtaText = 'Cómo funciona'
 
 function scrollToContact(): void {

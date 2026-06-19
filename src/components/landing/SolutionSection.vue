@@ -8,37 +8,34 @@ const sectionTitle = 'Cobranza App simplifica y centraliza todo el proceso de co
 const bodyText =
   'Es una plataforma que permite cargar deudas de forma rápida (individual o masiva), que tus clientes consulten su saldo actual en cualquier momento, suban sus comprobantes de pago y que tú puedas validarlos de manera ágil y ordenada.'
 
-interface SolutionFeature {
-  icon: string
-  label: string
-  description: string
+interface ComparisonRow {
+  before: string
+  after: string
 }
 
-const features: SolutionFeature[] = [
+const comparisonRows: ComparisonRow[] = [
   {
-    icon: 'bi-lightning-charge',
-    label: 'Carga rápida de deudas',
-    description: 'Carga individual o masiva de deudas en segundos'
+    before: 'Comprobantes dispersos en WhatsApp, mail y chats',
+    after: 'Todos los comprobantes centralizados y organizados'
   },
   {
-    icon: 'bi-graph-up',
-    label: 'Consulta de saldo',
-    description: 'Tus clientes consultan su saldo actual en cualquier momento'
+    before: 'Tenés que verificar manualmente cada transferencia',
+    after: 'El sistema cruza automáticamente comprobantes, transferencias y deudas'
   },
   {
-    icon: 'bi-file-earmark-arrow-up',
-    label: 'Subida de comprobantes',
-    description: 'Los clientes suben sus comprobantes de pago directamente'
+    before: 'Conciliación manual con extractos bancarios',
+    after: 'Conciliación asistida con revisión manual solo en excepciones'
   },
   {
-    icon: 'bi-clipboard2-check',
-    label: 'Validación ágil',
-    description: 'Validá pagos de manera ágil y ordenada'
+    before: 'Clientes preguntando constantemente cuánto deben',
+    after: 'Clientes consultan su saldo por sí mismos en cualquier momento'
   }
 ]
 
 const closingStatement =
   'De esta forma reducís drásticamente el tiempo dedicado a comunicación, verificación y conciliación de pagos.'
+
+const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en segundos.'
 </script>
 
 <template>
@@ -54,23 +51,42 @@ const closingStatement =
             {{ bodyText }}
           </p>
 
-          <div data-reveal class="features-wrapper">
-            <div class="features-grid row g-4">
-              <div
-                v-for="feature in features"
-                :key="feature.label"
-                class="feature-item col-12 col-md-6"
-              >
-                <div class="feature-content dark-card">
-                  <i :class="feature.icon" class="feature-icon" aria-hidden="true"></i>
-                  <div class="feature-text-wrapper">
-                    <h3 class="feature-label">{{ feature.label }}</h3>
-                    <p class="feature-description">{{ feature.description }}</p>
-                  </div>
-                </div>
+          <div data-reveal class="comparison-wrapper">
+            <div class="row">
+              <div class="col-md-6">
+                <h3 class="comparison-heading comparison-heading--antes">
+                  <i class="bi bi-x-circle me-2"></i>Antes
+                </h3>
+                <ul class="comparison-list">
+                  <li
+                    v-for="(row, index) in comparisonRows"
+                    :key="'antes-' + index"
+                    class="comparison-item comparison-item--antes"
+                  >
+                    <span class="comparison-text">{{ row.before }}</span>
+                  </li>
+                </ul>
+              </div>
+              <div class="col-md-6">
+                <h3 class="comparison-heading comparison-heading--despues">
+                  <i class="bi bi-check-circle me-2"></i>Después
+                </h3>
+                <ul class="comparison-list">
+                  <li
+                    v-for="(row, index) in comparisonRows"
+                    :key="'despues-' + index"
+                    class="comparison-item comparison-item--despues"
+                  >
+                    <span class="comparison-text">{{ row.after }}</span>
+                  </li>
+                </ul>
               </div>
             </div>
           </div>
+
+          <p data-reveal class="upcoming-note">
+            {{ upcomingNote }}
+          </p>
 
           <p data-reveal class="solution-closing">
             {{ closingStatement }}
@@ -101,44 +117,70 @@ const closingStatement =
   line-height: 1.65;
 }
 
-.features-wrapper {
-  margin-bottom: 2.5rem;
+.comparison-wrapper {
+  margin-bottom: 2rem;
 }
 
-.features-grid {
-  margin-bottom: 0;
+.comparison-heading {
+  font-size: 1.25rem;
+  font-weight: 700;
+  margin-bottom: 1.25rem;
+  display: flex;
+  align-items: center;
 }
 
-.feature-content {
+.comparison-heading--antes {
+  color: var(--color-danger);
+}
+
+.comparison-heading--despues {
+  color: var(--color-success);
+}
+
+.comparison-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 2rem;
+}
+
+.comparison-item {
   display: flex;
   align-items: flex-start;
-  gap: 1rem;
-  height: 100%;
+  gap: 0.75rem;
+  padding: 0.85rem 1rem;
+  margin-bottom: 0.75rem;
+  border-radius: 8px;
+  background: rgba(255, 255, 255, 0.04);
+  border: 1px solid rgba(255, 255, 255, 0.06);
 }
 
-.feature-icon {
-  font-size: 1.4rem;
-  color: var(--color-primary);
-  flex-shrink: 0;
-  margin-top: 0.15rem;
+.comparison-item--antes {
+  border-left: 3px solid var(--color-danger);
 }
 
-.feature-text-wrapper {
-  flex: 1;
+.comparison-item--despues {
+  border-left: 3px solid var(--color-success);
 }
 
-.feature-label {
-  font-size: 1.125rem;
-  font-weight: 600;
-  margin-bottom: 0.35rem;
-  line-height: 1.35;
-}
-
-.feature-description {
+.comparison-text {
   font-size: 0.95rem;
+  line-height: 1.45;
   color: var(--color-text-on-dark-muted);
-  line-height: 1.5;
-  margin-bottom: 0;
+}
+
+.comparison-item--despues .comparison-text {
+  color: var(--color-text-on-dark);
+}
+
+.upcoming-note {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 1rem 1.25rem;
+  font-size: 1rem;
+  color: var(--color-text-on-dark-muted);
+  margin-bottom: 2.5rem;
+  text-align: center;
 }
 
 .solution-closing {
@@ -158,11 +200,11 @@ const closingStatement =
     font-size: 1rem;
   }
 
-  .feature-label {
-    font-size: 1.05rem;
+  .comparison-heading {
+    font-size: 1.1rem;
   }
 
-  .feature-description {
+  .upcoming-note {
     font-size: 0.9rem;
   }
 }
