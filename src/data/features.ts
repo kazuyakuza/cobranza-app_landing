@@ -1,4 +1,4 @@
-import type { FeatureItem, FeatureGroup } from '@/types/features'
+import type { FeatureItem, FeatureGroup } from '@/types/features';
 
 const companyFeatures: FeatureItem[] = [
   {
@@ -43,7 +43,7 @@ const companyFeatures: FeatureItem[] = [
     elaboration:
       'El sistema propone los cruces entre deudas, comprobantes y transferencias; vos solo revisás y confirmás los casos dudosos.'
   }
-]
+];
 
 const userFeatures: FeatureItem[] = [
   {
@@ -62,7 +62,7 @@ const userFeatures: FeatureItem[] = [
     icon: 'bi-cloud-upload',
     text: 'Subida sencilla de comprobantes desde el celular',
     elaboration:
-      'Con una foto del comprobante alcanza: el cliente lo sube en segundos y queda asociado automáticamente a su deuda.'
+      'Con una foto, captura de pantalla, o bien archivo del comprobante alcanza: el cliente lo sube en segundos y queda asociado automáticamente a su deuda.'
   },
   {
     icon: 'bi-eye',
@@ -76,7 +76,7 @@ const userFeatures: FeatureItem[] = [
     elaboration:
       'Cuando el pago se valida, el cliente descarga su recibo en el momento, sin tener que pedírtelo ni esperar.'
   }
-]
+];
 
 export const featureGroups: FeatureGroup[] = [
   {
@@ -91,4 +91,4 @@ export const featureGroups: FeatureGroup[] = [
     variant: 'user',
     features: userFeatures
   }
-]
+];

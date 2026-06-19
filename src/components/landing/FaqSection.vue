@@ -162,11 +162,13 @@ function collapseId(accordionId: string, index: number): string {
 
 .faq-note {
   margin: 1rem 0 0;
-  padding-left: 1rem;
+  padding: 0.75rem 1rem;
+  background: var(--color-bg-card-alt);
   border-left: 2px solid var(--group-color);
+  border-radius: 6px;
   font-style: italic;
   font-size: 0.9375rem;
-  color: var(--color-text-on-dark-dim);
+  color: var(--color-text-on-dark-muted);
 }
 
 .accordion-collapse {
