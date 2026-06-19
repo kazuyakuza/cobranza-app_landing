@@ -1,9 +1,11 @@
 # Global Plan: Landing Page Content Updates
 
 ## Date
+
 2026-06-19
 
 ## Source
+
 TODO file: `.agent/todos/20260619/20260619-todo-0.md`
 
 ## Global Pre-Analysis
@@ -11,6 +13,7 @@ TODO file: `.agent/todos/20260619/20260619-todo-0.md`
 All requested changes are **content/text updates** to two existing Vue components and the content source file. No new components, no new dependencies, no structural changes. The work is purely editorial with one minor CSS adjustment for horizontal alignment in the comparison list.
 
 **Files affected:**
+
 - `src/components/landing/SolutionSection.vue`
 - `src/components/landing/HowItWorksSection.vue`
 - `src/types/how-it-works.ts` (possibly, if new kind needed)
@@ -27,13 +30,15 @@ Update landing page Spanish content across Solution and How It Works sections, p
 ### Requirements Breakdown
 
 #### SolutionSection.vue
+
 1. Remove the `upcomingNote` paragraph ("Próximamente podrás importar deudas desde Excel o CSV en segundos.").
 2. Add a new comparison row:
-   - Antes: "Recordar deudas/pagos a clientes mediante WhatsApp/mail/chat/llamada."
-   - Después: "El sistema envía recordatorios a los clientes mediante notificaciones automáticas."
+   - Antes: "Recordar deudas/pagos a clientes mediante WhatsApp/mail/chat/llamada"
+   - Después: "El sistema envía recordatorios a los clientes mediante notificaciones automáticas"
 3. Ensure "Antes" and "Después" list items are horizontally aligned (same height per row). This likely requires CSS changes so each `li` pair has equal height, e.g., using flexbox or `min-height` / grid approach.
 
 #### HowItWorksSection.vue
+
 1. Change tag label from "Empresa" to "Negocio".
 2. Change tag label from "Automático" to "Sistema".
 3. Change tag label from "Recibo" to "Cliente".
@@ -43,6 +48,7 @@ Update landing page Spanish content across Solution and How It Works sections, p
    - Step 5: Append " Genera reportes y un resumen del resultante. Notifica a los clientes sobre el estado de su deuda."
 
 #### landing-content.es.md
+
 Update §3 (La Solución) and §3.5 (Cómo funciona) to reflect the new texts.
 
 ---
@@ -65,6 +71,7 @@ Update §3 (La Solución) and §3.5 (Cómo funciona) to reflect the new texts.
 ---
 
 ## Constraints & Rules
+
 - All user-facing text must be in neutral Spanish.
 - All code (variables, components, types) must remain in English.
 - Preserve existing code style and structure.

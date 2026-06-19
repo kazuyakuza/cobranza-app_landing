@@ -28,8 +28,8 @@ const comparisonRows: ComparisonRow[] = [
     after: 'Clientes consultan su saldo por sí mismos en cualquier momento'
   },
   {
-    before: 'Recordar deudas/pagos a clientes mediante WhatsApp/mail/chat/llamada.',
-    after: 'El sistema envía recordatorios a los clientes mediante notificaciones automáticas.'
+    before: 'Recordar deudas/pagos a clientes mediante WhatsApp/mail/chat/llamada',
+    after: 'El sistema envía recordatorios a los clientes mediante notificaciones automáticas'
   }
 ]
 

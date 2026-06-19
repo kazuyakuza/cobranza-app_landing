@@ -48,7 +48,7 @@ Es una plataforma que permite cargar deudas de forma rápida (individual o masiv
 | Tenés que verificar manualmente cada transferencia | El sistema cruza automáticamente comprobantes, transferencias y deudas |
 | Conciliación manual con extractos bancarios | Conciliación asistida con revisión manual solo en excepciones |
 | Clientes preguntando constantemente cuánto deben | Clientes consultan su saldo por sí mismos en cualquier momento |
-| Recordar deudas/pagos a clientes mediante WhatsApp/mail/chat/llamada. | El sistema envía recordatorios a los clientes mediante notificaciones automáticas. |
+| Recordar deudas/pagos a clientes mediante WhatsApp/mail/chat/llamada | El sistema envía recordatorios a los clientes mediante notificaciones automáticas |
 
 De esta forma reducís drásticamente el tiempo dedicado a comunicación, verificación y conciliación de pagos.
 
@@ -250,7 +250,7 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
 - **¿Cobranza App accede a mis cuentas bancarias o mueve dinero?**  
   No. Los pagos se realizan por fuera de la plataforma (transferencias bancarias habituales). Cobranza App solo organiza y ayuda a conciliar la información.
 
-  *"Me gustaría que el sistema acceda y descarga el resumen de mi banco de forma autónoma"*
+  _"Me gustaría que el sistema acceda y descarga el resumen de mi banco de forma autónoma"_
   
   Contáctanos y podemos buscar una solución.
 
