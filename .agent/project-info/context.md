@@ -2,11 +2,12 @@
 
 ## Current Work Focus
 
-**Phase**: TODO-09 — Task 5 Step 4.4 Documentation
-**Status**: Navbar menu items and Footer nav links updated; context updated
+**Phase**: TODO-09 — Task 1 Step 4.4 Documentation
+**Status**: FeaturesSection accordion implemented; context updated
 
 ## Recent Changes
 
+- **2026-06-19**: FeaturesSection redesigned — replaced grid layout with Bootstrap 5 Accordion pattern; two accordion groups (empresa/user) with `FeatureVariant` color coding via CSS custom property `--group-color`; types extracted to `src/types/features.ts` (`FeatureItem`, `FeatureGroup`, `FeatureVariant`); data extracted to `src/data/features.ts` (`companyFeatures`, `userFeatures`, `featureGroups`); dark-theme accordion overrides; self-documenting code; no comments needed
 - **2026-06-18**: Navbar updated — menu items expanded to 8 items (Inicio, El Problema, La Solución, Cómo funciona, Rubros, Precios, Dudas, Contacto); CTA text set to "Solicitar acceso anticipado gratuito"; self-documenting code; no comments needed
 - **2026-06-18**: Footer updated — nav links changed to Inicio, La Solución, Cómo funciona, Rubros, Contacto; self-documenting code; no comments needed
 - **2026-06-18**: App.vue updated — HowItWorksSection imported and rendered in template between SolutionSection and UseCasesSection; self-documenting import and tag, no comments needed
@@ -135,6 +136,24 @@
 - Scroll reveal animations via `data-reveal` attribute
 - Background: `--color-bg-dark`
 - Responsive: title scales to `1.75rem`, smaller nodes and padding on mobile (<768px)
+
+### FeaturesSection Component Details
+
+**File**: `src/components/landing/FeaturesSection.vue`
+**Purpose**: Displays product features organized in two Bootstrap 5 Accordion groups, one for the company perspective and one for the end-client perspective.
+**Key Features**:
+
+- Two accordion groups rendered via `v-for` over `featureGroups` array from `src/data/features.ts`
+- `FeatureVariant` type (`'company' | 'user'`) drives color coding via CSS custom property `--group-color`
+- Company group uses `--color-primary` border accent; user group uses `--color-accent` border accent
+- Each accordion item: Bootstrap icon + feature text in button header, elaboration in collapsible body
+- `collapseId(accordionId, index)` helper generates unique collapse target IDs per group
+- `src/types/features.ts` — `FeatureItem` (icon, text, elaboration), `FeatureGroup` (title, accordionId, variant, features), `FeatureVariant`
+- `src/data/features.ts` — `companyFeatures` (7 items), `userFeatures` (5 items), `featureGroups` export
+- Dark theme accordion overrides: `--color-bg-card` background, `--color-text-on-dark` text, `--color-bg-card-alt` for expanded state
+- Scroll reveal animations via `data-reveal` attribute
+- Background: `--color-bg-dark`
+- Responsive: title scales to `1.75rem`, smaller padding and font sizes on mobile (<768px)
 
 ### FaqSection Component Details
 
