@@ -119,11 +119,6 @@ function collapseId(accordionId: string, index: number): string {
   overflow: hidden;
 }
 
-.accordion-item:first-of-type,
-.accordion-item:last-of-type {
-  border-radius: 8px;
-}
-
 .accordion-item:last-of-type {
   margin-bottom: 0;
 }
@@ -143,11 +138,6 @@ function collapseId(accordionId: string, index: number): string {
   background: var(--color-bg-card-alt);
   color: var(--color-text-on-dark);
   box-shadow: none;
-}
-
-.accordion-button.collapsed {
-  background: var(--color-bg-card);
-  color: var(--color-text-on-dark);
 }
 
 .accordion-button::after {
