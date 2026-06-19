@@ -112,15 +112,20 @@ function collapseId(accordionId: string, index: number): string {
 }
 
 .accordion-item {
-  background: transparent;
-  border: none;
-  border-radius: 0;
-  margin-bottom: 0;
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
+  border-radius: 8px;
+  margin-bottom: 0.75rem;
+  overflow: hidden;
 }
 
 .accordion-item:first-of-type,
 .accordion-item:last-of-type {
-  border-radius: 0;
+  border-radius: 8px;
+}
+
+.accordion-item:last-of-type {
+  margin-bottom: 0;
 }
 
 .accordion-button {
@@ -158,7 +163,11 @@ function collapseId(accordionId: string, index: number): string {
   color: var(--color-text-on-dark-muted);
   font-size: 0.9375rem;
   line-height: 1.6;
-  padding: 0 1.5rem 1rem calc(1.5rem + 1.1rem + 0.75rem);
+  padding: 0 1.5rem 1rem 3.1rem;
+}
+
+.accordion-collapse {
+  transition: height 0.35s ease;
 }
 
 .feature-icon {
