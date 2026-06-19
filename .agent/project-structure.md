@@ -8,6 +8,7 @@
 - components/ - Vue components
 - components/landing/ - Landing page section components (HeroSection, ProblemSection, SolutionSection, HowItWorksSection, UseCasesSection, FeaturesSection, BetaSection, PricingSection, FaqSection, ContactSection, Footer, Navbar)
 - composables/ - Reusable composition functions
+- data/ - Static data collections (feature lists, content arrays)
 - types/ - TypeScript type definitions
 - utils/ - Utility functions
 
