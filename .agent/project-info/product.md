@@ -7,6 +7,7 @@ Cobranza App is a professional SaaS platform designed for debt management and pa
 ### Primary User Personas
 
 **B2B Users (Business Owners/Managers):**
+
 - Administrations of consorcios and expenses (condominium management)
 - Real estate agencies and rental managers
 - Professionals and monotributists (fees and services)
@@ -14,6 +15,7 @@ Cobranza App is a professional SaaS platform designed for debt management and pa
 - Any recurring or variable billing scenario
 
 **End Users (Clients):**
+
 - Property owners or tenants accessing their debt information
 - Individuals making payments via transfer and needing to upload proof
 - Anyone wanting real-time payment status updates
@@ -21,6 +23,7 @@ Cobranza App is a professional SaaS platform designed for debt management and pa
 ## Problem Statement
 
 Businesses spend excessive hours managing collections and payment follow-ups. Common pain points include:
+
 - Time lost searching for payment proofs across multiple channels (WhatsApp, email, chats)
 - Manual verification of transfers against correct debts
 - Time-consuming manual reconciliation with bank statements
@@ -38,6 +41,7 @@ Businesses spend excessive hours managing collections and payment follow-ups. Co
 ## Value Proposition
 
 **For Businesses:**
+
 - Centralized debt and payment management
 - Mass debt loading capability
 - Clear reports on debts, payments, and delinquency
@@ -46,6 +50,7 @@ Businesses spend excessive hours managing collections and payment follow-ups. Co
 - Complete client history and traceability
 
 **For Clients:**
+
 - Immediate debt and due date visibility
 - Simple payment proof upload from mobile
 - Real-time payment status tracking
@@ -65,6 +70,7 @@ Businesses spend excessive hours managing collections and payment follow-ups. Co
 ## Pricing Model
 
 Pay-per-use structure:
+
 - No fixed monthly fees
 - Small percentage only on payments processed through the platform
 - Example: Process $400,000 in payments = pay percentage only on those $400,000
@@ -76,7 +82,7 @@ Pay-per-use structure:
 1. **Awareness**: User lands on landing page, reads problem and solution sections
 2. **Interest**: User explores use cases and features/benefits
 3. **Consideration**: User reviews pricing model and FAQ to address concerns
-4. **Intent**: User clicks CTA (e.g., "Quiero probar la Beta gratis")
+4. **Intent**: User clicks CTA (e.g., "Solicitar acceso anticipado gratuito")
 5. **Contact**: User fills out contact form (email + optional fields)
 6. **Onboarding**: User receives Beta access confirmation
 7. **Adoption**: User sets up their account and begins managing debts

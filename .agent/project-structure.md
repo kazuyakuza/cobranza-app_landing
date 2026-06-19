@@ -6,7 +6,7 @@
 - assets/images/ - Image files for landing page sections
 - assets/icons/ - Icon assets
 - components/ - Vue components
-- components/landing/ - Landing page section components (HeroSection, ProblemSection, SolutionSection, UseCasesSection, FeaturesSection, BetaSection, PricingSection, FaqSection, ContactSection, Footer, Navbar)
+- components/landing/ - Landing page section components (HeroSection, ProblemSection, SolutionSection, HowItWorksSection, UseCasesSection, FeaturesSection, BetaSection, PricingSection, FaqSection, ContactSection, Footer, Navbar)
 - composables/ - Reusable composition functions
 - types/ - TypeScript type definitions
 - utils/ - Utility functions
