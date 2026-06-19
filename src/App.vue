@@ -4,6 +4,7 @@ import Navbar from '@/components/landing/Navbar.vue'
 import HeroSection from '@/components/landing/HeroSection.vue'
 import ProblemSection from '@/components/landing/ProblemSection.vue'
 import SolutionSection from '@/components/landing/SolutionSection.vue'
+import HowItWorksSection from '@/components/landing/HowItWorksSection.vue'
 import UseCasesSection from '@/components/landing/UseCasesSection.vue'
 import FeaturesSection from '@/components/landing/FeaturesSection.vue'
 import BetaSection from '@/components/landing/BetaSection.vue'
@@ -22,6 +23,7 @@ useScrollReveal()
     <HeroSection />
     <ProblemSection />
     <SolutionSection />
+    <HowItWorksSection />
     <UseCasesSection />
     <FeaturesSection />
     <BetaSection />

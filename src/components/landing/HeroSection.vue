@@ -15,8 +15,8 @@ function scrollToContact(): void {
   }
 }
 
-function scrollToSolution(): void {
-  const element = document.getElementById('solution')
+function scrollToHowItWorks(): void {
+  const element = document.getElementById('how-it-works')
   if (element) {
     const targetPosition = element.getBoundingClientRect().top + window.scrollY - NAVBAR_HEIGHT_PX
     window.scrollTo({ top: targetPosition, behavior: 'smooth' })
@@ -47,7 +47,7 @@ function scrollToSolution(): void {
             </button>
             <button
               class="btn btn-outline-light btn-lg px-4 py-3 fw-semibold hero-cta-secondary"
-              @click="scrollToSolution"
+              @click="scrollToHowItWorks"
             >
               {{ secondaryCtaText }}
             </button>

@@ -57,7 +57,7 @@ onUnmounted(() => {
       class="btn btn-success shadow floating-cta d-lg-none fw-semibold"
       @click="scrollToContact"
     >
-      Probar Beta Gratis
+      Solicitar acceso anticipado gratuito
     </button>
   </Transition>
 </template>
