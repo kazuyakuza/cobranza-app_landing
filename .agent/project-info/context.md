@@ -2,11 +2,12 @@
 
 ## Current Work Focus
 
-**Phase**: TODO-09 — Task 1 Step 4.4 Documentation
-**Status**: FeaturesSection accordion implemented; context updated
+**Phase**: TODO-09 — Task 2 Step 4.4 Documentation
+**Status**: UseCasesSection redesigned with rubros grid and tabs; context updated
 
 ## Recent Changes
 
+- **2026-06-19**: UseCasesSection redesigned — replaced numbered step list with rubros grid (5 cards with icons and sub-items) + Bootstrap Tabs component for use-case walkthroughs; new `UseCasesTabs.vue` child component with before/after comparison blocks per tab; types extracted to `src/types/use-cases.ts` (`RubroItem`, `UseCaseExample`); data extracted to `src/data/use-cases.ts` (`rubros`, `useCaseExamples`); tabs use Bootstrap `nav-tabs` with ARIA roles, overflow-x scroll on mobile, `--color-pain`/`--color-accent` border accents for habitual vs cobranza blocks; self-documenting code; no comments needed
 - **2026-06-19**: FeaturesSection redesigned — replaced grid layout with Bootstrap 5 Accordion pattern; two accordion groups (empresa/user) with `FeatureVariant` color coding via CSS custom property `--group-color`; types extracted to `src/types/features.ts` (`FeatureItem`, `FeatureGroup`, `FeatureVariant`); data extracted to `src/data/features.ts` (`companyFeatures`, `userFeatures`, `featureGroups`); dark-theme accordion overrides; self-documenting code; no comments needed
 - **2026-06-18**: Navbar updated — menu items expanded to 8 items (Inicio, El Problema, La Solución, Cómo funciona, Rubros, Precios, Dudas, Contacto); CTA text set to "Solicitar acceso anticipado gratuito"; self-documenting code; no comments needed
 - **2026-06-18**: Footer updated — nav links changed to Inicio, La Solución, Cómo funciona, Rubros, Contacto; self-documenting code; no comments needed
@@ -189,16 +190,36 @@
 ### UseCasesSection Component Details
 
 **File**: `src/components/landing/UseCasesSection.vue`
-**Purpose**: Displays target audiences that benefit from Cobranza App, plus a detailed walkthrough example of expense management workflow.
+**Purpose**: Displays target rubros (industry segments) that benefit from Cobranza App as a card grid, followed by Bootstrap Tabs with before/after use-case walkthroughs.
 **Key Features**:
 
-- Grid of 5 use case cards with Bootstrap icons (consorcios, inmobiliarias, profesionales, educación/gimnasios, cobros recurrentes)
-- Detailed example section: step-by-step "Administración de Expensas" workflow (7 steps)
-- Closing note extending the workflow to other use cases (honorarios, cuotas, alquileres, gimnasios)
+- Section title "Ideal para:" above the rubros grid
+- Grid of 5 rubro cards (`dark-card` pattern) with Bootstrap icon + title header and a list of sub-items (check icons)
+- Each rubro card: icon (`rubro-icon`), title (`rubro-title`), sub-items list with `bi-check2` accent icons
+- Cards use hover lift animation (`translateY(-4px)`) and `--color-primary` border on hover
+- `UseCasesTabs` child component rendered below the grid for detailed use-case examples
+- `src/types/use-cases.ts` — `RubroItem` (icon, title, subItems), `UseCaseExample` (tabId, label, beforeText, afterText)
+- `src/data/use-cases.ts` — `rubros` (5 items: consorcios, inmobiliarias, profesionales, educación/gimnasios, cobros recurrentes), `useCaseExamples` (4 tabs: consorcios, inmobiliaria, profesional, colegio)
 - Scroll reveal animations via `data-reveal` attribute
-- Dark theme with `--color-bg-slate` background, `--color-bg-card-alt` for detailed example card
-- Responsive title sizing (2.25rem desktop, 1.75rem/1.25rem mobile)
-- All content in neutral Spanish
+- Background: `--color-bg-slate`
+- Responsive: title scales to `1.75rem` on mobile (<768px); grid collapses to single column
+
+### UseCasesTabs Component Details
+
+**File**: `src/components/landing/UseCasesTabs.vue`
+**Purpose**: Bootstrap Tabs showing before/after comparisons for specific use cases, demonstrating how Cobranza App transforms each workflow.
+**Key Features**:
+
+- Section title "Seleccioná tu caso" above the tabs
+- Bootstrap `nav-tabs` with `data-bs-toggle="tab"` and full ARIA roles (`tablist`, `tab`, `tabpanel`)
+- `paneId(tabId)` and `tabControlId(tabId)` helpers generate unique IDs for tab/pane association
+- First tab active by default via `index === 0` check
+- Each tab pane contains two side-by-side comparison blocks: "Situación habitual" (`--color-pain` left border, `bi-x-circle` icon) and "Con Cobranza App" (`--color-accent` left border, `bi-check-circle` icon)
+- Tab nav has `overflow-x: auto` with `-webkit-overflow-scrolling: touch` for mobile horizontal scroll
+- `flex-wrap: nowrap` on `.nav-tabs` prevents tab wrapping
+- Tab content area: `--color-bg-card` background with `--color-border` border, rounded bottom corners
+- Example blocks: `--color-bg-card-alt` background, 2-column grid on desktop, single column on mobile
+- Responsive: title scales to `1.25rem`, smaller padding and font on mobile (<768px)
 
 ### Footer Component Details
 
