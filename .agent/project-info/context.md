@@ -2,11 +2,19 @@
 
 ## Current Work Focus
 
-**Phase**: TODO-09 — Task 3 Step 4.4 Documentation (App.vue Integration)
-**Status**: FloatingCta imported and rendered in App.vue after Footer; context updated
+**Phase**: TODO-09 — Task 5 Step 4.4 Documentation
+**Status**: Navbar menu items and Footer nav links updated; context updated
 
 ## Recent Changes
 
+- **2026-06-18**: Navbar updated — menu items expanded to 8 items (Inicio, El Problema, La Solución, Cómo funciona, Rubros, Precios, Dudas, Contacto); CTA text set to "Solicitar acceso anticipado gratuito"; self-documenting code; no comments needed
+- **2026-06-18**: Footer updated — nav links changed to Inicio, La Solución, Cómo funciona, Rubros, Contacto; self-documenting code; no comments needed
+- **2026-06-18**: App.vue updated — HowItWorksSection imported and rendered in template between SolutionSection and UseCasesSection; self-documenting import and tag, no comments needed
+- **2026-06-18**: HeroSection updated — secondary CTA scroll target changed from `#solution` to `#how-it-works`; new `scrollToHowItWorks` function; self-documenting code; no comments needed
+- **2026-06-18**: FloatingCta updated — button text changed to "Solicitar acceso anticipado gratuito"; self-documenting template, no comments needed
+- **2026-06-18**: HowItWorksSection created — 7-step vertical timeline showing company/client/system workflow; uses `HowItWorksStep`/`HowItWorksStepKind` types from `src/types/how-it-works.ts`; color-coded nodes via CSS custom property `--node-color`; dashed borders for "sistema" steps; self-documenting code; no comments needed
+- **2026-06-18**: HeroSection updated — title and primary CTA text refreshed to match landing-content.es.md §1; self-documenting constants (`mainTitle`, `primaryCtaText`); no comments needed
+- **2026-06-18**: SolutionSection redesigned — replaced features grid with "Antes vs Después" two-column comparison layout; uses `ComparisonRow` interface, `comparisonRows` array, `comparison-heading--antes`/`--despues` modifiers with `--color-pain`/`--color-accent` border accents; includes upcoming Excel/CSV import note; self-documenting code; no comments needed
 - **2026-06-03**: FloatingCta integrated in App.vue — component imported and rendered after `<Footer />` in template; self-documenting import and tag, no comments needed
 - **2026-06-03**: Mobile padding adjustments — HeroSection top padding set to `calc(var(--navbar-height) + 2rem)` and Footer bottom padding set to `5rem` in mobile media queries; prevents content overlap with floating CTA button; self-documenting CSS, no comments needed
 - **2026-06-03**: FloatingCta component created — fixed mobile CTA button that appears when hero and contact sections are not visible; uses IntersectionObserver for visibility tracking, smooth scroll to contact, Vue Transition for fade/slide animation, hidden on desktop (`d-lg-none`); code is self-documenting (clear function names: `isFloatingCtaVisible`, `updateVisibility`, `scrollToContact`; clear refs: `isHeroVisible`, `isContactVisible`); no comments needed
@@ -43,9 +51,8 @@
 
 ## Immediate Next Steps
 
-1. Complete TODO-08 remaining sub-steps (4.5 Verification, 4.6 Task Completion)
-2. Implement remaining landing page sections (ProblemSection, SolutionSection, BenefitsSection)
-3. Integrate Spanish content from `landing-content.es.md` into all sections
+1. Complete current TODO remaining sub-steps (4.5 Verification, 4.6 Task Completion)
+2. Integrate Spanish content from `landing-content.es.md` into all sections
 
 ## Project Status
 
@@ -68,7 +75,9 @@
 - [x] UseCasesSection — content update (Task A), detailed example text refined
 - [x] Visual review & SEO — Hero CTA variable fix, Navbar CTA consistency, SEO meta tags (Task B)
 - [x] Deployment preparation — vite base path, homepage field, OG URLs fixed, README docs added (Task C)
-- [ ] Implement remaining landing page sections (ProblemSection, SolutionSection, BenefitsSection)
+- [x] SolutionSection — "Antes vs Después" comparison layout implemented
+- [x] HowItWorksSection — 7-step vertical timeline with actor color coding implemented
+- [ ] Implement remaining landing page sections (BenefitsSection)
 - [ ] Integrate Spanish content
 
 ### Styling System Details
@@ -87,12 +96,45 @@
 **Key Features**:
 
 - Navy gradient background using CSS variables (`--color-bg-navy`, `--color-bg-dark`)
-- Primary CTA: "Quiero probar la Beta gratis" — scrolls to `#contact` section
-- Secondary CTA: "Cómo funciona" — scrolls to `#solution` section
+- Primary CTA: "Solicitar acceso anticipado gratuito" — scrolls to `#contact` section
+- Secondary CTA: "Cómo funciona" — scrolls to `#how-it-works` section
 - Smooth scroll with 70px offset for fixed navbar
 - Responsive: reduces to 90vh height and smaller font on mobile (<768px)
 - Hover animations on buttons (translateY + shadow/background changes)
 - Scroll reveal animations via `data-reveal` attribute
+
+### SolutionSection Component Details
+
+**File**: `src/components/landing/SolutionSection.vue`
+**Purpose**: Explains how Cobranza App centralizes the collections process, using a side-by-side "Antes vs Después" comparison to highlight the value proposition.
+**Key Features**:
+
+- Section title and body text from landing-content.es.md §3
+- Two-column comparison layout: "Antes" (left, `--color-pain` accents) vs "Después" (right, `--color-accent` accents)
+- `ComparisonRow` interface with `before`/`after` fields drives 4 comparison items via `v-for`
+- Each comparison item: card with left border accent (3px solid), `--color-bg-card` background
+- Upcoming feature note ("Próximamente podrás importar deudas desde Excel o CSV") in `--color-bg-card-alt` box
+- Closing statement in `--color-accent` color for emphasis
+- Scroll reveal animations via `data-reveal` attribute
+- Background: `--color-bg-navy`
+- Responsive: title scales to `1.75rem`, body/closing to `1rem` on mobile (<768px)
+
+### HowItWorksSection Component Details
+
+**File**: `src/components/landing/HowItWorksSection.vue`
+**Purpose**: Vertical timeline showing the 7-step workflow of Cobranza App, color-coded by actor (empresa, cliente, sistema, resultado).
+**Key Features**:
+
+- 7 numbered steps rendered as a vertical timeline with connecting lines
+- `HowItWorksStepKind` type (`'empresa' | 'cliente' | 'sistema' | 'resultado'`) drives color coding and actor labels
+- Each step: numbered node circle, actor tag (uppercase label), card with description text
+- Color mapping via CSS custom property `--node-color` per step kind
+- "sistema" steps use dashed borders and dashed timeline line to indicate automation
+- "resultado" step node is filled (solid background) to highlight the final output
+- `src/types/how-it-works.ts` — `HowItWorksStep` interface and `HowItWorksStepKind` type
+- Scroll reveal animations via `data-reveal` attribute
+- Background: `--color-bg-dark`
+- Responsive: title scales to `1.75rem`, smaller nodes and padding on mobile (<768px)
 
 ### FaqSection Component Details
 
@@ -146,7 +188,7 @@
 **Key Features**:
 
 - Closing phrase: "Un sistema en constante evolución, que crece junto a vos."
-- Navigation links: Inicio, Funcionalidades, Contacto — smooth scroll with 70px offset
+- Navigation links: Inicio, La Solución, Cómo funciona, Rubros, Contacto — smooth scroll with 70px offset
 - Contact email link: `cobranza360pro@gmail.com` via mailto
 - Copyright: dynamic year with company name
 - Legal disclaimer: beta-stage notice about features and pricing subject to change
