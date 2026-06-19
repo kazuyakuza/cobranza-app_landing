@@ -91,6 +91,10 @@ function tabControlId(tabId: string): string {
 }
 
 .nav-tabs {
+  --bs-nav-tabs-link-active-color: var(--color-text-on-dark);
+  --bs-nav-tabs-link-active-bg: var(--color-bg-card);
+  --bs-nav-tabs-link-active-border-color: var(--color-border) var(--color-border)
+    var(--color-bg-card);
   border-bottom-color: var(--color-border);
   flex-wrap: nowrap;
 }
@@ -108,7 +112,7 @@ function tabControlId(tabId: string): string {
   background: var(--color-bg-card);
 }
 
-.nav-link.active {
+.nav-tabs .nav-link.active {
   color: var(--color-text-on-dark);
   background: var(--color-bg-card);
   border-color: var(--color-border);
