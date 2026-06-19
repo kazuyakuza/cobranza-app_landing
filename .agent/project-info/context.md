@@ -2,15 +2,16 @@
 
 ## Current Work Focus
 
-**Phase**: TODO-09 — Task 2 Step 4.4 Documentation
-**Status**: UseCasesSection redesigned with rubros grid and tabs; context updated
+**Phase**: TODO-11 — Task 4 Step 4.4 Documentation
+**Status**: Integration & Polish — Navbar updated, content synced, FAQ font-weight aligned; context updated
 
 ## Recent Changes
 
+- **2026-06-19**: Integration & Polish — Navbar updated with "Funcionalidades" menu item (now 9 items: Inicio, El Problema, La Solución, Cómo funciona, Rubros, Funcionalidades, Precios, Dudas, Contacto); feature elaborations synced to `landing-content.es.md` §5; FaqSection accordion `font-weight: 500` aligned with FeaturesSection for visual consistency
 - **2026-06-19**: FaqSection expanded — replaced single accordion with 4 category groups (General, Para la empresa o profesional, Para tus clientes, Conciliación y pagos); now 17 questions total; `FaqVariant` type (`'general' | 'company' | 'user' | 'conciliation'`) drives color coding via CSS custom property `--group-color`; types extracted to `src/types/faq.ts` (`FaqItem` with optional `note` field, `FaqGroup`, `FaqVariant`); data extracted to `src/data/faq.ts` (`generalFaqs`, `companyFaqs`, `userFaqs`, `conciliationFaqs`, `faqGroups`); each group has left border accent matching variant color; optional `note` field rendered with italic style and left border accent; `collapseId(accordionId, index)` helper generates unique collapse target IDs per group; self-documenting code; no comments needed
 - **2026-06-19**: UseCasesSection redesigned — replaced numbered step list with rubros grid (5 cards with icons and sub-items) + Bootstrap Tabs component for use-case walkthroughs; new `UseCasesTabs.vue` child component with before/after comparison blocks per tab; types extracted to `src/types/use-cases.ts` (`RubroItem`, `UseCaseExample`); data extracted to `src/data/use-cases.ts` (`rubros`, `useCaseExamples`); tabs use Bootstrap `nav-tabs` with ARIA roles, overflow-x scroll on mobile, `--color-pain`/`--color-accent` border accents for habitual vs cobranza blocks; self-documenting code; no comments needed
 - **2026-06-19**: FeaturesSection redesigned — replaced grid layout with Bootstrap 5 Accordion pattern; two accordion groups (empresa/user) with `FeatureVariant` color coding via CSS custom property `--group-color`; types extracted to `src/types/features.ts` (`FeatureItem`, `FeatureGroup`, `FeatureVariant`); data extracted to `src/data/features.ts` (`companyFeatures`, `userFeatures`, `featureGroups`); dark-theme accordion overrides; self-documenting code; no comments needed
-- **2026-06-18**: Navbar updated — menu items expanded to 8 items (Inicio, El Problema, La Solución, Cómo funciona, Rubros, Precios, Dudas, Contacto); CTA text set to "Solicitar acceso anticipado gratuito"; self-documenting code; no comments needed
+- **2026-06-18**: Navbar updated — menu items expanded to 9 items (Inicio, El Problema, La Solución, Cómo funciona, Rubros, Funcionalidades, Precios, Dudas, Contacto); CTA text set to "Solicitar acceso anticipado gratuito"; self-documenting code; no comments needed
 - **2026-06-18**: Footer updated — nav links changed to Inicio, La Solución, Cómo funciona, Rubros, Contacto; self-documenting code; no comments needed
 - **2026-06-18**: App.vue updated — HowItWorksSection imported and rendered in template between SolutionSection and UseCasesSection; self-documenting import and tag, no comments needed
 - **2026-06-18**: HeroSection updated — secondary CTA scroll target changed from `#solution` to `#how-it-works`; new `scrollToHowItWorks` function; self-documenting code; no comments needed
