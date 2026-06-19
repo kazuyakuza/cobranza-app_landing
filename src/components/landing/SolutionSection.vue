@@ -1,10 +1,7 @@
 <script setup lang="ts">
 import { useScrollReveal } from '@/composables/useScrollReveal'
-
 useScrollReveal()
-
 const sectionTitle = 'Cobranza App simplifica y centraliza todo el proceso de cobranza'
-
 const bodyText =
   'Es una plataforma que permite cargar deudas de forma rápida (individual o masiva), que tus clientes consulten su saldo actual en cualquier momento, suban sus comprobantes de pago y que tú puedas validarlos de manera ágil y ordenada.'
 
