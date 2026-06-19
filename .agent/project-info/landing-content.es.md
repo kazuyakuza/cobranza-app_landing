@@ -3,13 +3,13 @@
 ## 1. Hero Section
 
 **Título principal:**  
-**Cobranza App** — Gestioná tus cobros de forma simple, ordenada y eficiente.
+Centralizá deudas, comprobantes y conciliación bancaria en un solo lugar
 
 **Subtítulo:**  
 Sistema web que permite a empresas y profesionales cargar deudas, recibir comprobantes de pago de sus clientes y conciliarlos de manera centralizada y sin complicaciones.
 
 **CTA Principal:**  
-**Quiero probar la Beta gratis**
+**Solicitar acceso anticipado gratuito**
 
 ---
 
@@ -40,7 +40,35 @@ Cobranza App simplifica y centraliza todo el proceso de cobranza
 **Contenido:**  
 Es una plataforma que permite cargar deudas de forma rápida (individual o masiva), que tus clientes consulten su saldo actual en cualquier momento, suban sus comprobantes de pago y que tú puedas validarlos de manera ágil y ordenada.
 
+**Antes vs Después:**
+
+| Antes                              | Con Cobranza App                     |
+|------------------------------------|---------------------------------------------|
+| Comprobantes dispersos en WhatsApp, mail y chats | Todos los comprobantes centralizados y organizados |
+| Tenés que verificar manualmente cada transferencia | El sistema cruza automáticamente comprobantes, transferencias y deudas |
+| Conciliación manual con extractos bancarios | Conciliación asistida con revisión manual solo en excepciones |
+| Clientes preguntando constantemente cuánto deben | Clientes consultan su saldo por sí mismos en cualquier momento |
+
 De esta forma reducís drásticamente el tiempo dedicado a comunicación, verificación y conciliación de pagos.
+
+**Nota sobre carga masiva:** Próximamente podrás importar deudas desde Excel o CSV en segundos.
+
+---
+
+## 3.5 Cómo funciona Cobranza App
+
+**Título:**  
+Cómo funciona Cobranza App
+
+**Contenido / Pasos para el diagrama:**
+
+1. La empresa carga las deudas (individual o masivamente).
+2. Cada cliente accede con su identificador (código de cliente, DNI + unidad, etc.) y consulta su saldo y vencimientos.
+3. El cliente realiza la transferencia y sube el comprobante directamente en la plataforma.
+4. La empresa sube el extracto bancario.
+5. El sistema cruza automáticamente los comprobantes, transferencias y deudas.
+6. Los casos que requieren atención se revisan y confirman manualmente.
+7. Se genera y descarga el recibo una vez validado el pago.
 
 ---
 
