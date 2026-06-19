@@ -1,68 +1,14 @@
 <script setup lang="ts">
-/**
- * FaqSection — Frequently Asked Questions section using Bootstrap 5
- * Accordion. Renders 9 Spanish Q&A pairs with dark theme overrides
- * and scroll reveal animations. Content from landing-content.es.md §8.
- */
 import { useScrollReveal } from '@/composables/useScrollReveal'
-
-interface FaqItem {
-  question: string
-  answer: string
-}
+import { faqGroups } from '@/data/faq'
 
 useScrollReveal()
 
 const sectionTitle = 'Preguntas Frecuentes'
-const accordionId = 'faqAccordion'
 
-const faqItems: FaqItem[] = [
-  {
-    question: '¿Para quién está pensado Cobranza App?',
-    answer:
-      'Principalmente para PyMEs, profesionales, monotributistas y administradores que necesitan organizar y agilizar su proceso de cobranza.'
-  },
-  {
-    question: '¿Es una aplicación móvil o web?',
-    answer:
-      'Es un sistema web responsive. Los clientes finales pueden usarlo cómodamente desde el celular. La administración es más cómoda desde computadora, aunque también es accesible desde móvil.'
-  },
-  {
-    question: '¿Hay límite de clientes?',
-    answer:
-      'No. No existe límite en la cantidad de clientes. El cobro depende únicamente del volumen de pagos procesados.'
-  },
-  {
-    question: '¿Cómo funcionan las notificaciones?',
-    answer:
-      'Actualmente mediante email (recordatorios y alertas de nuevos comprobantes). Próximamente incorporaremos WhatsApp y otros canales según demanda.'
-  },
-  {
-    question: '¿Qué medios de pago acepta?',
-    answer:
-      'El cliente paga por fuera (principalmente transferencia) y sube el comprobante. En etapas posteriores incorporaremos pasarelas de pago integradas.'
-  },
-  {
-    question: '¿Cómo se realiza la conciliación?',
-    answer:
-      'En esta primera etapa es semi-automática: el sistema ayuda a cruzar extractos bancarios, comprobantes y deudas. No solicitamos ni guardamos credenciales bancarias.'
-  },
-  {
-    question: '¿Los recibos tienen validez fiscal?',
-    answer:
-      'Actualmente generan recibos válidos internamente. La integración con AFIP (facturación electrónica) está planificada según necesidades de los usuarios.'
-  },
-  {
-    question: '¿Cómo se protegen los datos y comprobantes?',
-    answer:
-      'La seguridad es una prioridad. Todos los datos y archivos se almacenan de forma segura, con acceso restringido y encriptado.'
-  },
-  {
-    question: '¿Puedo solicitar funcionalidades específicas?',
-    answer:
-      'Sí. Estamos en etapa Beta y valoramos mucho el feedback. Si necesitás alguna funcionalidad, contáctanos.'
-  }
-]
+function collapseId(accordionId: string, index: number): string {
+  return `${accordionId}Collapse${index}`
+}
 </script>
 
 <template>
@@ -71,26 +17,44 @@ const faqItems: FaqItem[] = [
       <div class="row justify-content-center">
         <div class="col-12 col-md-10 col-lg-9">
           <h2 data-reveal class="faq-title">{{ sectionTitle }}</h2>
-          <div :id="accordionId" data-reveal class="accordion faq-accordion">
-            <div v-for="(item, index) in faqItems" :key="item.question" class="accordion-item">
-              <h3 class="accordion-header">
-                <button
-                  class="accordion-button"
-                  :class="{ collapsed: index !== 0 }"
-                  type="button"
-                  data-bs-toggle="collapse"
-                  :data-bs-target="'#faqCollapse' + index"
-                  :aria-expanded="index === 0"
+
+          <div class="faq-groups">
+            <div
+              v-for="group in faqGroups"
+              :key="group.accordionId"
+              :class="[`faq-group--${group.variant}`, 'faq-group']"
+              data-reveal
+            >
+              <h3 class="faq-group-title">{{ group.title }}</h3>
+
+              <div class="accordion">
+                <div
+                  v-for="(item, index) in group.faqs"
+                  :key="item.question"
+                  class="accordion-item"
                 >
-                  {{ item.question }}
-                </button>
-              </h3>
-              <div
-                :id="'faqCollapse' + index"
-                class="accordion-collapse collapse"
-                :class="{ show: index === 0 }"
-              >
-                <div class="accordion-body">{{ item.answer }}</div>
+                  <h4 class="accordion-header">
+                    <button
+                      class="accordion-button collapsed"
+                      type="button"
+                      data-bs-toggle="collapse"
+                      :data-bs-target="`#${collapseId(group.accordionId, index)}`"
+                      aria-expanded="false"
+                      :aria-controls="collapseId(group.accordionId, index)"
+                    >
+                      {{ item.question }}
+                    </button>
+                  </h4>
+                  <div
+                    :id="collapseId(group.accordionId, index)"
+                    class="accordion-collapse collapse"
+                  >
+                    <div class="accordion-body">
+                      <p class="faq-answer">{{ item.answer }}</p>
+                      <p v-if="item.note" class="faq-note">{{ item.note }}</p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
@@ -105,7 +69,6 @@ const faqItems: FaqItem[] = [
   background: var(--color-bg-card-alt);
   color: var(--color-text-on-dark);
 }
-
 .faq-title {
   font-size: 2.25rem;
   font-weight: 700;
@@ -113,24 +76,50 @@ const faqItems: FaqItem[] = [
   line-height: 1.25;
   color: var(--color-text-on-dark);
 }
-
-.faq-accordion {
+.faq-groups {
   margin-top: 2rem;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+}
+
+.faq-group {
+  border-left: 4px solid var(--group-color);
+  border-radius: 0 8px 8px 0;
+  overflow: hidden;
+}
+
+.faq-group--general {
+  --group-color: var(--color-primary);
+}
+
+.faq-group--company {
+  --group-color: var(--color-accent);
+}
+
+.faq-group--user {
+  --group-color: var(--color-primary);
+}
+
+.faq-group--conciliation {
+  --group-color: var(--color-accent);
+}
+
+.faq-group-title {
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin-bottom: 1rem;
+  line-height: 1.3;
+  padding-left: 1.5rem;
+  color: var(--group-color);
 }
 
 .accordion-item {
-  /* Rounded corners and consistent vertical spacing between items */
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
   border-radius: 8px;
   margin-bottom: 0.75rem;
-  /* Clip content to preserve border-radius on child elements */
   overflow: hidden;
-}
-
-.accordion-item:first-of-type,
-.accordion-item:last-of-type {
-  border-radius: 8px;
 }
 
 .accordion-item:last-of-type {
@@ -151,11 +140,6 @@ const faqItems: FaqItem[] = [
   box-shadow: none;
 }
 
-.accordion-button.collapsed {
-  background: var(--color-bg-card);
-  color: var(--color-text-on-dark);
-}
-
 .accordion-button::after {
   filter: brightness(0) invert(0.85);
 }
@@ -172,6 +156,19 @@ const faqItems: FaqItem[] = [
   padding: 1.25rem 1.5rem;
 }
 
+.faq-answer {
+  margin: 0;
+}
+
+.faq-note {
+  margin: 1rem 0 0;
+  padding-left: 1rem;
+  border-left: 2px solid var(--group-color);
+  font-style: italic;
+  font-size: 0.9375rem;
+  color: var(--color-text-on-dark-dim);
+}
+
 .accordion-collapse {
   transition: height 0.35s ease;
 }
@@ -179,6 +176,25 @@ const faqItems: FaqItem[] = [
 @media (max-width: 767.98px) {
   .faq-title {
     font-size: 1.75rem;
+  }
+
+  .faq-group-title {
+    font-size: 1.125rem;
+    padding-left: 1rem;
+  }
+
+  .accordion-button {
+    font-size: 0.9375rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .accordion-body {
+    font-size: 0.9375rem;
+    padding: 1rem 1.25rem;
+  }
+
+  .faq-note {
+    font-size: 0.875rem;
   }
 }
 </style>
