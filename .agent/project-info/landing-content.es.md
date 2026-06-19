@@ -242,7 +242,7 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
   
   Contáctanos y podemos buscar una solución.
 
-- **¿Qué pasa si el sistema no logra cruzar automáticamente un o mas pago/s?**  
+- **¿Qué pasa si el sistema no logra cruzar automáticamente uno o más pagos?**  
   Puedes revisar y confirmar manualmente los casos excepcionales en cualquier momento.
 
 - **¿Puedo tener varios usuarios administradores?**  
