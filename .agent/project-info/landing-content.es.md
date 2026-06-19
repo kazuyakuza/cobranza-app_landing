@@ -153,20 +153,32 @@ Funcionalidades diseñadas para ambas partes del proceso de cobranza.
 **Para la empresa o profesional:**
 
 - Gestión centralizada de clientes y deudas
+  - _Detalle:_ Todos tus clientes y sus saldos quedan en un único panel, sin repartir la información entre hojas de cálculo y mensajes sueltos.
 - Carga masiva de saldos y vencimientos
+  - _Detalle:_ Cargá los importes de muchos clientes a la vez y actualizá los vencimientos en segundos, ahorrando trabajo repetitivo cada mes.
 - Reportes claros de deudas, pagos y morosidad
+  - _Detalle:_ Visualizá de un vistazo quién debe, cuánto y desde cuándo, para tomar decisiones rápidas y seguir la evolución de la cobranza.
 - Notificaciones automáticas al recibir comprobantes
+  - _Detalle:_ Cuando un cliente sube un comprobante, el sistema te avisa al instante para que no tengas que revisar manualmente cada canal.
 - Validación ágil de pagos y generación automática de recibos
+  - _Detalle:_ Confirmá los pagos en pocos clics y dejá que el sistema arme el recibo correspondiente, sin trabajo manual extra.
 - Historial completo y trazabilidad por cliente
+  - _Detalle:_ Reconstruí el recorrido de cada cliente: deudas, comprobantes y validaciones, todo ordenado y disponible para consulta.
 - Conciliación asistida (el sistema cruza información automáticamente y permite revisión manual)
+  - _Detalle:_ El sistema propone los cruces entre deudas, comprobantes y transferencias; vos solo revisás y confirmás los casos dudosos.
 
 **Para el cliente final:**
 
 - Los clientes ingresan con un identificador (código de cliente, DNI + unidad, etc.) preconfigurado. **No necesitan registrarse ni crear cuenta**.
+  - _Detalle:_ Sin contraseñas que olvidar ni formularios de registro. Tus clientes acceden directamente y consultan su estado al instante.
 - Consulta inmediata de deuda y vencimientos
+  - _Detalle:_ En cualquier momento y desde el celular, tus clientes saben exactamente cuánto deben y cuándo vence cada concepto.
 - Subida sencilla de comprobantes desde el celular
+  - _Detalle:_ Con una foto del comprobante alcanza: el cliente lo sube en segundos y queda asociado automáticamente a su deuda.
 - Seguimiento en tiempo real del estado de sus pagos
+  - _Detalle:_ El cliente ve si su comprobante está pendiente, validado o rechazado, sin necesidad de preguntar por mensaje.
 - Descarga de un recibo una vez validado
+  - _Detalle:_ Cuando el pago se valida, el cliente descarga su recibo en el momento, sin tener que pedírtelo ni esperar.
 
 ---
 

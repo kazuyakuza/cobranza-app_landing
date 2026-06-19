@@ -130,7 +130,7 @@ function collapseId(accordionId: string, index: number): string {
   background: var(--color-bg-card);
   color: var(--color-text-on-dark);
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 500;
   padding: 1.25rem 1.5rem;
 }
 

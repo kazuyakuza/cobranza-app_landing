@@ -13,6 +13,7 @@ const menuItems: NavMenuItem[] = [
   { label: 'La Solución', sectionId: 'solution' },
   { label: 'Cómo funciona', sectionId: 'how-it-works' },
   { label: 'Rubros', sectionId: 'use-cases' },
+  { label: 'Funcionalidades', sectionId: 'features' },
   { label: 'Precios', sectionId: 'pricing' },
   { label: 'Dudas', sectionId: 'faq' },
   { label: 'Contacto', sectionId: 'contact' }
