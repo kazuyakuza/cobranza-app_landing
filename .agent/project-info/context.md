@@ -7,6 +7,7 @@
 
 ## Recent Changes
 
+- **2026-06-19**: FaqSection expanded — replaced single accordion with 4 category groups (General, Para la empresa o profesional, Para tus clientes, Conciliación y pagos); now 17 questions total; `FaqVariant` type (`'general' | 'company' | 'user' | 'conciliation'`) drives color coding via CSS custom property `--group-color`; types extracted to `src/types/faq.ts` (`FaqItem` with optional `note` field, `FaqGroup`, `FaqVariant`); data extracted to `src/data/faq.ts` (`generalFaqs`, `companyFaqs`, `userFaqs`, `conciliationFaqs`, `faqGroups`); each group has left border accent matching variant color; optional `note` field rendered with italic style and left border accent; `collapseId(accordionId, index)` helper generates unique collapse target IDs per group; self-documenting code; no comments needed
 - **2026-06-19**: UseCasesSection redesigned — replaced numbered step list with rubros grid (5 cards with icons and sub-items) + Bootstrap Tabs component for use-case walkthroughs; new `UseCasesTabs.vue` child component with before/after comparison blocks per tab; types extracted to `src/types/use-cases.ts` (`RubroItem`, `UseCaseExample`); data extracted to `src/data/use-cases.ts` (`rubros`, `useCaseExamples`); tabs use Bootstrap `nav-tabs` with ARIA roles, overflow-x scroll on mobile, `--color-pain`/`--color-accent` border accents for habitual vs cobranza blocks; self-documenting code; no comments needed
 - **2026-06-19**: FeaturesSection redesigned — replaced grid layout with Bootstrap 5 Accordion pattern; two accordion groups (empresa/user) with `FeatureVariant` color coding via CSS custom property `--group-color`; types extracted to `src/types/features.ts` (`FeatureItem`, `FeatureGroup`, `FeatureVariant`); data extracted to `src/data/features.ts` (`companyFeatures`, `userFeatures`, `featureGroups`); dark-theme accordion overrides; self-documenting code; no comments needed
 - **2026-06-18**: Navbar updated — menu items expanded to 8 items (Inicio, El Problema, La Solución, Cómo funciona, Rubros, Precios, Dudas, Contacto); CTA text set to "Solicitar acceso anticipado gratuito"; self-documenting code; no comments needed
@@ -70,7 +71,7 @@
 - [x] Add Navbar component — implemented with smooth scroll navigation
 - [x] HeroSection component — implemented with scroll-to-section CTAs, documented
 - [x] Styling system — CSS variables, base styles, typography, scroll animations, style guide
-- [x] FaqSection component — Bootstrap 5 Accordion, 9 Spanish Q&A pairs, documented
+- [x] FaqSection component — 4 category accordion groups, 17 Spanish Q&A pairs, variant color coding, optional note field, documented
 - [x] ContactSection component — email link, Google Form embed, mailto CTA, dark theme, documented
 - [x] Footer component — nav links, contact email, copyright, beta disclaimer, smooth scroll, documented
 - [x] Landing page structure — all 10 sections + Navbar + Footer with styling polish applied
@@ -159,19 +160,29 @@
 ### FaqSection Component Details
 
 **File**: `src/components/landing/FaqSection.vue`
-**Purpose**: FAQ accordion section with 9 Spanish Q&A pairs about Cobranza App.
+**Purpose**: FAQ section with 17 Spanish Q&A pairs organized in 4 category accordion groups about Cobranza App.
 **Key Features**:
 
-- Bootstrap 5 Accordion with multi-open behavior (multiple items can be expanded simultaneously)
-- Dark theme overrides for accordion button, body, and chevron icon
+- Four accordion groups rendered via `v-for` over `faqGroups` array from `src/data/faq.ts`
+- `FaqVariant` type (`'general' | 'company' | 'user' | 'conciliation'`) drives color coding via CSS custom property `--group-color`
+- General group uses `--color-primary` border accent; company group uses `--color-accent`; user group uses `--color-primary`; conciliation group uses `--color-accent`
+- Each group: left border accent (4px solid), group title in variant color
+- `collapseId(accordionId, index)` helper generates unique collapse target IDs per group
+- `src/types/faq.ts` — `FaqItem` (question, answer, optional note), `FaqGroup` (title, accordionId, variant, faqs), `FaqVariant`
+- `src/data/faq.ts` — `generalFaqs` (3 items), `companyFaqs` (6 items), `userFaqs` (3 items), `conciliationFaqs` (5 items), `faqGroups` export
+- Optional `note` field: rendered with italic style, left border accent matching group color, smaller font size
+- Dark theme accordion overrides: `--color-bg-card` background, `--color-text-on-dark` text, `--color-bg-card-alt` for expanded state
 - Scroll reveal animations via `data-reveal` attribute
-- Responsive title sizing (2.25rem desktop, 1.75rem mobile)
+- Background: `--color-bg-card-alt`
+- Responsive: title scales to `1.75rem`, group titles to `1.125rem`, smaller padding and font sizes on mobile (<768px)
 
 **Design Details**:
 
 - Accordion items: 8px border-radius, 0.75rem vertical spacing, overflow hidden to clip child content to rounded corners
 - Card backgrounds use `--color-bg-card` with `--color-border` borders
 - Expanded state uses `--color-bg-card-alt` for visual distinction
+- Group containers: 2rem gap between groups, left border accent per variant
+- Note blocks: 1rem top margin, 1rem left padding, 2px left border accent, italic style, 0.9375rem font size
 
 ### ContactSection Component Details
 
