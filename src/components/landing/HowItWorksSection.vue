@@ -4,11 +4,11 @@ import type { HowItWorksStep, HowItWorksStepKind } from '@/types/how-it-works'
 useScrollReveal()
 const sectionTitle = 'Cómo funciona Cobranza App'
 const stepTexts = [
-  'La empresa carga las deudas (individual o masivamente).',
+  'Carga las deudas de tus clientes, individual o masivamente.',
   'Cada cliente accede con su identificador (código de cliente, DNI + unidad, etc.) y consulta su saldo y vencimientos.',
   'El cliente realiza la transferencia y sube el comprobante directamente en la plataforma.',
-  'La empresa sube el extracto bancario.',
-  'El sistema cruza automáticamente los comprobantes, transferencias y deudas.',
+  'Sube tu extracto bancario al sistema.',
+  'El sistema cruza automáticamente los comprobantes, transferencias y deudas. Genera reportes y un resumen del resultante. Notifica a los clientes sobre el estado de su deuda.',
   'Los casos que requieren atención se revisan y confirman manualmente.',
   'Se genera y descarga el recibo una vez validado el pago.'
 ]
@@ -29,10 +29,10 @@ const steps: HowItWorksStep[] = stepTexts.map((text, i) => ({
   text
 }))
 const actorLabels: Record<HowItWorksStepKind, string> = {
-  empresa: 'Empresa',
+  empresa: 'Negocio',
   cliente: 'Cliente',
-  sistema: 'Automático',
-  resultado: 'Recibo'
+  sistema: 'Sistema',
+  resultado: 'Cliente'
 }
 const kindColorMap: Record<HowItWorksStepKind, string> = {
   empresa: 'var(--color-primary)',

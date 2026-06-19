@@ -29,13 +29,15 @@ const comparisonRows: ComparisonRow[] = [
   {
     before: 'Clientes preguntando constantemente cuánto deben',
     after: 'Clientes consultan su saldo por sí mismos en cualquier momento'
+  },
+  {
+    before: 'Recordar deudas/pagos a clientes mediante WhatsApp/mail/chat/llamada.',
+    after: 'El sistema envía recordatorios a los clientes mediante notificaciones automáticas.'
   }
 ]
 
 const closingStatement =
   'De esta forma reducís drásticamente el tiempo dedicado a comunicación, verificación y conciliación de pagos.'
-
-const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en segundos.'
 </script>
 
 <template>
@@ -50,40 +52,27 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
             {{ bodyText }}
           </p>
           <div data-reveal class="comparison-wrapper">
-            <div class="row">
-              <div class="col-md-6">
-                <h3 class="comparison-heading comparison-heading--antes">
-                  <i class="bi bi-x-circle me-2"></i>Antes
-                </h3>
-                <ul class="comparison-list">
-                  <li
-                    v-for="(row, index) in comparisonRows"
-                    :key="'antes-' + index"
-                    class="comparison-item comparison-item--antes"
-                  >
-                    <span class="comparison-text">{{ row.before }}</span>
-                  </li>
-                </ul>
-              </div>
-              <div class="col-md-6">
-                <h3 class="comparison-heading comparison-heading--despues">
-                  <i class="bi bi-check-circle me-2"></i>Después
-                </h3>
-                <ul class="comparison-list">
-                  <li
-                    v-for="(row, index) in comparisonRows"
-                    :key="'despues-' + index"
-                    class="comparison-item comparison-item--despues"
-                  >
-                    <span class="comparison-text">{{ row.after }}</span>
-                  </li>
-                </ul>
-              </div>
+            <div class="comparison-headers">
+              <h3 class="comparison-heading comparison-heading--antes">
+                <i class="bi bi-x-circle me-2"></i>Antes
+              </h3>
+              <h3 class="comparison-heading comparison-heading--despues">
+                <i class="bi bi-check-circle me-2"></i>Después
+              </h3>
             </div>
+            <ul class="comparison-list">
+              <li v-for="(row, index) in comparisonRows" :key="index" class="comparison-row">
+                <div class="comparison-cell comparison-cell--antes">
+                  <span class="comparison-cell-label">Antes</span>
+                  <span class="comparison-text">{{ row.before }}</span>
+                </div>
+                <div class="comparison-cell comparison-cell--despues">
+                  <span class="comparison-cell-label">Después</span>
+                  <span class="comparison-text">{{ row.after }}</span>
+                </div>
+              </li>
+            </ul>
           </div>
-          <p data-reveal class="upcoming-note">
-            {{ upcomingNote }}
-          </p>
           <p data-reveal class="solution-closing">
             {{ closingStatement }}
           </p>
@@ -113,10 +102,15 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
 .comparison-wrapper {
   margin-bottom: 2rem;
 }
+.comparison-headers {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.75rem;
+  margin-bottom: 1.25rem;
+}
 .comparison-heading {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-bottom: 1.25rem;
   display: flex;
   align-items: center;
 }
@@ -129,41 +123,41 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
 .comparison-list {
   list-style: none;
   padding: 0;
-  margin: 0 0 2rem;
+  margin: 0;
 }
-.comparison-item {
-  display: flex;
-  align-items: flex-start;
+.comparison-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
   gap: 0.75rem;
-  padding: 0.85rem 1rem;
   margin-bottom: 0.75rem;
+}
+.comparison-row:last-child {
+  margin-bottom: 0;
+}
+.comparison-cell {
+  display: flex;
+  flex-direction: column;
+  padding: 0.85rem 1rem;
   border-radius: 8px;
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
 }
-.comparison-item--antes {
+.comparison-cell--antes {
   border-left: 3px solid var(--color-pain);
 }
-.comparison-item--despues {
+.comparison-cell--despues {
   border-left: 3px solid var(--color-accent);
+}
+.comparison-cell-label {
+  display: none;
 }
 .comparison-text {
   font-size: 0.95rem;
   line-height: 1.45;
   color: var(--color-text-on-dark-muted);
 }
-.comparison-item--despues .comparison-text {
+.comparison-cell--despues .comparison-text {
   color: var(--color-text-on-dark);
-}
-.upcoming-note {
-  background: var(--color-bg-card-alt);
-  border: 1px solid var(--color-border);
-  border-radius: 8px;
-  padding: 1rem 1.25rem;
-  font-size: 1rem;
-  color: var(--color-text-on-dark-muted);
-  margin-bottom: 2.5rem;
-  text-align: center;
 }
 .solution-closing {
   font-size: 1.125rem;
@@ -182,7 +176,27 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
   .comparison-heading {
     font-size: 1.1rem;
   }
-  .upcoming-note {
+  .comparison-headers {
+    display: none;
+  }
+  .comparison-row {
+    grid-template-columns: 1fr;
+  }
+  .comparison-cell-label {
+    display: block;
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    margin-bottom: 0.35rem;
+  }
+  .comparison-cell--antes .comparison-cell-label {
+    color: var(--color-pain);
+  }
+  .comparison-cell--despues .comparison-cell-label {
+    color: var(--color-accent);
+  }
+  .comparison-text {
     font-size: 0.9rem;
   }
 }
