@@ -46,11 +46,9 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
           <h2 data-reveal class="solution-title">
             {{ sectionTitle }}
           </h2>
-
           <p data-reveal class="solution-body">
             {{ bodyText }}
           </p>
-
           <div data-reveal class="comparison-wrapper">
             <div class="row">
               <div class="col-md-6">
@@ -83,11 +81,9 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
               </div>
             </div>
           </div>
-
           <p data-reveal class="upcoming-note">
             {{ upcomingNote }}
           </p>
-
           <p data-reveal class="solution-closing">
             {{ closingStatement }}
           </p>
@@ -102,25 +98,21 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
   background: var(--color-bg-navy);
   color: var(--color-text-on-dark);
 }
-
 .solution-title {
   font-size: 2.25rem;
   font-weight: 700;
   margin-bottom: 1.5rem;
   line-height: 1.25;
 }
-
 .solution-body {
   font-size: 1.125rem;
   color: var(--color-text-on-dark-muted);
   margin-bottom: 2.5rem;
   line-height: 1.65;
 }
-
 .comparison-wrapper {
   margin-bottom: 2rem;
 }
-
 .comparison-heading {
   font-size: 1.25rem;
   font-weight: 700;
@@ -128,21 +120,17 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
   display: flex;
   align-items: center;
 }
-
 .comparison-heading--antes {
-  color: var(--color-danger);
+  color: var(--color-pain);
 }
-
 .comparison-heading--despues {
-  color: var(--color-success);
+  color: var(--color-accent);
 }
-
 .comparison-list {
   list-style: none;
   padding: 0;
   margin: 0 0 2rem;
 }
-
 .comparison-item {
   display: flex;
   align-items: flex-start;
@@ -150,31 +138,26 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
   padding: 0.85rem 1rem;
   margin-bottom: 0.75rem;
   border-radius: 8px;
-  background: rgba(255, 255, 255, 0.04);
-  border: 1px solid rgba(255, 255, 255, 0.06);
+  background: var(--color-bg-card);
+  border: 1px solid var(--color-border);
 }
-
 .comparison-item--antes {
-  border-left: 3px solid var(--color-danger);
+  border-left: 3px solid var(--color-pain);
 }
-
 .comparison-item--despues {
-  border-left: 3px solid var(--color-success);
+  border-left: 3px solid var(--color-accent);
 }
-
 .comparison-text {
   font-size: 0.95rem;
   line-height: 1.45;
   color: var(--color-text-on-dark-muted);
 }
-
 .comparison-item--despues .comparison-text {
   color: var(--color-text-on-dark);
 }
-
 .upcoming-note {
-  background: rgba(255, 255, 255, 0.05);
-  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: var(--color-bg-card-alt);
+  border: 1px solid var(--color-border);
   border-radius: 8px;
   padding: 1rem 1.25rem;
   font-size: 1rem;
@@ -182,28 +165,23 @@ const upcomingNote = 'Próximamente podrás importar deudas desde Excel o CSV en
   margin-bottom: 2.5rem;
   text-align: center;
 }
-
 .solution-closing {
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--color-accent);
   line-height: 1.65;
 }
-
 @media (max-width: 767.98px) {
   .solution-title {
     font-size: 1.75rem;
   }
-
   .solution-body,
   .solution-closing {
     font-size: 1rem;
   }
-
   .comparison-heading {
     font-size: 1.1rem;
   }
-
   .upcoming-note {
     font-size: 0.9rem;
   }
