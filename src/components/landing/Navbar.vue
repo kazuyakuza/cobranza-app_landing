@@ -11,15 +11,14 @@ const menuItems: NavMenuItem[] = [
   { label: 'Inicio', sectionId: 'hero' },
   { label: 'El Problema', sectionId: 'problem' },
   { label: 'La Solución', sectionId: 'solution' },
+  { label: 'Cómo funciona', sectionId: 'how-it-works' },
   { label: 'Rubros', sectionId: 'use-cases' },
-  { label: 'Funcionalidades', sectionId: 'features' },
-  { label: 'Prueba Gratis', sectionId: 'beta' },
   { label: 'Precios', sectionId: 'pricing' },
   { label: 'Dudas', sectionId: 'faq' },
   { label: 'Contacto', sectionId: 'contact' }
 ]
 
-const ctaText = 'Quiero probar la Beta gratis'
+const ctaText = 'Solicitar acceso anticipado gratuito'
 const brandName = 'Cobranza App'
 const activeSectionId = ref<string>('hero')
 let observer: IntersectionObserver | null = null

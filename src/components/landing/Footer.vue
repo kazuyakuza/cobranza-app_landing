@@ -14,7 +14,9 @@ interface FooterLink {
 
 const footerLinks: FooterLink[] = [
   { label: 'Inicio', sectionId: 'hero' },
-  { label: 'Funcionalidades', sectionId: 'features' },
+  { label: 'La Solución', sectionId: 'solution' },
+  { label: 'Cómo funciona', sectionId: 'how-it-works' },
+  { label: 'Rubros', sectionId: 'use-cases' },
   { label: 'Contacto', sectionId: 'contact' }
 ]
 
