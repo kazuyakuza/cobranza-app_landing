@@ -113,10 +113,6 @@ function tabControlId(tabId: string): string {
 }
 
 .nav-tabs .nav-link.active {
-  color: var(--color-text-on-dark);
-  background: var(--color-bg-card);
-  border-color: var(--color-border);
-  border-bottom-color: var(--color-bg-card);
   font-weight: 600;
 }
 
