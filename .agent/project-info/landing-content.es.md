@@ -76,25 +76,70 @@ Cómo funciona Cobranza App
 **Título:**  
 Ideal para:
 
-- Administraciones de consorcios y expensas
-- Inmobiliarias y administradores de alquileres
-- Profesionales y monotributistas (honorarios y servicios)
-- Colegios, academias, gimnasios y clubes
-- Cualquier cobro recurrente o variable
+**Rubros con sub-items:**
 
-**Caso de uso detallado:**
+- **Administraciones de consorcios y expensas**
+  - Expensas ordinarias y extraordinarias
+  - Seguimiento de pagos por unidad
+  - Recepción de comprobantes
+  - Conciliación de transferencias
 
-**Ejemplo práctico: Administración de Expensas con Cobranza App**
+- **Inmobiliarias y administradores de alquileres**
+  - Alquileres mensuales
+  - Expensas y servicios
+  - Control de vencimientos
+  - Validación de pagos
 
-1. La administradora carga las expensas del mes (de forma individual o masiva).
-2. Cada propietario o inquilino accede con su ID de unidad y consulta el monto exacto y la fecha de vencimiento.
-3. Cada propietario o inquilino realiza la transferencia bancaria y sube el comprobante (foto o PDF) directamente en la plataforma.
-4. La administradora sube el extracto bancario.
-5. El sistema facilita el cruzamiento entre comprobantes, transferencias y deudas.
-6. Queda registrado claramente el estado de cada unidad (pagado, pendiente, en revisión).
-7. El cliente puede descargar su recibo oficial una vez validado el pago.
+- **Profesionales y monotributistas**
+  - Honorarios
+  - Abonos mensuales
+  - Servicios recurrentes
+  - Seguimiento de cobranzas
 
-Este mismo flujo se aplica a honorarios profesionales, cuotas educativas, alquileres, gimnasios y cualquier otro tipo de cobro recurrente o variable.
+- **Colegios, academias, gimnasios y clubes**
+  - Cuotas mensuales
+  - Matrículas
+  - Actividades especiales
+  - Control de morosidad
+
+- **Cualquier cobro recurrente o variable**
+  - Cuotas
+  - Membresías
+  - Servicios
+  - Pagos periódicos
+
+**Ejemplo práctico con tabs:**
+
+**Título:** Seleccioná tu caso
+
+Incluir tabs:
+
+- Administración de Consorcios
+- Inmobiliaria
+- Profesional o Estudio
+- Colegio, Academia o Gimnasio
+
+**Contenido para cada tab:**
+
+**Administración de Consorcios**
+
+- Situación habitual: Cada mes las expensas cambian. Los propietarios consultan montos, envían comprobantes por WhatsApp y la conciliación se realiza manualmente.
+- Con Cobranza App: Se cargan las expensas del mes. Cada propietario consulta su saldo. Sube el comprobante de pago. Se carga el extracto bancario. El sistema ayuda a relacionar deudas, comprobantes y transferencias. Se valida el pago y se genera el recibo.
+
+**Inmobiliaria**
+
+- Situación habitual: Los inquilinos consultan alquileres, expensas y vencimientos por distintos canales. Los comprobantes llegan dispersos y el seguimiento consume tiempo administrativo.
+- Con Cobranza App: Se cargan alquileres y conceptos asociados. Cada inquilino consulta su deuda actual. Realiza la transferencia y sube el comprobante. El sistema centraliza la información. El administrador valida los pagos desde un único lugar.
+
+**Profesional o Estudio**
+
+- Situación habitual: Los clientes realizan transferencias por honorarios o abonos mensuales y luego envían comprobantes por correo o WhatsApp.
+- Con Cobranza App: Se generan los importes a cobrar. Los clientes consultan su saldo. Suben el comprobante directamente en la plataforma. El profesional revisa y valida los pagos. Todo queda registrado y disponible para consulta.
+
+**Colegio, Academia o Gimnasio**
+
+- Situación habitual: Las cuotas mensuales generan consultas frecuentes, comprobantes dispersos y seguimiento manual de morosidad.
+- Con Cobranza App: Se cargan las cuotas del período. Los alumnos o socios consultan sus vencimientos. Suben comprobantes desde el celular. La administración controla pagos y pendientes desde un único panel.
 
 ---
 
@@ -102,6 +147,8 @@ Este mismo flujo se aplica a honorarios profesionales, cuotas educativas, alquil
 
 **Título:**  
 Cómo te ayuda Cobranza App
+
+Funcionalidades diseñadas para ambas partes del proceso de cobranza.
 
 **Para la empresa o profesional:**
 
@@ -111,13 +158,15 @@ Cómo te ayuda Cobranza App
 - Notificaciones automáticas al recibir comprobantes
 - Validación ágil de pagos y generación automática de recibos
 - Historial completo y trazabilidad por cliente
+- Conciliación asistida (el sistema cruza información automáticamente y permite revisión manual)
 
 **Para el cliente final:**
 
-- Consulta inmediata de su deuda y vencimientos
+- Los clientes ingresan con un identificador (código de cliente, DNI + unidad, etc.) preconfigurado. **No necesitan registrarse ni crear cuenta**.
+- Consulta inmediata de deuda y vencimientos
 - Subida sencilla de comprobantes desde el celular
 - Seguimiento en tiempo real del estado de sus pagos
-- Descarga de recibo oficial una vez validado
+- Descarga de un recibo una vez validado
 
 ---
 
@@ -179,6 +228,34 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
 
 - **¿Puedo solicitar funcionalidades específicas?**  
   Sí. Estamos en etapa Beta y valoramos mucho el feedback. Si necesitás alguna funcionalidad, contáctanos.
+
+- **¿Mis clientes necesitan registrarse o crear una cuenta?**  
+  No. Solo necesitan ingresar su código identificatorio y/o datos definidos por la empresa.
+
+- **¿Puedo importar deudas desde Excel o CSV?**  
+  Es una funcionalidad que será agregada según lo demanden nuestros usuarios.
+
+- **¿Cobranza App accede a mis cuentas bancarias o mueve dinero?**  
+  No. Los pagos se realizan por fuera de la plataforma (transferencias bancarias habituales). Cobranza App solo organiza y ayuda a conciliar la información.
+
+  *"Me gustaría que el sistema acceda y descarga el resumen de mi banco de forma autónoma"*
+  
+  Contáctanos y podemos buscar una solución.
+
+- **¿Qué pasa si el sistema no logra cruzar automáticamente un o mas pago/s?**  
+  Puedes revisar y confirmar manualmente los casos excepcionales en cualquier momento.
+
+- **¿Puedo tener varios usuarios administradores?**  
+  Sí. Podrás invitar a otros miembros de tu equipo sin costo extra.
+
+- **¿Puedo exportar reportes e información?**  
+  Sí, podrás exportar listados de deudas, pagos y reportes de conciliación.
+
+- **¿Funciona con pagos parciales, montos variables y cuotas?**  
+  Sí. El sistema está diseñado para manejar cobros variables y recurrentes.
+
+- **¿Qué formatos de extracto bancario soporta?**  
+  Inicialmente soporta los formatos más comunes (PDF y CSV) de los principales bancos. Se irán agregando más según los comentarios y experiencias que nos hagan llegar.
 
 ---
 
