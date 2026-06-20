@@ -1,45 +1,11 @@
 <script setup lang="ts">
 import { useScrollReveal } from '@/composables/useScrollReveal'
-import type { HowItWorksStep, HowItWorksStepKind } from '@/types/how-it-works'
+import { steps, actorLabels, kindColorMap, CONCILIATION_STEP_NUMBER } from '@/data/how-it-works'
+import ConciliationDiagram from '@/components/landing/ConciliationDiagram.vue'
+
 useScrollReveal()
+
 const sectionTitle = 'Cómo funciona Cobranza App'
-const stepTexts = [
-  'Carga las deudas de tus clientes, individual o masivamente.',
-  'Cada cliente accede con su identificador (código de cliente, DNI + unidad, etc.) y consulta su saldo y vencimientos.',
-  'El cliente realiza la transferencia y sube el comprobante directamente en la plataforma.',
-  'Sube tu extracto bancario al sistema.',
-  'El sistema cruza automáticamente los comprobantes, transferencias y deudas. Genera reportes y un resumen del resultante. Notifica a los clientes sobre el estado de su deuda.',
-  'Los casos que requieren atención se revisan y confirman manualmente.',
-  'Se genera y descarga el recibo una vez validado el pago.'
-]
-const stepKinds: HowItWorksStepKind[] = [
-  'empresa',
-  'cliente',
-  'cliente',
-  'empresa',
-  'sistema',
-  'empresa',
-  'resultado'
-]
-const stepIcons = ['upload', 'search', 'upload', 'upload', 'refresh-cw', 'search', 'file-text']
-const steps: HowItWorksStep[] = stepTexts.map((text, i) => ({
-  number: i + 1,
-  kind: stepKinds[i]!,
-  icon: stepIcons[i]!,
-  text
-}))
-const actorLabels: Record<HowItWorksStepKind, string> = {
-  empresa: 'Negocio',
-  cliente: 'Cliente',
-  sistema: 'Sistema',
-  resultado: 'Cliente'
-}
-const kindColorMap: Record<HowItWorksStepKind, string> = {
-  empresa: 'var(--color-primary)',
-  cliente: 'var(--color-accent)',
-  sistema: 'var(--color-primary)',
-  resultado: 'var(--color-accent)'
-}
 </script>
 <template>
   <section id="how-it-works" class="how-it-works-section">
@@ -66,6 +32,11 @@ const kindColorMap: Record<HowItWorksStepKind, string> = {
                 <span class="step-tag">{{ actorLabels[step.kind] }}</span>
                 <div class="step-card">
                   <p class="step-text">{{ step.text }}</p>
+                  <ConciliationDiagram
+                    v-if="step.number === CONCILIATION_STEP_NUMBER"
+                    class="conciliation-diagram-wrapper"
+                    aria-hidden="false"
+                  />
                 </div>
               </div>
             </li>
@@ -178,6 +149,11 @@ const kindColorMap: Record<HowItWorksStepKind, string> = {
   border-color: var(--node-color);
   color: var(--color-bg-dark);
 }
+
+.conciliation-diagram-wrapper {
+  margin-top: 0.5rem;
+}
+
 @media (max-width: 767.98px) {
   .section-title {
     font-size: 1.75rem;
