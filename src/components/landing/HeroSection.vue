@@ -115,5 +115,9 @@ function scrollToHowItWorks(): void {
   .hero-title {
     font-size: 2rem;
   }
+
+  .hero-subtitle {
+    font-size: 1.125rem;
+  }
 }
 </style>

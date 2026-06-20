@@ -122,7 +122,7 @@ onUnmounted(() => {
         </ul>
 
         <a
-          class="btn btn-success px-4 py-2 fw-semibold d-none d-lg-inline-block"
+          class="btn btn-success px-4 py-2 fw-semibold d-none d-xl-inline-block"
           href="#"
           @click.prevent="scrollToSection('contact')"
         >

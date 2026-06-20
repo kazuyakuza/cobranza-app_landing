@@ -144,16 +144,6 @@ function isGroupOpen(): boolean {
   padding: 1rem 1.25rem;
 }
 
-
-.faq-question-button::after {
-  filter: brightness(0) invert(0.85);
-}
-
-.faq-question-button:focus {
-  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.5);
-  border-color: var(--color-primary);
-}
-
 .faq-answer-body {
   color: var(--color-text-on-dark-muted);
   font-size: 1rem;

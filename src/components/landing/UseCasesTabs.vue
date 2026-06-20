@@ -22,7 +22,7 @@ function mobileCollapseId(tabId: string): string {
   <div data-reveal class="use-cases-tabs">
     <h3 class="use-cases-tabs-title">{{ tabsTitle }}</h3>
 
-    <div class="d-none d-md-block">
+    <div class="d-none d-lg-block">
       <div class="use-cases-tabs-nav">
         <ul class="nav nav-tabs" role="tablist">
           <li
@@ -63,7 +63,7 @@ function mobileCollapseId(tabId: string): string {
       </div>
     </div>
 
-    <div :id="mobileAccordionId" class="accordion d-md-none">
+    <div :id="mobileAccordionId" class="accordion d-lg-none">
       <div
         v-for="(example, index) in useCaseExamples"
         :key="example.tabId"

@@ -35,7 +35,7 @@ const cobranzaHeader = 'Cobranza App'
 .excel-comparison-heading {
   font-size: 1.25rem;
   font-weight: 700;
-  margin-top: 2.5rem;
+  margin-top: 1.5rem;
   margin-bottom: 1rem;
   color: var(--color-text-on-dark);
 }

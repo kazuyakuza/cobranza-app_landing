@@ -139,6 +139,7 @@ const closingStatement =
   font-weight: 600;
   color: var(--color-accent);
   line-height: 1.65;
+  margin-bottom: 1rem;
 }
 @media (max-width: 767.98px) {
   .solution-title {

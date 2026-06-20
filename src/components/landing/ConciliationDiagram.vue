@@ -5,14 +5,15 @@ const diagramLabel =
 </script>
 
 <template>
-  <svg
-    class="conciliation-diagram"
-    viewBox="0 0 620 300"
-    width="100%"
-    role="img"
-    :aria-label="diagramLabel"
-    xmlns="http://www.w3.org/2000/svg"
-  >
+  <div class="conciliation-diagram-scroll">
+    <svg
+      class="conciliation-diagram"
+      viewBox="0 0 620 300"
+      width="100%"
+      role="img"
+      :aria-label="diagramLabel"
+      xmlns="http://www.w3.org/2000/svg"
+    >
     <defs>
       <marker
         id="conciliationArrow"
@@ -110,7 +111,8 @@ const diagramLabel =
       class="conciliation-edge"
       marker-end="url(#conciliationArrow)"
     />
-  </svg>
+    </svg>
+  </div>
 </template>
 
 <style scoped>
@@ -152,13 +154,18 @@ const diagramLabel =
   fill: none;
 }
 
+.conciliation-diagram-scroll {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
 @media (max-width: 767.98px) {
   .conciliation-diagram {
-    max-width: 100%;
+    min-width: 480px;
   }
 
   .conciliation-node text {
-    font-size: 11px;
+    font-size: 13px;
   }
 }
 </style>

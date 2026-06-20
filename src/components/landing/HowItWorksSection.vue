@@ -54,9 +54,8 @@ const sectionTitle = 'Cómo funciona Cobranza App'
 .section-title {
   font-size: 2.25rem;
   font-weight: 700;
-  margin-bottom: 3rem;
+  margin-bottom: 1.5rem;
   line-height: 1.25;
-  text-align: center;
 }
 .step-row {
   display: flex;
