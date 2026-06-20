@@ -22,7 +22,20 @@ const menuItems: NavMenuItem[] = [
 const ctaText = 'Solicitar acceso anticipado gratuito'
 const brandName = 'Cobranza App'
 const activeSectionId = ref<string>('hero')
+const sectionVisibility = new Map<string, number>()
 let observer: IntersectionObserver | null = null
+
+function mostVisibleSectionId(currentId: string): string {
+  let topId = currentId
+  let topRatio = 0
+  for (const [id, ratio] of sectionVisibility) {
+    if (ratio > topRatio) {
+      topRatio = ratio
+      topId = id
+    }
+  }
+  return topId
+}
 
 function closeNavCollapse(): void {
   const navContent = document.getElementById('navbarContent')
@@ -51,12 +64,11 @@ onMounted(() => {
   observer = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {
-        if (entry.isIntersecting) {
-          activeSectionId.value = entry.target.id
-        }
+        sectionVisibility.set(entry.target.id, entry.isIntersecting ? entry.intersectionRatio : 0)
       }
+      activeSectionId.value = mostVisibleSectionId(activeSectionId.value)
     },
-    { rootMargin: '-70px 0px -50% 0px', threshold: [0, 0.25] }
+    { rootMargin: '-70px 0px -50% 0px', threshold: [0, 0.25, 0.5] }
   )
 
   for (const item of menuItems) {
@@ -96,7 +108,12 @@ onUnmounted(() => {
       <div id="navbarContent" class="collapse navbar-collapse">
         <ul class="navbar-nav mx-auto mb-2 mb-lg-0">
           <li v-for="item in menuItems" :key="item.sectionId" class="nav-item">
-            <a class="nav-link" :class="{ active: activeSectionId === item.sectionId }" href="#" @click.prevent="scrollToSection(item.sectionId)">
+            <a
+              class="nav-link"
+              :class="{ active: activeSectionId === item.sectionId }"
+              href="#"
+              @click.prevent="scrollToSection(item.sectionId)"
+            >
               {{ item.label }}
             </a>
           </li>
@@ -141,7 +158,9 @@ onUnmounted(() => {
 
 .navbar .btn-success {
   border-radius: 8px;
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
+  transition:
+    transform 0.2s ease,
+    box-shadow 0.2s ease;
 }
 
 .navbar .btn-success:hover {
