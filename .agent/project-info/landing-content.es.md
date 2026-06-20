@@ -6,7 +6,7 @@
 Centralizá deudas, comprobantes y conciliación bancaria en un solo lugar
 
 **Subtítulo:**  
-Sistema web que permite a empresas y profesionales cargar deudas, recibir comprobantes de pago de sus clientes y conciliarlos de manera centralizada y sin complicaciones.
+Sistema web que permite a empresas y profesionales centralizar el ciclo completo entre deudas, comprobantes, transferencias y conciliación, manteniendo siempre control manual cuando sea necesario.
 
 **CTA Principal:**  
 **Solicitar acceso anticipado gratuito**
@@ -28,7 +28,13 @@ Además, se pierde tiempo valioso en:
 - Conciliar manualmente con los extractos bancarios
 - Resolver confusiones y reclamos de clientes
 
-Todo esto genera pérdida de tiempo, errores y estrés innecesario.
+Todo esto genera pérdida de tiempo, errores, estrés innecesario y problemas frecuentes como:
+
+- Un propietario dice que pagó pero no encontrás el comprobante.
+- Recibiste una transferencia pero no sabés a qué deuda corresponde.
+- Un cliente pregunta varias veces cuánto debe este mes.
+- Tenés que revisar cientos de comprobantes al cierre del mes.
+- Dificultad para saber rápidamente quién pagó y quién no.
 
 ---
 
@@ -40,9 +46,9 @@ Cobranza App simplifica y centraliza todo el proceso de cobranza
 **Contenido:**  
 Es una plataforma que permite cargar deudas de forma rápida (individual o masiva), que tus clientes consulten su saldo actual en cualquier momento, suban sus comprobantes de pago y que tú puedas validarlos de manera ágil y ordenada.
 
-**Antes vs Después:**
+**Sin Cobranza App vs Con Cobranza App:**
 
-| Antes                              | Con Cobranza App                     |
+| Sin Cobranza App                   | Con Cobranza App                     |
 |------------------------------------|---------------------------------------------|
 | Comprobantes dispersos en WhatsApp, mail y chats | Todos los comprobantes centralizados y organizados |
 | Tenés que verificar manualmente cada transferencia | El sistema cruza automáticamente comprobantes, transferencias y deudas |
@@ -51,6 +57,16 @@ Es una plataforma que permite cargar deudas de forma rápida (individual o masiv
 | Recordar deudas/pagos a clientes mediante WhatsApp/mail/chat/llamada | El sistema envía recordatorios a los clientes mediante notificaciones automáticas |
 
 De esta forma reducís drásticamente el tiempo dedicado a comunicación, verificación y conciliación de pagos.
+
+**¿Por qué no alcanza con Excel o WhatsApp?**
+
+| Aspecto | Excel / WhatsApp | Cobranza App |
+|---|---|---|
+| Ubicación de comprobantes | Dispersos | Centralizados |
+| Conciliación | Manual | Asistida + revisión manual |
+| Portal para clientes | No existe | Sí, simple y sin registro |
+| Trazabilidad | Baja | Completa |
+| Tiempo administrativo | Alto | Significativamente reducido |
 
 ---
 
@@ -68,6 +84,21 @@ Cómo funciona Cobranza App
 5. El sistema cruza automáticamente los comprobantes, transferencias y deudas. Genera reportes y un resumen del resultante. Notifica a los clientes sobre el estado de su deuda.
 6. Los casos que requieren atención se revisan y confirman manualmente.
 7. Se genera y descarga el recibo una vez validado el pago.
+
+**Visualización del paso 5 — Conciliación:**
+
+```text
+         Cliente
+           ╲
+            ╲
+             Deuda
+              ╲
+               ╲
+Comprobante ──► Match ◄── Transferencia ◄── Extracto Bancario
+              ╱
+             ╱
+      Validación final
+```
 
 ---
 
@@ -152,6 +183,8 @@ Funcionalidades diseñadas para ambas partes del proceso de cobranza.
 
 **Para la empresa o profesional:**
 
+Una plataforma web donde un administrador autorizado tiene acceso a distintas funcionalidades, tales como:
+
 - Gestión centralizada de clientes y deudas
   - _Detalle:_ Todos tus clientes y sus saldos quedan en un único panel, sin repartir la información entre hojas de cálculo y mensajes sueltos.
 - Carga masiva de saldos y vencimientos
@@ -168,6 +201,8 @@ Funcionalidades diseñadas para ambas partes del proceso de cobranza.
   - _Detalle:_ El sistema propone los cruces entre deudas, comprobantes y transferencias; vos solo revisás y confirmás los casos dudosos.
 
 **Para el cliente final:**
+
+Un portal web simple donde el cliente puede:
 
 - Los clientes ingresan con un identificador (código de cliente, DNI + unidad, etc.) preconfigurado. **No necesitan registrarse ni crear cuenta**.
   - _Detalle:_ Sin contraseñas que olvidar ni formularios de registro. Tus clientes acceden directamente y consultan su estado al instante.
@@ -220,6 +255,9 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
 - **¿Es una aplicación móvil o web?**  
   Es un sistema web responsive. Los clientes finales pueden usarlo cómodamente desde el celular. La administración es más cómoda desde computadora, aunque también es accesible desde móvil.
 
+- **¿Necesito instalar algo?**  
+  No. Ni el administrador ni el cliente necesitan instalar ni programas ni apps. Solo se requiere un dispositivo con acceso a internet y un navegador web.
+
 - **¿Hay límite de clientes?**  
   No. No existe límite en la cantidad de clientes. El cobro depende únicamente del volumen de pagos procesados.
 
@@ -235,6 +273,9 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
 - **¿Los recibos tienen validez fiscal?**  
   Actualmente generan recibos válidos internamente. La integración con AFIP (facturación electrónica) está planificada según necesidades de los usuarios.
 
+- **¿Puedo emitir recibos personalizados?**  
+  Es una funcionalidad que agregaremos según la demanda de los usuarios.
+
 - **¿Cómo se protegen los datos y comprobantes?**  
   La seguridad es una prioridad. Todos los datos y archivos se almacenan de forma segura, con acceso restringido y encriptado.
 
@@ -243,6 +284,12 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
 
 - **¿Mis clientes necesitan registrarse o crear una cuenta?**  
   No. Solo necesitan ingresar su código identificatorio y/o datos definidos por la empresa.
+
+- **¿Cómo identifico a mis clientes?**  
+  Mediante DNI, unidad funcional, código de cliente u otro identificador configurable.
+
+- **¿Mis clientes pueden ver pagos históricos?**  
+  El cliente puede verificar el estado de sus pagos recientes y la última deuda. No tiene acceso a un historial completo (funcionalidad en evaluación según demanda).
 
 - **¿Puedo importar deudas desde Excel o CSV?**  
   Es una funcionalidad que será agregada según lo demanden nuestros usuarios.
@@ -257,6 +304,18 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
 - **¿Qué pasa si el sistema no logra cruzar automáticamente uno o más pagos?**  
   Puedes revisar y confirmar manualmente los casos excepcionales en cualquier momento.
 
+- **¿Qué sucede cuando el sistema no puede identificar correctamente un comprobante?**  
+  El cliente puede completar manualmente los datos del comprobante. El administrador es notificado para revisar y tratar el caso manualmente.
+
+- **¿Qué pasa si un cliente no sube el comprobante?**  
+  El pago se considera pendiente hasta que se detecte en el extracto bancario o se concilie manualmente.
+
+- **¿Qué pasa si la transferencia no aparece en el extracto?**  
+  Se puede conciliar manualmente o esperar a un extracto posterior.
+
+- **¿Qué pasa si un cliente paga varias deudas juntas?**  
+  El sistema permite configurar si las deudas se acumulan o se mantienen individuales. En ambos casos soporta conciliación manual o asistida.
+
 - **¿Puedo tener varios usuarios administradores?**  
   Sí. Podrás invitar a otros miembros de tu equipo sin costo extra.
 
@@ -266,8 +325,14 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
 - **¿Funciona con pagos parciales, montos variables y cuotas?**  
   Sí. El sistema está diseñado para manejar cobros variables y recurrentes.
 
+- **¿Puedo usarlo aunque mis montos cambien todos los meses?**  
+  Sí. El sistema permite generar deudas únicas o recurrentes, con valores fijos o calculados mediante fórmulas.
+
 - **¿Qué formatos de extracto bancario soporta?**  
-  Inicialmente soporta los formatos más comunes (PDF y CSV) de los principales bancos. Se irán agregando más según los comentarios y experiencias que nos hagan llegar.
+  Inicialmente soporta los formatos más comunes (PDF, CSV y Excel) de los principales bancos. Se irán agregando más según los comentarios y experiencias que nos hagan llegar.
+
+- **¿Qué bancos soporta?**  
+  Cualquier banco que permita descargar un extracto de movimientos (PDF, CSV o Excel).
 
 ---
 
