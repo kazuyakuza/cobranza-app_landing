@@ -8,6 +8,7 @@ export interface FeatureItem {
 
 export interface FeatureGroup {
   title: string
+  intro?: string
   accordionId: string
   variant: FeatureVariant
   features: FeatureItem[]

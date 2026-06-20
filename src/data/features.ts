@@ -1,4 +1,4 @@
-import type { FeatureItem, FeatureGroup } from '@/types/features';
+import type { FeatureItem, FeatureGroup } from '@/types/features'
 
 const companyFeatures: FeatureItem[] = [
   {
@@ -43,7 +43,7 @@ const companyFeatures: FeatureItem[] = [
     elaboration:
       'El sistema propone los cruces entre deudas, comprobantes y transferencias; vos solo revisás y confirmás los casos dudosos.'
   }
-];
+]
 
 const userFeatures: FeatureItem[] = [
   {
@@ -76,19 +76,22 @@ const userFeatures: FeatureItem[] = [
     elaboration:
       'Cuando el pago se valida, el cliente descarga su recibo en el momento, sin tener que pedírtelo ni esperar.'
   }
-];
+]
 
 export const featureGroups: FeatureGroup[] = [
   {
     title: 'Para la empresa o profesional',
+    intro:
+      'Una plataforma web donde un administrador autorizado tiene acceso a distintas funcionalidades, tales como:',
     accordionId: 'featuresCompanyAccordion',
     variant: 'company',
     features: companyFeatures
   },
   {
     title: 'Para el cliente final',
+    intro: 'Un portal web simple donde el cliente puede:',
     accordionId: 'featuresUserAccordion',
     variant: 'user',
     features: userFeatures
   }
-];
+]

@@ -29,6 +29,7 @@ function collapseId(accordionId: string, index: number): string {
             >
               <div :class="[`feature-group--${group.variant}`, 'feature-group']">
                 <h3 class="feature-group-title">{{ group.title }}</h3>
+                <p v-if="group.intro" class="feature-group-intro">{{ group.intro }}</p>
 
                 <div class="accordion">
                   <div
@@ -111,6 +112,14 @@ function collapseId(accordionId: string, index: number): string {
   color: var(--group-color);
 }
 
+.feature-group-intro {
+  font-size: 1rem;
+  color: var(--color-text-on-dark-muted);
+  padding-left: 1.5rem;
+  margin-bottom: 1rem;
+  line-height: 1.55;
+}
+
 .accordion-item {
   background: var(--color-bg-card);
   border: 1px solid var(--color-border);
@@ -153,7 +162,7 @@ function collapseId(accordionId: string, index: number): string {
   color: var(--color-text-on-dark-muted);
   font-size: 0.9375rem;
   line-height: 1.6;
-  padding: 0 1.5rem 1rem 3.1rem;
+  padding: 1rem 1.5rem 1rem 3.1rem;
 }
 
 .accordion-collapse {
@@ -189,7 +198,7 @@ function collapseId(accordionId: string, index: number): string {
   }
 
   .accordion-body {
-    padding: 0 1rem 0.75rem calc(1rem + 1.1rem + 0.75rem);
+    padding: 0.875rem 1rem 0.875rem calc(1rem + 1.1rem + 0.75rem);
   }
 }
 </style>
