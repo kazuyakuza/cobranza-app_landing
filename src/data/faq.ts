@@ -1,4 +1,4 @@
-import type { FaqItem, FaqGroup } from '@/types/faq';
+import type { FaqItem, FaqGroup } from '@/types/faq'
 
 const generalFaqs: FaqItem[] = [
   {
@@ -15,8 +15,13 @@ const generalFaqs: FaqItem[] = [
     question: '¿Puedo solicitar funcionalidades específicas?',
     answer:
       'Sí. Estamos en etapa Beta y valoramos mucho el feedback. Si necesitás alguna funcionalidad, contáctanos.'
+  },
+  {
+    question: '¿Necesito instalar algo?',
+    answer:
+      'No. Ni el administrador ni el cliente necesitan instalar ni programas ni apps. Solo se requiere un dispositivo con acceso a internet y un navegador web.'
   }
-];
+]
 
 const companyFaqs: FaqItem[] = [
   {
@@ -45,8 +50,21 @@ const companyFaqs: FaqItem[] = [
     question: '¿Cómo se protegen los datos y comprobantes?',
     answer:
       'La seguridad es una prioridad. Todos los datos y archivos se almacenan de forma segura, con acceso restringido y encriptado.'
+  },
+  {
+    question: '¿Cómo identifico a mis clientes?',
+    answer: 'Mediante DNI, unidad funcional, código de cliente u otro identificador configurable.'
+  },
+  {
+    question: '¿Puedo usarlo aunque mis montos cambien todos los meses?',
+    answer:
+      'Sí. El sistema permite generar deudas únicas o recurrentes, con valores fijos o calculados mediante fórmulas.'
+  },
+  {
+    question: '¿Puedo emitir recibos personalizados?',
+    answer: 'Es una funcionalidad que agregaremos según la demanda de los usuarios.'
   }
-];
+]
 
 const userFaqs: FaqItem[] = [
   {
@@ -63,8 +81,13 @@ const userFaqs: FaqItem[] = [
     question: '¿Qué medios de pago acepta?',
     answer:
       'El cliente paga por fuera (principalmente transferencia) y sube el comprobante. En etapas posteriores incorporaremos pasarelas de pago integradas.'
+  },
+  {
+    question: '¿Mis clientes pueden ver pagos históricos?',
+    answer:
+      'El cliente puede verificar el estado de sus pagos recientes y la última deuda. No tiene acceso a un historial completo (funcionalidad en evaluación según demanda).'
   }
-];
+]
 
 const conciliationFaqs: FaqItem[] = [
   {
@@ -89,9 +112,32 @@ const conciliationFaqs: FaqItem[] = [
   {
     question: '¿Qué formatos de extracto bancario soporta?',
     answer:
-      'Inicialmente soporta los formatos más comunes (PDF y CSV) de los principales bancos. Se irán agregando más según los comentarios y experiencias que nos hagan llegar.'
+      'Inicialmente soporta los formatos más comunes (PDF, CSV y Excel) de los principales bancos. Se irán agregando más según los comentarios y experiencias que nos hagan llegar.'
+  },
+  {
+    question: '¿Qué sucede cuando el sistema no puede identificar correctamente un comprobante?',
+    answer:
+      'El cliente puede completar manualmente los datos del comprobante. El administrador es notificado para revisar y tratar el caso manualmente.'
+  },
+  {
+    question: '¿Qué pasa si un cliente paga varias deudas juntas?',
+    answer:
+      'El sistema permite configurar si las deudas se acumulan o se mantienen individuales. En ambos casos soporta conciliación manual o asistida.'
+  },
+  {
+    question: '¿Qué pasa si un cliente no sube el comprobante?',
+    answer:
+      'El pago se considera pendiente hasta que se detecte en el extracto bancario o se concilie manualmente.'
+  },
+  {
+    question: '¿Qué pasa si la transferencia no aparece en el extracto?',
+    answer: 'Se puede conciliar manualmente o esperar a un extracto posterior.'
+  },
+  {
+    question: '¿Qué bancos soporta?',
+    answer: 'Cualquier banco que permita descargar un extracto de movimientos (PDF, CSV o Excel).'
   }
-];
+]
 
 export const faqGroups: FaqGroup[] = [
   {
@@ -118,4 +164,4 @@ export const faqGroups: FaqGroup[] = [
     variant: 'conciliation',
     faqs: conciliationFaqs
   }
-];
+]
