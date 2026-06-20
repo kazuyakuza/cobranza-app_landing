@@ -1,7 +1,7 @@
 <!-- SVG diagram illustrating the conciliation flow: documents and data converge into a match that produces final validation. -->
 <script setup lang="ts">
 const diagramLabel =
-  'Diagrama de conciliación: Cliente y Deuda, Comprobante, Extracto Bancario y Transferencia confluyen en un Match central que produce la Validación final.'
+  'Diagrama de conciliación: el Cliente emite un Comprobante; la Deuda, el Comprobante y la Transferencia del Extracto bancario confluyen en un Match central que produce la Validación final.'
 </script>
 
 <template>
@@ -20,11 +20,11 @@ const diagramLabel =
           viewBox="0 0 10 10"
           refX="9"
           refY="5"
-          markerWidth="7"
-          markerHeight="7"
+          markerWidth="8"
+          markerHeight="8"
           orient="auto-start-reverse"
         >
-          <path d="M 0 0 L 10 5 L 0 10 z" :fill="'var(--color-text-on-dark-dim)'" />
+          <path d="M 1 1 L 10 5 L 1 9 L 3.5 5 z" :fill="'var(--color-text-on-dark-dim)'" />
         </marker>
       </defs>
 
@@ -33,7 +33,7 @@ const diagramLabel =
         <text x="60" y="23" text-anchor="middle">Cliente</text>
       </g>
 
-      <g class="conciliation-node" transform="translate(40,90)">
+      <g class="conciliation-node" transform="translate(200,20)">
         <rect width="120" height="36" rx="8" />
         <text x="60" y="23" text-anchor="middle">Deuda</text>
       </g>
@@ -58,7 +58,7 @@ const diagramLabel =
         <text x="65" y="23" text-anchor="middle">Extracto bancario</text>
       </g>
 
-      <g class="conciliation-node conciliation-node--result" transform="translate(340,250)">
+      <g class="conciliation-node conciliation-node--result" transform="translate(320,250)">
         <rect width="130" height="36" rx="8" />
         <text x="65" y="23" text-anchor="middle">Validación final</text>
       </g>
@@ -66,15 +66,15 @@ const diagramLabel =
       <line
         x1="100"
         y1="56"
-        x2="100"
-        y2="90"
+        x2="240"
+        y2="170"
         class="conciliation-edge"
         marker-end="url(#conciliationArrow)"
       />
       <line
-        x1="160"
-        y1="126"
-        x2="360"
+        x1="260"
+        y1="56"
+        x2="385"
         y2="170"
         class="conciliation-edge"
         marker-end="url(#conciliationArrow)"
@@ -87,11 +87,8 @@ const diagramLabel =
         class="conciliation-edge"
         marker-end="url(#conciliationArrow)"
       />
-      <line
-        x1="470"
-        y1="126"
-        x2="470"
-        y2="170"
+      <path
+        d="M 535 126 Q 548 148 535 170"
         class="conciliation-edge"
         marker-end="url(#conciliationArrow)"
       />
@@ -152,11 +149,14 @@ const diagramLabel =
   stroke: var(--color-text-on-dark-dim);
   stroke-width: 1.5;
   fill: none;
+  stroke-linecap: round;
+  stroke-linejoin: round;
 }
 
 .conciliation-diagram-scroll {
   overflow-x: auto;
   -webkit-overflow-scrolling: touch;
+  max-width: 100%;
 }
 
 @media (max-width: 767.98px) {

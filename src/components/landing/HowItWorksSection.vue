@@ -105,6 +105,7 @@ const sectionTitle = 'Cómo funciona Cobranza App'
 }
 .step-content {
   flex: 1;
+  min-width: 0;
 }
 .step-tag {
   display: inline-block;
