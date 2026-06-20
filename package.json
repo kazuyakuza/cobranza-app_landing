@@ -5,7 +5,7 @@
   "homepage": "https://kazuyakuza.github.io/cobranza-app_landing/",
   "type": "module",
   "description": "Professional landing page for Cobranza App — a SaaS platform for debt management and payment reconciliation",
-  "author": "",
+  "author": "kazuyakuza",
   "license": "UNLICENSED",
   "scripts": {
     "dev": "vite",
