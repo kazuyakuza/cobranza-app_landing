@@ -165,10 +165,6 @@ function collapseId(accordionId: string, index: number): string {
   padding: 1rem 1.5rem 1rem 3.1rem;
 }
 
-.accordion-collapse {
-  transition: height 0.35s ease;
-}
-
 .feature-icon {
   font-size: 1.1rem;
   color: var(--group-color);

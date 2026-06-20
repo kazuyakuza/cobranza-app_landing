@@ -20,12 +20,9 @@ const stepKinds: HowItWorksStepKind[] = [
   'resultado'
 ]
 
-const stepIcons = ['upload', 'search', 'upload', 'upload', 'refresh-cw', 'search', 'file-text']
-
 const steps: HowItWorksStep[] = stepTexts.map((text, index) => ({
   number: index + 1,
   kind: stepKinds[index]!,
-  icon: stepIcons[index]!,
   text
 }))
 

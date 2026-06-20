@@ -137,10 +137,6 @@ function mobileCollapseId(tabId: string): string {
   background: var(--color-bg-card);
 }
 
-.nav-tabs .nav-link.active {
-  font-weight: 600;
-}
-
 .nav-link:focus {
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.5);
 }

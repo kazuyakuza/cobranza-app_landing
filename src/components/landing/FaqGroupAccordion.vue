@@ -89,21 +89,10 @@ function isGroupOpen(): boolean {
   margin-bottom: 0;
 }
 
-.faq-group-item--general {
-  --group-color: var(--color-primary);
-}
-
-.faq-group-item--company {
-  --group-color: var(--color-accent);
-}
-
-.faq-group-item--user {
-  --group-color: var(--color-primary);
-}
-
-.faq-group-item--conciliation {
-  --group-color: var(--color-accent);
-}
+.faq-group-item--general { --group-color: var(--color-primary); }
+.faq-group-item--company { --group-color: var(--color-accent); }
+.faq-group-item--user { --group-color: var(--color-primary); }
+.faq-group-item--conciliation { --group-color: var(--color-accent); }
 
 .faq-group-button {
   background: var(--color-bg-card);
@@ -118,11 +107,13 @@ function isGroupOpen(): boolean {
   box-shadow: none;
 }
 
-.faq-group-button::after {
+.faq-group-button::after,
+.faq-question-button::after {
   filter: brightness(0) invert(0.85);
 }
 
-.faq-group-button:focus {
+.faq-group-button:focus,
+.faq-question-button:focus {
   box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.5);
   border-color: var(--color-primary);
 }
@@ -152,10 +143,6 @@ function isGroupOpen(): boolean {
   padding: 1rem 1.25rem;
 }
 
-.faq-question-button:not(.collapsed) {
-  background: var(--color-bg-card);
-  box-shadow: none;
-}
 
 .faq-question-button::after {
   filter: brightness(0) invert(0.85);

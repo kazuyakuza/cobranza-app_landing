@@ -62,7 +62,7 @@ const userFeatures: FeatureItem[] = [
     icon: 'bi-cloud-upload',
     text: 'Subida sencilla de comprobantes desde el celular',
     elaboration:
-      'Con una foto, captura de pantalla, o bien archivo del comprobante alcanza: el cliente lo sube en segundos y queda asociado automáticamente a su deuda.'
+      'Con una foto del comprobante alcanza: el cliente lo sube en segundos y queda asociado automáticamente a su deuda.'
   },
   {
     icon: 'bi-eye',

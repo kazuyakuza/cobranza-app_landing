@@ -44,7 +44,7 @@ const companyFaqs: FaqItem[] = [
   {
     question: '¿Los recibos tienen validez fiscal?',
     answer:
-      'Generamos recibos válidos internamente. La integración con AFIP/ARCA (facturación electrónica) está planificada según necesidades de los usuarios.'
+      'Actualmente generan recibos válidos internamente. La integración con AFIP (facturación electrónica) está planificada según necesidades de los usuarios.'
   },
   {
     question: '¿Cómo se protegen los datos y comprobantes?',
@@ -75,7 +75,7 @@ const userFaqs: FaqItem[] = [
   {
     question: '¿Cómo funcionan las notificaciones?',
     answer:
-      'Actualmente mediante email (recordatorios y alertas de nuevos comprobantes). Incorporaremos WhatsApp y otros canales según demanda de nuestros usuarios.'
+      'Actualmente mediante email (recordatorios y alertas de nuevos comprobantes). Próximamente incorporaremos WhatsApp y otros canales según demanda.'
   },
   {
     question: '¿Qué medios de pago acepta?',
