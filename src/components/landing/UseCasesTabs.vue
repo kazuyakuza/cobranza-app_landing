@@ -1,7 +1,9 @@
 <script setup lang="ts">
 import { useCaseExamples } from '@/data/use-cases'
+import UseCaseComparison from '@/components/landing/UseCaseComparison.vue'
 
 const tabsTitle = 'Seleccioná tu caso'
+const mobileAccordionId = 'useCaseMobileAccordion'
 
 function paneId(tabId: string): string {
   return `useCasePane-${tabId}`
@@ -10,61 +12,84 @@ function paneId(tabId: string): string {
 function tabControlId(tabId: string): string {
   return `useCaseTab-${tabId}`
 }
+
+function mobileCollapseId(tabId: string): string {
+  return `useCaseMobileCollapse-${tabId}`
+}
 </script>
 
 <template>
   <div data-reveal class="use-cases-tabs">
     <h3 class="use-cases-tabs-title">{{ tabsTitle }}</h3>
 
-    <div class="use-cases-tabs-nav">
-      <ul class="nav nav-tabs" role="tablist">
-        <li
+    <div class="d-none d-md-block">
+      <div class="use-cases-tabs-nav">
+        <ul class="nav nav-tabs" role="tablist">
+          <li
+            v-for="(example, index) in useCaseExamples"
+            :key="example.tabId"
+            class="nav-item"
+            role="presentation"
+          >
+            <button
+              :id="tabControlId(example.tabId)"
+              class="nav-link"
+              :class="{ active: index === 0 }"
+              type="button"
+              role="tab"
+              data-bs-toggle="tab"
+              :data-bs-target="`#${paneId(example.tabId)}`"
+              :aria-controls="paneId(example.tabId)"
+              :aria-selected="index === 0"
+            >
+              {{ example.label }}
+            </button>
+          </li>
+        </ul>
+      </div>
+
+      <div class="tab-content">
+        <div
           v-for="(example, index) in useCaseExamples"
+          :id="paneId(example.tabId)"
           :key="example.tabId"
-          class="nav-item"
-          role="presentation"
+          class="tab-pane fade"
+          :class="{ 'show active': index === 0 }"
+          role="tabpanel"
+          :aria-labelledby="tabControlId(example.tabId)"
         >
+          <UseCaseComparison :example="example" />
+        </div>
+      </div>
+    </div>
+
+    <div :id="mobileAccordionId" class="accordion d-md-none">
+      <div
+        v-for="(example, index) in useCaseExamples"
+        :key="example.tabId"
+        class="accordion-item use-case-mobile-item"
+      >
+        <h4 class="accordion-header">
           <button
-            :id="tabControlId(example.tabId)"
-            class="nav-link"
-            :class="{ active: index === 0 }"
+            class="accordion-button use-case-mobile-button"
+            :class="{ collapsed: index !== 0 }"
             type="button"
-            role="tab"
-            data-bs-toggle="tab"
-            :data-bs-target="`#${paneId(example.tabId)}`"
-            :aria-controls="paneId(example.tabId)"
-            :aria-selected="index === 0"
+            data-bs-toggle="collapse"
+            :data-bs-target="`#${mobileCollapseId(example.tabId)}`"
+            :aria-expanded="index === 0"
+            :aria-controls="mobileCollapseId(example.tabId)"
           >
             {{ example.label }}
           </button>
-        </li>
-      </ul>
-    </div>
-
-    <div class="tab-content">
-      <div
-        v-for="(example, index) in useCaseExamples"
-        :id="paneId(example.tabId)"
-        :key="example.tabId"
-        class="tab-pane fade"
-        :class="{ 'show active': index === 0 }"
-        role="tabpanel"
-        :aria-labelledby="tabControlId(example.tabId)"
-      >
-        <div class="example-blocks">
-          <div class="example-block example-block--habitual">
-            <h4 class="example-block-label">
-              <i class="bi bi-x-circle" aria-hidden="true"></i>
-              Situación habitual
-            </h4>
-            <p class="example-block-text">{{ example.beforeText }}</p>
-          </div>
-          <div class="example-block example-block--cobranza">
-            <h4 class="example-block-label">
-              <i class="bi bi-check-circle" aria-hidden="true"></i>
-              Con Cobranza App
-            </h4>
-            <p class="example-block-text">{{ example.afterText }}</p>
+        </h4>
+        <div
+          :id="mobileCollapseId(example.tabId)"
+          class="accordion-collapse collapse"
+          :class="{ show: index === 0 }"
+          :data-bs-parent="`#${mobileAccordionId}`"
+        >
+          <div class="accordion-body use-case-mobile-body">
+            <UseCaseComparison :example="example" />
           </div>
         </div>
       </div>
@@ -128,51 +153,42 @@ function tabControlId(tabId: string): string {
   padding: 1.75rem;
 }
 
-.example-blocks {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 1.25rem;
-}
-
-.example-block {
-  padding: 1.25rem;
-  border-radius: 8px;
-  background: var(--color-bg-card-alt);
+.use-case-mobile-item {
+  background: var(--color-bg-card);
   border: 1px solid var(--color-border);
-}
-
-.example-block--habitual {
-  border-left: 3px solid var(--color-pain);
-}
-
-.example-block--cobranza {
-  border-left: 3px solid var(--color-accent);
-}
-
-.example-block-label {
-  display: flex;
-  align-items: center;
-  gap: 0.4rem;
-  font-size: 0.8rem;
-  font-weight: 700;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  border-radius: 8px;
   margin-bottom: 0.75rem;
+  overflow: hidden;
 }
 
-.example-block--habitual .example-block-label {
-  color: var(--color-pain);
-}
-
-.example-block--cobranza .example-block-label {
-  color: var(--color-accent);
-}
-
-.example-block-text {
-  font-size: 0.95rem;
-  line-height: 1.6;
+.use-case-mobile-item:last-of-type {
   margin-bottom: 0;
+}
+
+.use-case-mobile-button {
+  background: var(--color-bg-card);
   color: var(--color-text-on-dark);
+  font-size: 1rem;
+  font-weight: 600;
+  padding: 1rem 1.25rem;
+}
+
+.use-case-mobile-button:not(.collapsed) {
+  background: var(--color-bg-card-alt);
+  box-shadow: none;
+}
+
+.use-case-mobile-button::after {
+  filter: brightness(0) invert(0.85);
+}
+
+.use-case-mobile-button:focus {
+  box-shadow: 0 0 0 0.25rem rgba(var(--bs-primary-rgb), 0.5);
+}
+
+.use-case-mobile-body {
+  padding: 0 1.25rem 1.25rem;
+  background: var(--color-bg-card);
 }
 
 @media (max-width: 767.98px) {
@@ -180,16 +196,8 @@ function tabControlId(tabId: string): string {
     font-size: 1.25rem;
   }
 
-  .nav-link {
-    font-size: 0.9rem;
-  }
-
   .tab-content {
     padding: 1.25rem;
-  }
-
-  .example-blocks {
-    grid-template-columns: 1fr;
   }
 }
 </style>
