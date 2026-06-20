@@ -14,103 +14,103 @@ const diagramLabel =
       :aria-label="diagramLabel"
       xmlns="http://www.w3.org/2000/svg"
     >
-    <defs>
-      <marker
-        id="conciliationArrow"
-        viewBox="0 0 10 10"
-        refX="9"
-        refY="5"
-        markerWidth="7"
-        markerHeight="7"
-        orient="auto-start-reverse"
-      >
-        <path d="M 0 0 L 10 5 L 0 10 z" :fill="'var(--color-text-on-dark-dim)'" />
-      </marker>
-    </defs>
+      <defs>
+        <marker
+          id="conciliationArrow"
+          viewBox="0 0 10 10"
+          refX="9"
+          refY="5"
+          markerWidth="7"
+          markerHeight="7"
+          orient="auto-start-reverse"
+        >
+          <path d="M 0 0 L 10 5 L 0 10 z" :fill="'var(--color-text-on-dark-dim)'" />
+        </marker>
+      </defs>
 
-    <g class="conciliation-node" transform="translate(40,20)">
-      <rect width="120" height="36" rx="8" />
-      <text x="60" y="23" text-anchor="middle">Cliente</text>
-    </g>
+      <g class="conciliation-node" transform="translate(40,20)">
+        <rect width="120" height="36" rx="8" />
+        <text x="60" y="23" text-anchor="middle">Cliente</text>
+      </g>
 
-    <g class="conciliation-node" transform="translate(40,90)">
-      <rect width="120" height="36" rx="8" />
-      <text x="60" y="23" text-anchor="middle">Deuda</text>
-    </g>
+      <g class="conciliation-node" transform="translate(40,90)">
+        <rect width="120" height="36" rx="8" />
+        <text x="60" y="23" text-anchor="middle">Deuda</text>
+      </g>
 
-    <g class="conciliation-node" transform="translate(170,170)">
-      <rect width="140" height="36" rx="8" />
-      <text x="70" y="23" text-anchor="middle">Comprobante</text>
-    </g>
+      <g class="conciliation-node" transform="translate(170,170)">
+        <rect width="140" height="36" rx="8" />
+        <text x="70" y="23" text-anchor="middle">Comprobante</text>
+      </g>
 
-    <g class="conciliation-node conciliation-node--match" transform="translate(340,170)">
-      <rect width="90" height="40" rx="10" />
-      <text x="45" y="26" text-anchor="middle">Match</text>
-    </g>
+      <g class="conciliation-node conciliation-node--match" transform="translate(340,170)">
+        <rect width="90" height="40" rx="10" />
+        <text x="45" y="26" text-anchor="middle">Match</text>
+      </g>
 
-    <g class="conciliation-node" transform="translate(470,170)">
-      <rect width="130" height="36" rx="8" />
-      <text x="65" y="23" text-anchor="middle">Transferencia</text>
-    </g>
+      <g class="conciliation-node" transform="translate(470,170)">
+        <rect width="130" height="36" rx="8" />
+        <text x="65" y="23" text-anchor="middle">Transferencia</text>
+      </g>
 
-    <g class="conciliation-node" transform="translate(470,90)">
-      <rect width="130" height="36" rx="8" />
-      <text x="65" y="23" text-anchor="middle">Extracto bancario</text>
-    </g>
+      <g class="conciliation-node" transform="translate(470,90)">
+        <rect width="130" height="36" rx="8" />
+        <text x="65" y="23" text-anchor="middle">Extracto bancario</text>
+      </g>
 
-    <g class="conciliation-node conciliation-node--result" transform="translate(340,250)">
-      <rect width="130" height="36" rx="8" />
-      <text x="65" y="23" text-anchor="middle">Validación final</text>
-    </g>
+      <g class="conciliation-node conciliation-node--result" transform="translate(340,250)">
+        <rect width="130" height="36" rx="8" />
+        <text x="65" y="23" text-anchor="middle">Validación final</text>
+      </g>
 
-    <line
-      x1="100"
-      y1="56"
-      x2="100"
-      y2="90"
-      class="conciliation-edge"
-      marker-end="url(#conciliationArrow)"
-    />
-    <line
-      x1="160"
-      y1="126"
-      x2="360"
-      y2="170"
-      class="conciliation-edge"
-      marker-end="url(#conciliationArrow)"
-    />
-    <line
-      x1="310"
-      y1="188"
-      x2="340"
-      y2="188"
-      class="conciliation-edge"
-      marker-end="url(#conciliationArrow)"
-    />
-    <line
-      x1="470"
-      y1="126"
-      x2="470"
-      y2="170"
-      class="conciliation-edge"
-      marker-end="url(#conciliationArrow)"
-    />
-    <line
-      x1="470"
-      y1="188"
-      x2="430"
-      y2="188"
-      class="conciliation-edge"
-      marker-end="url(#conciliationArrow)"
-    />
-    <line
-      x1="385"
-      y1="210"
-      x2="385"
-      y2="250"
-      class="conciliation-edge"
-      marker-end="url(#conciliationArrow)"
-    />
+      <line
+        x1="100"
+        y1="56"
+        x2="100"
+        y2="90"
+        class="conciliation-edge"
+        marker-end="url(#conciliationArrow)"
+      />
+      <line
+        x1="160"
+        y1="126"
+        x2="360"
+        y2="170"
+        class="conciliation-edge"
+        marker-end="url(#conciliationArrow)"
+      />
+      <line
+        x1="310"
+        y1="188"
+        x2="340"
+        y2="188"
+        class="conciliation-edge"
+        marker-end="url(#conciliationArrow)"
+      />
+      <line
+        x1="470"
+        y1="126"
+        x2="470"
+        y2="170"
+        class="conciliation-edge"
+        marker-end="url(#conciliationArrow)"
+      />
+      <line
+        x1="470"
+        y1="188"
+        x2="430"
+        y2="188"
+        class="conciliation-edge"
+        marker-end="url(#conciliationArrow)"
+      />
+      <line
+        x1="385"
+        y1="210"
+        x2="385"
+        y2="250"
+        class="conciliation-edge"
+        marker-end="url(#conciliationArrow)"
+      />
     </svg>
   </div>
 </template>

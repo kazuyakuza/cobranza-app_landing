@@ -90,10 +90,18 @@ function isGroupOpen(): boolean {
   margin-bottom: 0;
 }
 
-.faq-group-item--general { --group-color: var(--color-primary); }
-.faq-group-item--company { --group-color: var(--color-accent); }
-.faq-group-item--user { --group-color: var(--color-primary); }
-.faq-group-item--conciliation { --group-color: var(--color-accent); }
+.faq-group-item--general {
+  --group-color: var(--color-primary);
+}
+.faq-group-item--company {
+  --group-color: var(--color-accent);
+}
+.faq-group-item--user {
+  --group-color: var(--color-primary);
+}
+.faq-group-item--conciliation {
+  --group-color: var(--color-accent);
+}
 
 .faq-group-button {
   background: var(--color-bg-card);
