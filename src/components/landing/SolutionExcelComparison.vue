@@ -1,3 +1,4 @@
+<!-- Table comparing Cobranza App capabilities against Excel/WhatsApp for key administrative aspects. -->
 <script setup lang="ts">
 import { excelComparisonHeading, excelComparisonRows } from '@/data/solution'
 

@@ -1,4 +1,6 @@
-import type { ComparisonRow, ExcelComparisonRow } from '@/types/solution'
+// Comparison data for the solution section: before/after rows and Excel/WhatsApp vs Cobranza App table.
+
+import type { ComparisonRow, ExcelComparisonRow } from '@/types/solution';
 
 const comparisonRows: ComparisonRow[] = [
   {
@@ -21,9 +23,9 @@ const comparisonRows: ComparisonRow[] = [
     before: 'Recordar deudas/pagos a clientes mediante WhatsApp/mail/chat/llamada',
     after: 'El sistema envía recordatorios a los clientes mediante notificaciones automáticas'
   }
-]
+];
 
-const excelComparisonHeading = '¿Por qué no alcanza con Excel o WhatsApp?'
+const excelComparisonHeading = '¿Por qué no alcanza con Excel o WhatsApp?';
 
 const excelComparisonRows: ExcelComparisonRow[] = [
   {
@@ -51,6 +53,6 @@ const excelComparisonRows: ExcelComparisonRow[] = [
     excelWhatsapp: 'Alto',
     cobranzaApp: 'Significativamente reducido'
   }
-]
+];
 
-export { comparisonRows, excelComparisonHeading, excelComparisonRows }
+export { comparisonRows, excelComparisonHeading, excelComparisonRows };

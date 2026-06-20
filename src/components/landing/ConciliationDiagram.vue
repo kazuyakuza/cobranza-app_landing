@@ -1,3 +1,4 @@
+<!-- SVG diagram illustrating the conciliation flow: documents and data converge into a match that produces final validation. -->
 <script setup lang="ts">
 const diagramLabel =
   'Diagrama de conciliación: Cliente y Deuda, Comprobante, Extracto Bancario y Transferencia confluyen en un Match central que produce la Validación final.'

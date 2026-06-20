@@ -70,7 +70,7 @@ De esta forma reducís drásticamente el tiempo dedicado a comunicación, verifi
 
 ---
 
-## 3.5 Cómo funciona Cobranza App
+## 4. Cómo funciona Cobranza App
 
 **Título:**  
 Cómo funciona Cobranza App
@@ -102,7 +102,7 @@ Comprobante ──► Match ◄── Transferencia ◄── Extracto Bancario
 
 ---
 
-## 4. Ejemplos de Uso
+## 5. Ejemplos de Uso
 
 **Título:**  
 Ideal para:
@@ -174,7 +174,7 @@ Incluir tabs:
 
 ---
 
-## 5. Funcionalidades / Beneficios
+## 6. Funcionalidades / Beneficios
 
 **Título:**  
 Cómo te ayuda Cobranza App
@@ -217,7 +217,7 @@ Un portal web simple donde el cliente puede:
 
 ---
 
-## 6. Etapa Actual
+## 7. Etapa Actual
 
 **Título:**  
 Estamos en versión Beta
@@ -231,7 +231,7 @@ Estamos en versión Beta
 
 ---
 
-## 7. Modelo de Precios
+## 8. Modelo de Precios
 
 **Título:**  
 Pagás solo por lo que usás
@@ -247,7 +247,7 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
 
 ---
 
-## 8. Preguntas Frecuentes (FAQ)
+## 9. Preguntas Frecuentes (FAQ)
 
 - **¿Para quién está pensado Cobranza App?**  
   Principalmente para PyMEs, profesionales, monotributistas y administradores que necesitan organizar y agilizar su proceso de cobranza.
@@ -336,10 +336,12 @@ El cobro es mensual y transparente. Los porcentajes se definen de forma personal
 
 ---
 
-## 9. Frase de Acompañamiento
+## 10. Frase de Acompañamiento
 
 “Un sistema en constante evolución, que crece junto a vos.”
 
-## 10. Contacto
+---
+
+## 11. Contacto
 
 **Email de contacto:** [completar]

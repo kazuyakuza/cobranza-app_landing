@@ -61,6 +61,8 @@ function handleClickOutside(event: MouseEvent): void {
 }
 
 onMounted(() => {
+  // Scroll-spy: track each section's visibility ratio via IntersectionObserver,
+  // then highlight the nav link for the most visible section.
   observer = new IntersectionObserver(
     (entries) => {
       for (const entry of entries) {

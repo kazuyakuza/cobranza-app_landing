@@ -1,3 +1,4 @@
+<!-- Nested accordion rendering a FAQ group with its collapsible question-answer items. -->
 <script setup lang="ts">
 import type { FaqGroup } from '@/types/faq'
 

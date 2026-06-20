@@ -1,3 +1,4 @@
+<!-- Before/after comparison blocks showing a use case's habitual situation vs. using Cobranza App. -->
 <script setup lang="ts">
 import type { UseCaseExample } from '@/types/use-cases'
 

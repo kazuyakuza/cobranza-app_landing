@@ -1,4 +1,6 @@
-import type { HowItWorksStep, HowItWorksStepKind } from '@/types/how-it-works'
+// Step definitions, actor labels, and color mappings for the "How it works" section flow.
+
+import type { HowItWorksStep, HowItWorksStepKind } from '@/types/how-it-works';
 
 const stepTexts = [
   'Carga las deudas de tus clientes, individual o masivamente.',
@@ -8,7 +10,7 @@ const stepTexts = [
   'El sistema cruza automáticamente los comprobantes, transferencias y deudas. Genera reportes y un resumen del resultante. Notifica a los clientes sobre el estado de su deuda.',
   'Los casos que requieren atención se revisan y confirman manualmente.',
   'Se genera y descarga el recibo una vez validado el pago.'
-]
+];
 
 const stepKinds: HowItWorksStepKind[] = [
   'empresa',
@@ -18,28 +20,28 @@ const stepKinds: HowItWorksStepKind[] = [
   'sistema',
   'empresa',
   'resultado'
-]
+];
 
 const steps: HowItWorksStep[] = stepTexts.map((text, index) => ({
   number: index + 1,
   kind: stepKinds[index]!,
   text
-}))
+}));
 
 const actorLabels: Record<HowItWorksStepKind, string> = {
   empresa: 'Negocio',
   cliente: 'Cliente',
   sistema: 'Sistema',
   resultado: 'Cliente'
-}
+};
 
 const kindColorMap: Record<HowItWorksStepKind, string> = {
   empresa: 'var(--color-primary)',
   cliente: 'var(--color-accent)',
   sistema: 'var(--color-primary)',
   resultado: 'var(--color-accent)'
-}
+};
 
-const CONCILIATION_STEP_NUMBER = 5
+const CONCILIATION_STEP_NUMBER = 5;
 
-export { steps, actorLabels, kindColorMap, CONCILIATION_STEP_NUMBER }
+export { steps, actorLabels, kindColorMap, CONCILIATION_STEP_NUMBER };
