@@ -3,7 +3,7 @@ import { NAVBAR_HEIGHT_PX } from '@/utils/constants'
 
 const mainTitle = 'Centralizá deudas, comprobantes y conciliación bancaria en un solo lugar'
 const subtitle =
-  'Sistema web que permite a empresas y profesionales cargar deudas, recibir comprobantes de pago de sus clientes y conciliarlos de manera centralizada y sin complicaciones.'
+  'Sistema web que permite a empresas y profesionales centralizar el ciclo completo entre deudas, comprobantes, transferencias y conciliación, manteniendo siempre control manual cuando sea necesario.'
 const primaryCtaText = 'Solicitar acceso anticipado gratuito'
 const secondaryCtaText = 'Cómo funciona'
 

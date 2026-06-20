@@ -34,7 +34,16 @@ const painPoints: PainPoint[] = [
   }
 ]
 
-const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés innecesario.'
+const commonCasesIntro =
+  'Todo esto genera pérdida de tiempo, errores, estrés innecesario y problemas frecuentes como:'
+
+const commonCases: string[] = [
+  'Un propietario dice que pagó pero no encontrás el comprobante.',
+  'Recibiste una transferencia pero no sabés a qué deuda corresponde.',
+  'Un cliente pregunta varias veces cuánto debe este mes.',
+  'Tenés que revisar cientos de comprobantes al cierre del mes.',
+  'Dificultad para saber rápidamente quién pagó y quién no.'
+]
 </script>
 
 <template>
@@ -68,8 +77,15 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
           </div>
 
           <p data-reveal class="problem-closing">
-            {{ closingStatement }}
+            {{ commonCasesIntro }}
           </p>
+
+          <ul data-reveal class="common-cases-list list-unstyled">
+            <li v-for="caseItem in commonCases" :key="caseItem" class="common-case-item">
+              <i class="bi bi-exclamation-triangle common-case-marker" aria-hidden="true"></i>
+              <span class="common-case-text">{{ caseItem }}</span>
+            </li>
+          </ul>
         </div>
       </div>
     </div>
@@ -136,6 +152,31 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
   line-height: 1.65;
 }
 
+.common-cases-list {
+  margin-top: 1rem;
+  margin-bottom: 0;
+}
+
+.common-case-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 0.6rem;
+  padding: 0.4rem 0;
+}
+
+.common-case-marker {
+  color: var(--color-pain);
+  font-size: 0.95rem;
+  margin-top: 0.25rem;
+  flex-shrink: 0;
+}
+
+.common-case-text {
+  font-size: 1rem;
+  line-height: 1.55;
+  color: var(--color-text-on-dark-muted);
+}
+
 @media (max-width: 767.98px) {
   .problem-title {
     font-size: 1.75rem;
@@ -145,6 +186,10 @@ const closingStatement = 'Todo esto genera pérdida de tiempo, errores y estrés
   .problem-intro,
   .problem-closing {
     font-size: 1rem;
+  }
+
+  .common-case-text {
+    font-size: 0.9rem;
   }
 }
 </style>
