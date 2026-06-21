@@ -202,7 +202,7 @@ Una plataforma web donde un administrador autorizado tiene acceso a distintas fu
 
 **Para el cliente final:**
 
-Un portal web simple donde el cliente puede:
+Un portal web sencillo de usar, donde:
 
 - Los clientes ingresan con un identificador (código de cliente, DNI + unidad, etc.) preconfigurado. **No necesitan registrarse ni crear cuenta**.
   - _Detalle:_ Sin contraseñas que olvidar ni formularios de registro. Tus clientes acceden directamente y consultan su estado al instante.

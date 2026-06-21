@@ -17,6 +17,13 @@ function isFloatingCtaVisible(): boolean {
 
 const isVisible = computed(isFloatingCtaVisible)
 
+function isElementInViewport(element: HTMLElement): boolean {
+  const rect = element.getBoundingClientRect()
+  const isAboveViewport = rect.bottom <= 0
+  const isBelowViewport = rect.top >= window.innerHeight
+  return !isAboveViewport && !isBelowViewport
+}
+
 let observer: IntersectionObserver | null = null
 
 function updateVisibility(entries: IntersectionObserverEntry[]): void {
@@ -38,9 +45,15 @@ function scrollToContact(): void {
 }
 
 onMounted(() => {
-  observer = new IntersectionObserver(updateVisibility, { rootMargin: '0px', threshold: 0 })
   const hero = document.getElementById('hero')
   const contact = document.getElementById('contact')
+  if (hero) {
+    isHeroVisible.value = isElementInViewport(hero)
+  }
+  if (contact) {
+    isContactVisible.value = isElementInViewport(contact)
+  }
+  observer = new IntersectionObserver(updateVisibility, { rootMargin: '0px', threshold: 0 })
   if (hero) observer.observe(hero)
   if (contact) observer.observe(contact)
 })

@@ -77,7 +77,8 @@ const cobranzaHeader = 'Cobranza App'
 
   .excel-comparison-table :deep(th),
   .excel-comparison-table :deep(td) {
-    font-size: 0.875rem;
+    font-size: 0.8rem;
+    overflow-wrap: break-word;
   }
 }
 </style>

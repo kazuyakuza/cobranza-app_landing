@@ -89,7 +89,7 @@ export const featureGroups: FeatureGroup[] = [
   },
   {
     title: 'Para el cliente final',
-    intro: 'Un portal web simple donde el cliente puede:',
+    intro: 'Un portal web sencillo de usar, donde:',
     accordionId: 'featuresUserAccordion',
     variant: 'user',
     features: userFeatures
