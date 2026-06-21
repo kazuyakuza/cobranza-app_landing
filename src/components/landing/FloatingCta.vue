@@ -87,7 +87,9 @@ onUnmounted(() => {
 
 .float-enter-active,
 .float-leave-active {
-  transition: opacity 0.3s ease, transform 0.3s ease;
+  transition:
+    opacity 0.3s ease,
+    transform 0.3s ease;
 }
 
 .float-enter-from,
