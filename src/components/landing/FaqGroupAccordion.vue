@@ -154,7 +154,9 @@ function isGroupOpen(): boolean {
 }
 
 .faq-question-button:not(.collapsed) {
+  background: var(--color-bg-card-alt);
   color: var(--color-text-on-dark);
+  box-shadow: none;
 }
 
 .faq-answer-body {
