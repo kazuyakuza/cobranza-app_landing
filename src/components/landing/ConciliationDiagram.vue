@@ -28,82 +28,85 @@ const diagramLabel =
         </marker>
       </defs>
 
-      <g class="conciliation-node" transform="translate(40,20)">
+      <g class="conciliation-node" transform="translate(75,20)">
         <rect width="120" height="36" rx="8" />
         <text x="60" y="23" text-anchor="middle">Cliente</text>
       </g>
 
-      <g class="conciliation-node" transform="translate(200,20)">
+      <g class="conciliation-node" transform="translate(255,20)">
         <rect width="120" height="36" rx="8" />
         <text x="60" y="23" text-anchor="middle">Deuda</text>
       </g>
 
-      <g class="conciliation-node" transform="translate(170,170)">
+      <g class="conciliation-node" transform="translate(65,150)">
         <rect width="140" height="36" rx="8" />
         <text x="70" y="23" text-anchor="middle">Comprobante</text>
       </g>
 
-      <g class="conciliation-node conciliation-node--match" transform="translate(340,170)">
+      <g class="conciliation-node conciliation-node--match" transform="translate(270,150)">
         <rect width="90" height="40" rx="10" />
         <text x="45" y="26" text-anchor="middle">Match</text>
       </g>
 
-      <g class="conciliation-node" transform="translate(470,170)">
+      <g class="conciliation-node" transform="translate(425,150)">
         <rect width="130" height="36" rx="8" />
         <text x="65" y="23" text-anchor="middle">Transferencia</text>
       </g>
 
-      <g class="conciliation-node" transform="translate(470,90)">
+      <g class="conciliation-node" transform="translate(425,20)">
         <rect width="130" height="36" rx="8" />
         <text x="65" y="23" text-anchor="middle">Extracto bancario</text>
       </g>
 
-      <g class="conciliation-node conciliation-node--result" transform="translate(320,250)">
+      <g class="conciliation-node conciliation-node--result" transform="translate(250,250)">
         <rect width="130" height="36" rx="8" />
         <text x="65" y="23" text-anchor="middle">Validación final</text>
       </g>
 
       <line
-        x1="100"
+        x1="135"
         y1="56"
-        x2="240"
+        x2="135"
+        y2="150"
+        class="conciliation-edge"
+        marker-end="url(#conciliationArrow)"
+      />
+      <line
+        x1="315"
+        y1="56"
+        x2="315"
+        y2="150"
+        class="conciliation-edge"
+        marker-end="url(#conciliationArrow)"
+      />
+      <line
+        x1="490"
+        y1="56"
+        x2="490"
+        y2="150"
+        class="conciliation-edge"
+        marker-end="url(#conciliationArrow)"
+      />
+      <line
+        x1="205"
+        y1="170"
+        x2="270"
         y2="170"
         class="conciliation-edge"
         marker-end="url(#conciliationArrow)"
       />
       <line
-        x1="260"
-        y1="56"
-        x2="385"
+        x1="425"
+        y1="170"
+        x2="360"
         y2="170"
         class="conciliation-edge"
         marker-end="url(#conciliationArrow)"
       />
       <line
-        x1="310"
-        y1="188"
-        x2="340"
-        y2="188"
-        class="conciliation-edge"
-        marker-end="url(#conciliationArrow)"
-      />
-      <path
-        d="M 535 126 Q 548 148 535 170"
-        class="conciliation-edge"
-        marker-end="url(#conciliationArrow)"
-      />
-      <line
-        x1="470"
-        y1="188"
-        x2="430"
-        y2="188"
-        class="conciliation-edge"
-        marker-end="url(#conciliationArrow)"
-      />
-      <line
-        x1="385"
-        y1="210"
-        x2="385"
+        x1="315"
+        y1="190"
+        x2="315"
         y2="250"
         class="conciliation-edge"
         marker-end="url(#conciliationArrow)"
