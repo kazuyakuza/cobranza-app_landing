@@ -113,6 +113,7 @@ function isGroupOpen(): boolean {
 
 .faq-group-button:not(.collapsed) {
   background: var(--color-bg-card-alt);
+  color: var(--color-text-on-dark);
   box-shadow: none;
 }
 
@@ -150,6 +151,10 @@ function isGroupOpen(): boolean {
   font-size: 1rem;
   font-weight: 500;
   padding: 1rem 1.25rem;
+}
+
+.faq-question-button:not(.collapsed) {
+  color: var(--color-text-on-dark);
 }
 
 .faq-answer-body {

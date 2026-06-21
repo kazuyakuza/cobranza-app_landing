@@ -171,6 +171,7 @@ function mobileCollapseId(tabId: string): string {
 
 .use-case-mobile-button:not(.collapsed) {
   background: var(--color-bg-card-alt);
+  color: var(--color-text-on-dark);
   box-shadow: none;
 }
 
@@ -183,7 +184,7 @@ function mobileCollapseId(tabId: string): string {
 }
 
 .use-case-mobile-body {
-  padding: 0 1.25rem 1.25rem;
+  padding: 1rem 1.25rem 1.25rem;
   background: var(--color-bg-card);
 }
 
